@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Python 回測框架（五）Sizer - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../../ubuntu/ubuntu_setup.html">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../../tools/network.html">Network</a></li><li class="chapter-item "><a href="../../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../../c++/move.html">Move</a></li><li class="chapter-item "><a href="../../c++/CAS.html">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../../docker/command.html">Command</a></li><li class="chapter-item "><a href="../../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../../go/oo.html">OO</a></li><li class="chapter-item "><a href="../../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../../go/interface.html">interface</a></li><li class="chapter-item "><a href="../../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item "><a href="../../python/other.html">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../../strategy/note.html">Resource</a></li><li class="chapter-item "><a href="../../strategy/nansen.html">Nansen</a></li><li class="chapter-item "><a href="../../strategy/example.html">Example</a></li><li class="chapter-item "><a href="../../strategy/other.html">Other</a></li><li class="chapter-item "><a href="../../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../../strategy/finlab.html">Finlab</a></li><li class="chapter-item expanded "><a href="../../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item expanded "><a href="../../strategy/backtrader/Python回測框架五Sizer.html" class="active">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="python-回測框架五sizer"><a class="header" href="#python-回測框架五sizer">Python 回測框架（五）Sizer</a></h1>
+<p>出處：https://stockbuzzai.wordpress.com/2019/07/23/python-%e5%9b%9e%e6%b8%ac%e6%a1%86%e6%9e%b6%ef%bc%88%e4%ba%94%ef%bc%89sizer/</p>
+<p>在上一篇 <a href="https://stockbuzzai.wordpress.com/2019/07/15/python-%E5%9B%9E%E6%B8%AC%E6%A1%86%E6%9E%B6%EF%BC%88%E5%9B%9B%EF%BC%89crossover-%E5%92%8C-signal/"><strong>Python 回測框架（四）CrossOver 和 Signal</strong></a> 中，我們談到了如何使用CrossOver 和 Signal 來買賣商品。但是我們又遇到了一個問題，我們無法控制買賣的商品數量。在一般交易中，我們可能會根據當前的狀況來買賣不同的數量的商品，因此我們在這一篇文章要介紹的就是 Backtrader 中負責控制買賣商品數量的工具 Sizer。</p>
+<p>首先我們先回看下面這段程式碼：</p>
+<pre><code class="language-python">from datetime import datetime
+import backtrader
+  
+class SmaCross(backtrader.SignalStrategy):
+    def __init__(self):
+        sma10 = backtrader.ind.SMA(period=10)
+        sma30 = backtrader.ind.SMA(period=30)
+        crossover = backtrader.ind.CrossOver(sma10, sma30)
+        self.signal_add(backtrader.SIGNAL_LONG, crossover)
+  
+cerebro = backtrader.Cerebro()
+data = backtrader.feeds.YahooFinanceData(dataname='MSFT',
+                                         fromdate=datetime(2011, 1, 1),
+                                         todate=datetime(2012, 12, 31))
+  
+cerebro.adddata(data)
+cerebro.addstrategy(SmaCross)
+cerebro.addsizer(backtrader.sizers.SizerFix, stake=10)
+cerebro.run()
+cerebro.plot() 
+</code></pre>
+<p>這一段程式碼幾乎跟 <a href="https://stockbuzzai.wordpress.com/2019/07/15/python-%E5%9B%9E%E6%B8%AC%E6%A1%86%E6%9E%B6%EF%BC%88%E5%9B%9B%EF%BC%89crossover-%E5%92%8C-signal/"><strong>Python 回測框架（四）CrossOver 和 Signal</strong></a> 中的程式碼一樣，但是我們多了一行程式碼：</p>
+<pre><code class="language-python">cerebro.addsizer(backtrader.sizers.SizerFix, stake=10) 
+</code></pre>
+<p>這裡我們設定了一個 Sizer，這個 Sizer 每次買賣固定的數量，一次是 10 股。下列是設定不同的 stake 的值的時候所產生的結果。</p>
+<p><img src="../images/michael_5-1.png" alt="img" />stake = 1</p>
+<p>stake=1 的時候，產生的結果跟 <a href="https://stockbuzzai.wordpress.com/2019/07/15/python-%E5%9B%9E%E6%B8%AC%E6%A1%86%E6%9E%B6%EF%BC%88%E5%9B%9B%EF%BC%89crossover-%E5%92%8C-signal/"><strong>Python 回測框架（四）CrossOver 和 Signal</strong></a> 中是相同的。</p>
+<p><img src="../images/michael_5-2.png" alt="img" />stake = 10</p>
+<p>stake=10 的時候，我們發現每次購買股票資金明顯花費的比較多。</p>
+<p><img src="../images/michael_5-3.png" alt="img" />stake = 100</p>
+<p>stake=100 的時候，我們發現每次購買的的數量確實更多了，所花費的資金也更多。</p>
+<p>另外，在 Backtrader 之中，主要分成兩種 sizer。一種 sizer 屬於預設的 sizer，在系統中如果沒有其他的 sizer，就使用這個 sizer。在之前的程式碼就是使用預設 sizer 的範例。</p>
+<p>另一種 sizer 是跟隨著 strategy 的，這種 sizer 只處理對應的 strategy 的買賣。設定strategy 的 sizer 有二種方法，一種是透過 cerebro 的 addsizer_byidx 來設定，如以下範例：</p>
+<pre><code class="language-python">idx = cerebro.addstrategy(SmaCross)
+cerebro.addsizer_byidx(idx, backtrader.sizers.SizerFix, stake=100) 
+</code></pre>
+<p>其中 idx 是 cerebro 在新增 strategy 的時候所回傳 idx 值，以此當參數來新增 sizer。</p>
+<p>第二種方式是透過 strategy 的 setsizer 來設定 sizer，程式碼如下：</p>
+<pre><code class="language-python">self.setsizer(backtrader.sizers.SizerFix(stake=100))
+</code></pre>
+<h3 id="如何自訂-sizer"><a class="header" href="#如何自訂-sizer"><strong>如何自訂 sizer</strong></a></h3>
+<p>要撰寫自訂的 sizer，需要繼承 backtrader.Sizer 這個物件，然後覆寫 _getsizing 這個函式，以下是範例：</p>
+<pre><code class="language-python">class AllSizer(backtrader.Sizer):
+    def _getsizing(self, comminfo, cash, data, isbuy):
+        if isbuy:
+            return math.floor(cash/data.high)
+        else:
+            return self.broker.getposition(data) 
+</code></pre>
+<p>AllSizer 是一個直接將資金買入商品的 sizer，其中 comminfo 代表手續費的相關資訊，cash 代表目前持有的現金，data 代表目前這檔商品，isbuy 代表這是買入還是賣出的請求。在買入的部分，我們利用持有現金除上當天最高價計算買入的股票數。賣出的時候則是把所有持倉都賣出。</p>
+<p>以下是完整的程式碼和執行的結果：</p>
+<pre><code class="language-python">from datetime import datetime
+import yfinance as yf
+import backtrader
+import math
+
+
+class AllSizer(backtrader.Sizer):
+    def _getsizing(self, comminfo, cash, data, isbuy):
+        if isbuy:
+            return math.floor(cash / data.high)
+        else:
+            return self.broker.getposition(data)
+
+
+class SmaCross(backtrader.SignalStrategy):
+    def __init__(self):
+        sma10 = backtrader.ind.SMA(period=10)
+        sma30 = backtrader.ind.SMA(period=30)
+        crossover = backtrader.ind.CrossOver(sma10, sma30)
+        self.signal_add(backtrader.SIGNAL_LONG, crossover)
+
+        self.setsizer(AllSizer())
+
+
+cerebro = backtrader.Cerebro()
+# data = backtrader.feeds.PandasData(dataname=yf.download('TSLA', '2018-01-01', '2023-01-01'))
+data = backtrader.feeds.PandasData(
+    dataname=yf.download(&quot;MSFT&quot;, &quot;2011-01-01&quot;, &quot;2023-01-01&quot;)
+)
+
+# data = backtrader.feeds.YahooFinanceData(
+#    dataname=&quot;MSFT&quot;, fromdate=datetime(2011, 1, 1), todate=datetime(2012, 12, 31)
+# )
+
+cerebro.adddata(data)
+idx = cerebro.addstrategy(SmaCross)
+cerebro.run()
+# pip install matplotlib==3.2.2
+cerebro.plot()
+</code></pre>
+<p><img src="../images/michael_5-4.png" alt="img" /></p>
+<p>有了 sizer，我們就可以把計算買賣商品數量的邏輯獨立，讓我們在撰寫回測程式的時候更方便且更有彈性。</p>
+<h2 id="backtrader---sizer"><a class="header" href="#backtrader---sizer">Backtrader - sizer</a></h2>
+<p>出處：https://ithelp.ithome.com.tw/articles/10279754</p>
+<p>之前有介紹過，如果我們下單除了股價以外，還有一個很重要的因素就是要買幾股，有些時候，我們的策略可能會需要不同的買入數量，Backtrader 也有一個物件 sizer 可以提供相關的彈性，如果預設的沒有合適的，也可以自訂義一個，以下先介紹內建的一些 sizer</p>
+<h3 id="fixedsize"><a class="header" href="#fixedsize">FixedSize</a></h3>
+<p>顧名思義就是固定的數量
+參數：</p>
+<ul>
+<li>stake { default 1 }: 固定數量的股數</li>
+<li>tranches { default 1 }: 只執行 stake 的幾分之一
+<em>最後的數量 = stake / tranches</em></li>
+</ul>
+<pre><code class="language-python">cerebro.addsizer(bt.sizers.SizerFix, stake = 1000)
+</code></pre>
+<h3 id="fixedreverser"><a class="header" href="#fixedreverser">FixedReverser</a></h3>
+<p>一樣是固定數量，只是在賣的時候，會賣出 2 倍的庫存，也就是把正的庫存賣成負的庫存
+參數：</p>
+<ul>
+<li>stake { default 1 } 固定的股數</li>
+</ul>
+<pre><code class="language-python">cerebro.addsizer(bt.sizers.FixedRevert, stake = 1000)
+</code></pre>
+<h3 id="percentsizer"><a class="header" href="#percentsizer">PercentSizer</a></h3>
+<p>使用一定比例的帳戶餘額去買進
+參數：</p>
+<ul>
+<li>percents { default 20 }: 20%</li>
+</ul>
+<pre><code class="language-python">cerebro.addsizer(bt.sizers.PercentSizer, percents = 80)
+</code></pre>
+<h3 id="allinsizer"><a class="header" href="#allinsizer">AllInSizer</a></h3>
+<p>基本上和 PercentSizer 一樣，只是預設是 100% 的帳戶餘額去買進股票，另一個差別就是 All in 聽起來比較霸氣。
+<em>這裡有一個要注意的是，AllIn 是以當天的收盤價去算要買的股數，可是在執行買入的時候，是隔天的開盤價，所以隔天是漲的話，就會造成餘額不足，買入失敗喔</em></p>
+<pre><code class="language-python">cerebro.addsizer(bt.sizers.AllInSizer)
+</code></pre>
+<h3 id="其它"><a class="header" href="#其它">其它</a></h3>
+<p>PercentSizerInt, AllInSizerInt，這兩個看說明是說在回傳數量的時候會轉成整數，不過我真正去執行的結果，兩個都是一樣的，所以暫時看不出差別</p>
+<h3 id="自訂義-sizer"><a class="header" href="#自訂義-sizer">自訂義 sizer</a></h3>
+<p>要自訂義 sizer 也很簡單</p>
+<ul>
+<li>訂義一個 sizer 的 class 繼承 backtrader.Sizer
+繼承後可以使用 self.strategy 和 self.broker 來取得相關資料
+<ul>
+<li>取得庫存 self.strategy.getposition(data)</li>
+<li>取得目前淨值 self.broker.getvalue() (或是 self.stratgy.broker.getvalue())</li>
+</ul>
+</li>
+<li>覆寫 _getsizing(self, comminfo, cash, data, isbuy)
+<ul>
+<li>comminfo: 手續費相關資訊</li>
+<li>cash：目前帳戶餘額</li>
+<li>data: 目前的操作(買入/賣出)資料</li>
+<li>isbuy: 是否為買入(True)</li>
+</ul>
+</li>
+</ul>
+<p>例如：改寫 percent 變成可以買的最大的張數 ( 1000 股 )</p>
+<pre><code class="language-python">import backtrader as bt
+import math
+class PercentBoardSizer(bt.Sizer):
+    params = (
+        ('percents', 20),
+    )
+
+    def _getsizing(self, comminfo, cash, data, isbuy):
+        position = self.broker.getposition(data)
+        if not position:
+            size = cash / data.close[0] * (self.p.percents / 100)
+            
+            if size &lt; 1000:
+                # 小於 1000 股，就不買
+                size = 0
+            else:
+                size = math.floor(size / 1000) * 1000
+        else:
+            size = position.size
+
+        size = int(size)
+        
+        return size
+
+class AllInBoardSizer(PercentBoardSizer):
+    params = (
+        ('percents', 100),
+    )
+</code></pre>
+<h3 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h3>
+<ul>
+<li>
+<p>在 strategy 中：</p>
+<ul>
+<li>def setsizer(self, sizer): 可以取得已經初始化的 sizer</li>
+<li>def getsizer(self): 回傳目前使用的 sizer</li>
+<li>sizer 屬性可以直接進行 get/set (前幾天的範例就是使用這個)</li>
+</ul>
+</li>
+<li>
+<p>使用 cerebro：
+<em>目前看來，如果 strategy 和 cerebro 都有設定的話，會以 cerebro 為主</em>，cerebro 有兩個方法可以設定</p>
+<ul>
+<li>addsizer(sizerClass, *args, **kwargs): 指定所有的 strategy 使用的 sizer</li>
+<li>addsizer_byidx(idx, sizerClass, *args, **kwargs): 根據不同的 strategy inx 來使用不同的 sizer
+ex:</li>
+</ul>
+<pre><code class="language-python">cerebro = bt.Cerebro()
+# 預設的 sizer
+cerebro.addsizer(bt.sizers.SizerFix, stake = 1000)
+
+# 這樣就可以針對不同的 strategy 來設定不同的 sizer
+idx = cerebro.addstrategy(TestStrategy)
+cerebro.addsizer_byidx(idx, bt.sizers.SizerFix, stake = 5)
+</code></pre>
+</li>
+</ul>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../strategy/backtrader/Python回測框架四CrossOver和Signal.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../strategy/backtrader/Python回測框架六Analyzers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../strategy/backtrader/Python回測框架四CrossOver和Signal.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../strategy/backtrader/Python回測框架六Analyzers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>

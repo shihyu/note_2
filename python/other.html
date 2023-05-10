@@ -1,0 +1,1802 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Other - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../ubuntu/ubuntu_setup.html">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../tools/network.html">Network</a></li><li class="chapter-item "><a href="../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../c++/move.html">Move</a></li><li class="chapter-item "><a href="../c++/CAS.html">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../docker/command.html">Command</a></li><li class="chapter-item "><a href="../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../go/oo.html">OO</a></li><li class="chapter-item "><a href="../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../go/interface.html">interface</a></li><li class="chapter-item "><a href="../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item expanded "><a href="../python/other.html" class="active">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../strategy/note.html">Resource</a></li><li class="chapter-item "><a href="../strategy/nansen.html">Nansen</a></li><li class="chapter-item "><a href="../strategy/example.html">Example</a></li><li class="chapter-item "><a href="../strategy/other.html">Other</a></li><li class="chapter-item "><a href="../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../strategy/finlab.html">Finlab</a></li><li class="chapter-item "><a href="../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架五Sizer.html">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="pdf-分割"><a class="header" href="#pdf-分割">pdf 分割</a></h2>
+<pre><code class="language-python">from PyPDF2 import PdfReader, PdfWriter
+
+
+# PDF文件分割
+def split_pdf(read_file, out_detail):
+    try:
+        fp_read_file = open(read_file, &quot;rb&quot;)
+        pdf_input = PdfReader(fp_read_file)  # 將要分割的PDF內容格式話
+        page_count = pdf_input.pages  # 獲取PDF頁數
+        print(page_count)  # 打印頁數
+
+        with open(out_detail, &quot;r&quot;, True, &quot;utf-8&quot;) as fp:
+            # print(fp)
+            txt = fp.readlines()
+            # print(txt)
+            for detail in txt:  # 打開分割標準文件
+                # print(type(detail))
+                pages = detail.strip()  # 空格分組
+                #  write_file, write_ext = os.path.splitext(write_file)  # 用於返回文件名和擴展名元組
+                pdf_file = f&quot;{pages}.pdf&quot;
+                # liststr=list(map(int, pages.split('-')))
+                # print(type(liststr))
+                start_page, end_page = list(map(int, pages.split(&quot;-&quot;)))  # 將字符串數組轉換成整形數組
+                start_page -= 1
+                try:
+                    print(f&quot;開始分割{start_page}頁-{end_page}頁，保存為{pdf_file}......&quot;)
+                    pdf_output = PdfWriter()  # 實例一個 PDF文件編寫器
+                    for i in range(start_page, end_page):
+                        pdf_output.add_page(pdf_input.pages[i])
+                    with open(pdf_file, &quot;wb&quot;) as sub_fp:
+                        pdf_output.write(sub_fp)
+                    print(f&quot;完成分割{start_page}頁-{end_page}頁，保存為{pdf_file}!&quot;)
+                except IndexError:
+                    print(f&quot;分割頁數超過了PDF的頁數&quot;)
+        # fp.close()
+    except Exception as e:
+        print(e)
+    finally:
+        fp_read_file.close()
+
+
+split_pdf(&quot;./The Art of Writing Efficient Programs An advanced programmers guide to efficient hardware utilization and compiler... (Fedor G. Pikus) (Z-Library).pdf&quot;, &quot;config.txt&quot;)
+</code></pre>
+<h2 id="使用-urllibparse-模組的-unquote-函數將編碼過的-url-字符串解碼"><a class="header" href="#使用-urllibparse-模組的-unquote-函數將編碼過的-url-字符串解碼">使用 <code>urllib.parse</code> 模組的 <code>unquote()</code> 函數將編碼過的 URL 字符串解碼</a></h2>
+<pre><code class="language-python">import urllib.parse
+
+url = &quot;https://www.finlab.tw/wp-content/uploads/2022/07/%E6%88%AA%E5%9C%96-2022-07-25-%E4%B8%8B%E5%8D%8812.42.21-1536x431.png&quot;
+decoded_url = urllib.parse.unquote(url)
+
+print(decoded_url)
+</code></pre>
+<h2 id="dataframe-寫到csv-再從csv-讀回dataframe"><a class="header" href="#dataframe-寫到csv-再從csv-讀回dataframe">dataFrame 寫到csv, 再從csv 讀回dataframe</a></h2>
+<pre><code class="language-python">import pandas as pd
+
+# Create a sample DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 
+        'Age': [25, 30, 35], 
+        'City': ['New York', 'Paris', 'London']}
+df = pd.DataFrame(data)
+
+# Write the DataFrame to a CSV file
+df.to_csv('data.csv', index=False)
+
+# Read the CSV file back into a DataFrame
+new_df = pd.read_csv('data.csv')
+
+# Print the original and new DataFrames
+print('Original DataFrame:\n', df)
+print('\nNew DataFrame:\n', new_df)
+</code></pre>
+<h2 id="顯示-datafrmae-index-跟--欄位型態"><a class="header" href="#顯示-datafrmae-index-跟--欄位型態">顯示 datafrmae index 跟  欄位型態</a></h2>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'col1': [1, 2, 3],
+    'col2': ['a', 'b', 'c']
+}, index=pd.date_range('2022-01-01', periods=3))
+
+print(df.index)
+print(df.dtypes)
+</code></pre>
+<h2 id="已經在-sqlite-的-primary_keys-不-insert-data"><a class="header" href="#已經在-sqlite-的-primary_keys-不-insert-data">已經在 sqlite 的 primary_keys 不 insert data</a></h2>
+<pre><code class="language-python">import pandas as pd
+import sqlite3
+
+
+class FinmindAPI:
+    db_path = &quot;example.db&quot;
+
+    @staticmethod
+    def insert_db(data):
+        conn = sqlite3.connect(FinmindAPI.db_path)
+        create_table = &quot;&quot;&quot;
+    CREATE TABLE IF NOT EXISTS TaiwanStockMonthRevenue (
+        stock_id TEXT,
+        date TEXT,
+        revenue INTEGER
+    );&quot;&quot;&quot;
+
+        conn.execute(create_table)
+        # Check if data already exists in the database
+        primary_keys = [&quot;stock_id&quot;, &quot;date&quot;]
+        existing_data = pd.read_sql_query(
+            f&quot;SELECT {', '.join(primary_keys)} FROM TaiwanStockMonthRevenue&quot;, con=conn
+        )
+        if (
+            existing_data.set_index(primary_keys)
+            .index.isin(data.set_index(primary_keys).index)
+            .any()
+        ):
+            print(&quot;Data already exists in database, skipping insertion&quot;)
+            conn.close()
+            return
+
+        # Insert data into database
+        data.to_sql(
+            name=&quot;TaiwanStockMonthRevenue&quot;, con=conn, if_exists=&quot;append&quot;, index=False
+        )
+        conn.close()
+        print(f&quot;Data inserted to database successfully.&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    # Create example data
+    data1 = pd.DataFrame(
+        {
+            &quot;stock_id&quot;: [&quot;2330&quot;, &quot;2454&quot;, &quot;2382&quot;],
+            &quot;date&quot;: [&quot;2020-01&quot;, &quot;2020-01&quot;, &quot;2020-01&quot;],
+            &quot;revenue&quot;: [1000, 2000, 3000],
+        }
+    )
+    data2 = pd.DataFrame(
+        {
+            &quot;stock_id&quot;: [&quot;2330&quot;, &quot;2454&quot;, &quot;2382&quot;],
+            &quot;date&quot;: [&quot;2020-02&quot;, &quot;2020-02&quot;, &quot;2020-02&quot;],
+            &quot;revenue&quot;: [4000, 5000, 6000],
+        }
+    )
+
+    # Insert first set of data
+    print(&quot;Inserting first set of data ...&quot;)
+    FinmindAPI.insert_db(data1)
+    # Insert same data again
+    print(&quot;Inserting same data again ...&quot;)
+    FinmindAPI.insert_db(data1)
+    # Insert new set of data
+    print(&quot;Inserting new set of data ...&quot;)
+    FinmindAPI.insert_db(data2)
+</code></pre>
+<h2 id="產生num組加總為1的小數數值"><a class="header" href="#產生num組加總為1的小數數值">產生num組加總為1的小數數值</a></h2>
+<pre><code class="language-python">import random
+
+def generate_random_decimals(num):
+    &quot;&quot;&quot;
+    產生num組加總為1的小數數值
+
+    Args:
+        num: 需要產生的小數數值的組數
+
+    Returns:
+        一個包含num組小數數值的列表，每組小數數值都是一個長度為3的列表
+    &quot;&quot;&quot;
+    result = []
+    # 初始化三個數值
+    for i in range(num):
+        data = [0.0] * 3
+        # 隨機產生兩個小數數值
+        data[0] = round(random.uniform(0, 1), 2)
+        data[1] = round(random.uniform(0, 1 - data[0]), 2)
+        # 計算第三個小數數值
+        data[2] = round(1 - data[0] - data[1], 2)
+        result.append(data)
+    return result
+
+if __name__ == '__main__':
+    data = generate_random_decimals(2)
+    print(data)
+</code></pre>
+<h2 id="讀檔正則取圖下載"><a class="header" href="#讀檔正則取圖下載">讀檔正則取圖下載</a></h2>
+<pre><code class="language-python">import os
+import re
+import requests
+import cv2
+import numpy as np
+
+# 設置要讀取的文件路徑
+file_path = &quot;./learn_network.md&quot;
+
+# 設置下載目標目錄
+target_dir = &quot;images&quot;
+
+# 設置轉換後的圖檔格式
+target_ext = &quot;.jpg&quot;
+
+# 創建目標目錄
+if not os.path.exists(target_dir):
+    os.makedirs(target_dir)
+
+# 定義正則表達式來匹配圖像URL
+with open(file_path, &quot;r&quot;) as f:
+    text = f.read()
+    pattern = r&quot;\!\[.*?\]\((.*?)\)&quot;
+    image_urls = re.findall(pattern, text)
+
+    for img in image_urls:
+        print(img)
+    input()
+
+    for url in image_urls:
+        try:
+            print(url)
+            response = requests.get(url, stream=True)
+            if response.status_code == 200:
+                # 取得圖像的文件名和擴展名
+                filename = url.split(&quot;/&quot;)[-1]
+                ext = os.path.splitext(filename)[1].lower()
+                img_array = np.asarray(bytearray(response.content), dtype=np.uint8)
+                img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                filename = os.path.splitext(filename)[0] + target_ext
+                filepath = os.path.join(target_dir, filename)
+                cv2.imwrite(filepath, img)
+                print(filename + &quot; 下載成功&quot;)
+            else:
+                print(filename + &quot; 下載失敗&quot;)
+        except Exception as e:
+            print(f&quot;下載圖像失敗: {e}&quot;)
+</code></pre>
+<h2 id="函數插入log"><a class="header" href="#函數插入log">函數插入log</a></h2>
+<pre><code class="language-python">import os
+import sys
+
+def insert_to_func(lines, func_lines, file_name):
+    for i in func_lines:
+        for j in range(i-1, len(lines)):
+            if str(lines[j]).find(';') != -1:
+                break
+
+            if str(lines[j]).find('{') != -1:
+                if str(lines[j]).find('}') != -1:
+                    break
+
+                if str(file_name).find('.java') != -1:
+                    lines.insert(j+1, '\tSystem.out.println(&quot;YAO [&quot; + Thread.currentThread().getStackTrace()[2].getClassName() + &quot;|&quot; + Thread.currentThread().getStackTrace()[2].getMethodName() + &quot;|&quot; + Thread.currentThread().getStackTrace()[2].getFileName() + &quot;:&quot; + Thread.currentThread().getStackTrace()[2].getLineNumber()+&quot;]&quot;);\n')
+                elif str(file_name).find('.cpp') != -1 or str(file_name).find('.c') != -1 or str(file_name).find('.cc') != -1:
+                    lines.insert(j+1, '::printf (&quot;This is line %d of file %s (function %s)\\n&quot;, __LINE__, __FILE__, __func__);')
+                elif str(file_name).find('.go'): 
+                    lines.insert(j+1,'\tutils.Trace(&quot;&quot;)')
+
+                break
+
+    return lines
+
+def main():
+    if len(sys.argv) &lt; 2:
+        print(&quot;please input python test.py filename&quot;)
+        return
+
+    file_name = sys.argv[1]
+    print(file_name)
+ 
+    if str(file_name).find('.java') != -1:
+        os.system(&quot;ctags-exuberant -x &quot; + file_name + &quot; | ack -o -w 'method\s+.*' | ack -o '\d+\s+.*' | ack -o '^\d+\s+' | sort -k 1 -nr &gt; /tmp/test.txt&quot;)
+    elif str(file_name).find('.cpp') != -1 or str(file_name).find('.c') != -1:
+        os.system(&quot;ctags-exuberant -x &quot; + file_name + &quot; | ack -o -w 'function\s+.*' | ack -o '\d+\s+.*' | ack -o '^\d+\s+' | sort -k 1 -nr &gt; /tmp/test.txt&quot;)
+    elif str(file_name).find('.go') != -1:
+        os.system(&quot;ctags-exuberant -x &quot; + file_name + &quot; | ack -o -w 'func.*'  | ack -o '\d+\s+.*' | ack -o '^\d+\s+' | sort -k 1 -nr &gt; /tmp/test.txt&quot;)
+    else:
+        print('unknown file type')
+        return
+
+    with open('/tmp/test.txt', 'r+') as f:
+        func_lines = [int(i) for i in f.read().splitlines()]
+
+    with open(file_name, 'r+') as f:
+        lines = f.read().splitlines()
+
+    insert_list_finish = insert_to_func(lines, func_lines, file_name)
+
+    with open(file_name, &quot;w+&quot;) as new_file:
+        for l in insert_list_finish:
+            new_file.write(l + '\n')
+
+if __name__=='__main__':
+    main()
+
+</code></pre>
+<h2 id="輸入日期取得上週五日期"><a class="header" href="#輸入日期取得上週五日期">輸入日期取得上週五日期</a></h2>
+<pre><code class="language-python">from datetime import date, datetime, timedelta
+
+#today = date.today()  # 取得今天日期
+today = datetime(2023, 3, 10)
+last_friday = today - timedelta(days=today.weekday() + 3)  # 回推到上週五
+last_friday_str = last_friday.strftime('%Y/%m/%d')  # 轉換成指定格式的字串
+
+print(last_friday_str)  # 印出上週五的日期
+</code></pre>
+<h2 id="模擬程式執行一段時間後出現問題需要重啟"><a class="header" href="#模擬程式執行一段時間後出現問題需要重啟">模擬程式執行一段時間後出現問題需要重啟</a></h2>
+<pre><code class="language-python">import os
+import sys
+import time
+import threading
+
+def main():
+    while True:
+        # 模擬程式執行一段時間後出現問題需要重啟
+        time.sleep(5)
+        if should_restart():
+            restart_program()
+
+def should_restart():
+    try:
+        a = 1 / 0
+        return False
+    except Exception as err:
+        print(err)
+        return True
+
+def restart_program():
+    python = sys.executable
+    print(&quot;Restarting program with PID {} and TID {}&quot;.format(os.getpid(), threading.get_ident()))
+    os.execl(python, python, *sys.argv)
+
+if __name__ == '__main__':
+    print(&quot;Starting program with PID {} and TID {}&quot;.format(os.getpid(), threading.get_ident()))
+    main()
+</code></pre>
+<h2 id="輸入日期取得上個月最後一天日期"><a class="header" href="#輸入日期取得上個月最後一天日期">輸入日期取得上個月最後一天日期</a></h2>
+<pre><code class="language-python">import datetime
+
+def get_last_day_of_month(date):
+    first_day = datetime.datetime(date.year, date.month, 1)  # 當月份的第一天
+    last_day = first_day.replace(month=first_day.month+1, day=1) - datetime.timedelta(days=1)  # 當月份的最後一天
+    return last_day.strftime('%Y-%m-%d')  # 格式化輸出日期
+
+# 呼叫函數並輸出結果
+date = datetime.datetime(2023, 3, 12)  # 要計算的日期
+print(get_last_day_of_month(date))
+</code></pre>
+<h2 id="找出-pct_change_12m-和-volume_12m-都為true的月份"><a class="header" href="#找出-pct_change_12m-和-volume_12m-都為true的月份">找出 Pct_Change_12M 和 Volume_12M 都為True的月份</a></h2>
+<pre><code class="language-python">import pandas as pd
+import yfinance as yf
+from datetime import timedelta
+
+# 下載資料
+# df = yf.download(&quot;2324.TW&quot;, start=&quot;2000-01-01&quot;, end=&quot;2023-01-01&quot;)
+df = yf.download(&quot;8299.TWO&quot;, start=&quot;2000-01-01&quot;, end=&quot;2023-01-01&quot;)
+
+# 計算月K資料
+monthly_df = df.resample(&quot;M&quot;).apply(
+    {&quot;Open&quot;: &quot;first&quot;, &quot;High&quot;: &quot;max&quot;, &quot;Low&quot;: &quot;min&quot;, &quot;Close&quot;: &quot;last&quot;, &quot;Volume&quot;: &quot;sum&quot;}
+)
+
+# 將日期轉換為月初的日期
+monthly_df.index = monthly_df.index.to_period(&quot;M&quot;).to_timestamp(&quot;M&quot;)
+
+# 計算月漲幅
+monthly_df[&quot;Pct_Change&quot;] = monthly_df[&quot;Close&quot;].pct_change() * 100
+
+# 計算成交量12個月移動平均
+monthly_df[&quot;Volume_MA12&quot;] = monthly_df[&quot;Volume&quot;].rolling(window=12).mean()
+
+# 計算是否股價創下過去12個月新高
+monthly_df[&quot;New_High_12M&quot;] = (
+    monthly_df[&quot;High&quot;] == monthly_df[&quot;High&quot;].rolling(window=12).max()
+)
+
+# 判斷當月漲幅、成交量和股價是否都超過過去12個月移動平均和最高價格
+monthly_df[&quot;Pct_Change_12M&quot;] = (
+    monthly_df[&quot;Pct_Change&quot;] &gt; monthly_df[&quot;Pct_Change&quot;].rolling(window=12).mean()
+)
+monthly_df[&quot;Volume_12M&quot;] = monthly_df[&quot;Volume&quot;] &gt; monthly_df[&quot;Volume_MA12&quot;]
+monthly_df[&quot;All_12M&quot;] = (
+    monthly_df[&quot;Pct_Change_12M&quot;] &amp; monthly_df[&quot;Volume_12M&quot;] &amp; monthly_df[&quot;New_High_12M&quot;]
+)
+
+# 找出 Pct_Change_12M、Volume_12M、New_High_12M 和 within_3_months 都為 True 的月份
+entries = monthly_df.loc[monthly_df[&quot;All_12M&quot;]]
+
+
+# 將 index 日期加 3 個月，並命名為 'Next_3_Months'
+entries[&quot;Next_3_Months&quot;] = entries.index + pd.DateOffset(months=3)
+
+# 往下 shift 一列
+entries[&quot;Next_3_Months&quot;] = entries[&quot;Next_3_Months&quot;].shift(1)
+
+entries[&quot;Within_3_Months&quot;] = entries[&quot;Next_3_Months&quot;] &gt;= entries.index
+
+
+print(entries)
+</code></pre>
+<h2 id="永豐期貨選擇權計算周選代號"><a class="header" href="#永豐期貨選擇權計算周選代號">永豐期貨/選擇權計算周選代號</a></h2>
+<pre><code class="language-python">from multiprocessing import Process, Queue
+from shioaji.contracts import Contract
+from shioaji import Exchange
+from time import sleep
+from line_notify import LineNotify
+from datetime import datetime, timedelta
+
+import re
+import redis
+import sys
+import platform
+import signal
+import shioaji as sj
+import os
+import json
+
+
+def get_option_week(api):
+    def get_previous_wednesday():
+        today = datetime.today()
+        wednesday = today - timedelta(days=today.weekday()) + timedelta(days=2)
+        previous_wednesday = wednesday - timedelta(days=7)
+        return previous_wednesday.date()
+
+    def get_this_week_wednesday():
+        today = datetime.today()
+        wednesday = (today + timedelta(days=(2 - today.weekday()))).date()
+        return wednesday
+
+    def get_next_week_wednesday():
+        today = datetime.today()
+        wednesday = (today + timedelta(days=(2 - today.weekday() + 7))).date()
+        return wednesday
+
+    option_symbols = (str(api.Contracts.Options))[1:-1].split(&quot;, &quot;)
+    near_week_option_symbol = [string for string in option_symbols if &quot;TX&quot; in string]
+    print(near_week_option_symbol)
+
+    symbols = sorted([x.symbol for x in api.Contracts.Options.TXO])
+    near_option_symbol_date = symbols[0][3:9]
+
+    for option in api.Contracts.Options:
+        for contract in option:
+            if &quot;TX&quot; in contract.category and near_option_symbol_date in contract.symbol:
+                now = datetime.now()
+                wednesday_time = get_this_week_wednesday()
+                wednesday_time = datetime.combine(
+                    wednesday_time, datetime.min.time()
+                ) + timedelta(hours=15)
+
+                # 根據當前時間判斷是否在星期三 15:00之前。如果在此時間之前，則列印上週三和本週三的日期；否則列印本週三和下週三的日期：
+                if now &lt; wednesday_time:
+                    if datetime.strptime(
+                        contract.update_date, &quot;%Y/%m/%d&quot;
+                    ).date() &gt;= get_previous_wednesday() and contract.delivery_date == get_this_week_wednesday().strftime(
+                        &quot;%Y/%m/%d&quot;
+                    ):
+                        print(
+                            contract.symbol,
+                            contract.name,
+                            contract.update_date,
+                            contract.delivery_date,
+                        )
+                        return contract.symbol
+                else:
+                    if datetime.strptime(
+                        contract.update_date, &quot;%Y/%m/%d&quot;
+                    ).date() &gt;= get_this_week_wednesday() and contract.delivery_date == get_next_week_wednesday().strftime(
+                        &quot;%Y/%m/%d&quot;
+                    ):
+                        print(
+                            contract.symbol,
+                            contract.name,
+                            contract.update_date,
+                            contract.delivery_date,
+                        )
+                        return contract.symbol
+
+
+with open(os.environ[&quot;HOME&quot;] + &quot;/.mybin/shioaji_token.txt&quot;, &quot;r&quot;) as f:
+    api = sj.Shioaji()
+    kw_login = json.loads(f.read())
+    api.login(**kw_login, contracts_timeout=300000)
+
+    print(get_option_week(api))
+
+    S = get_option_week(api)[:3]
+
+    for option in api.Contracts.Options[S]:
+        print(option)
+
+</code></pre>
+<pre><code class="language-python">import datetime
+
+def get_option_week():
+    # 設定選擇權到期時間
+    expiration_time = datetime.time(15, 0, 0)
+
+    # 取得當前日期的年份和月份
+    today = datetime.date.today()
+    year = today.year
+    month = today.month
+
+    # 找到本月的第一個星期三
+    first_wednesday = datetime.date(year, month, 1)
+    while first_wednesday.weekday() != 2:
+        first_wednesday = first_wednesday.replace(day=first_wednesday.day+1)
+
+    # 計算今天是第幾週
+    today_year, today_week, _ = today.isocalendar()
+    first_wednesday_year, first_wednesday_week, _ = first_wednesday.isocalendar()
+    week_num = today_week - first_wednesday_week + 1
+
+    # 判斷是否過了選擇權到期時間
+    if datetime.datetime.now().time() &gt;= expiration_time:
+        week_num += 1
+
+    return week_num
+</code></pre>
+<pre><code class="language-python">import cv2
+import glob
+import os
+
+# 變更到指定尺寸，長寬邊不足者補黑色
+def process_image(img, min_side=608):
+    size = img.shape
+    h, w = size[0], size[1]
+    scale = max(w, h) / float(min_side)
+    new_w, new_h = int(w / scale), int(h / scale)
+    resize_img = cv2.resize(img, (new_w, new_h), cv2.INTER_AREA)  # 變更尺寸
+    if new_w % 2 != 0 and new_h % 2 == 0:
+        top, bottom, left, right = (
+            (min_side - new_h) // 2,
+            (min_side - new_h) // 2,
+            (min_side - new_w) // 2 + 1,
+            (min_side - new_w) // 2,
+        )
+    elif new_h % 2 != 0 and new_w % 2 == 0:
+        top, bottom, left, right = (
+            (min_side - new_h) // 2 + 1,
+            (min_side - new_h) // 2,
+            (min_side - new_w) // 2,
+            (min_side - new_w) // 2,
+        )
+    elif new_h % 2 == 0 and new_w % 2 == 0:
+        top, bottom, left, right = (
+            (min_side - new_h) // 2,
+            (min_side - new_h) // 2,
+            (min_side - new_w) // 2,
+            (min_side - new_w) // 2,
+        )
+    else:
+        top, bottom, left, right = (
+            (min_side - new_h) // 2 + 1,
+            (min_side - new_h) // 2,
+            (min_side - new_w) // 2 + 1,
+            (min_side - new_w) // 2,
+        )
+    pad_img = cv2.copyMakeBorder(
+        resize_img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=[0, 0, 0]
+    )
+    return pad_img
+
+
+# 讀寫目錄
+inputPath = &quot;video&quot;
+outputPath = &quot;images&quot;
+
+files = os.path.join(inputPath, &quot;*.mp4&quot;)
+files_grabbed = []
+files_grabbed.extend(sorted(glob.iglob(files)))
+
+for videoId in range(len(files_grabbed)):
+    print(files_grabbed[videoId])
+    raw = cv2.VideoCapture(files_grabbed[videoId])
+    fIndex = 1
+    fCount = 0
+
+    while 1:
+        # 影片轉圖片
+        ret, frame = raw.read()
+        fCount += 1
+        if ret == True:
+            if (fCount % 5) == 0:
+                img_pad = process_image(frame, min_side=608)
+                cv2.imwrite(
+                    &quot;%s/%02d-frame-608x608-%04d.jpg&quot; % (outputPath, videoId, fIndex),
+                    img_pad,
+                )
+                fIndex += 1
+        else:
+            break
+</code></pre>
+<h2 id="目前主機時區跟-taipei-時區差多少-offset"><a class="header" href="#目前主機時區跟-taipei-時區差多少-offset">目前主機時區跟 Taipei 時區差多少 offset?</a></h2>
+<p>使用 Python 標準庫的 <code>datetime</code> 模組的 <code>now</code> 方法，並使用 <code>pytz</code> 模組的 <code>timezone</code> 方法，得到目前的本地時間，然後再使用 <code>astimezone</code> 方法，轉換為 Taipei 時間，並通過計算得到 offset：</p>
+<pre><code class="language-python">from datetime import datetime
+import pytz
+
+local_time = datetime.now()
+local_time = pytz.timezone('UTC').localize(local_time)
+taipei_time = local_time.astimezone(pytz.timezone('Asia/Taipei'))
+offset = int((taipei_time - local_time).total_seconds() / 3600)
+print(f&quot;Local time is {local_time}. Taipei time is {taipei_time}. Offset is {offset} hours.&quot;)
+</code></pre>
+<h2 id="裝飾器傳遞參數-args-和-kwargs"><a class="header" href="#裝飾器傳遞參數-args-和-kwargs">裝飾器傳遞參數 *args 和 **kwargs</a></h2>
+<pre><code class="language-python">def funA(fn):
+    # 定義一個嵌套函數
+    def say(*args,**kwargs):
+        print(args, kwargs)
+        fn(*args,**kwargs)
+    return say
+@funA
+def funB(arc):
+    print(&quot;C語言中文網：&quot;,arc)
+
+@funA
+def other_funB(name,arc):
+    print(name,arc)
+
+funB(&quot;http://c.biancheng.net&quot;)
+other_funB(&quot;Python教程：&quot;,&quot;http://c.biancheng.net/python&quot;)
+</code></pre>
+<h2 id="python-line_profiler--memory_profiler分析每一行程式碼的耗時及記憶體佔用情況"><a class="header" href="#python-line_profiler--memory_profiler分析每一行程式碼的耗時及記憶體佔用情況">【Python line_profiler &amp; memory_profiler】分析每一行程式碼的耗時及記憶體佔用情況</a></h2>
+<p>https://codeantenna.com/a/XoAFyhqZ2B</p>
+<pre><code class="language-sh">pip install line_profiler
+</code></pre>
+<pre><code class="language-python">from line_profiler import LineProfiler
+
+
+def func_line_time(follow=[]):
+    def decorate(func):
+        @wraps(func)
+        def profiled_func(*args, **kwargs):
+            try:
+                profiler = LineProfiler()
+                profiler.add_function(func)  # 增加每列的行數
+                for f in follow:
+                    profiler.add_function(f)
+                profiler.enable_by_count()  # enable_by_count進行執行以獲取消耗的時間
+                return func(*args, **kwargs)
+            finally:
+                profiler.print_stats()  # 顯示結果
+
+        return profiled_func
+
+    return decorate
+
+
+@func_line_time()
+def process(self, params):
+    import pandas as pd`在這裡插入程式碼片`
+    pass
+</code></pre>
+<ul>
+<li>Hit：程式碼運行次數；</li>
+<li>%Time：程式碼佔了它所在函數的消耗的時間百分比，通常直接看這一列。</li>
+<li>在這裡我們主要觀察%Time 所佔用的百分比，對百分比較高的行數進行最佳化為第一選擇。</li>
+</ul>
+<h2 id="藉助記憶體分析庫-memory_profiler-查看每一行消耗了多少記憶體"><a class="header" href="#藉助記憶體分析庫-memory_profiler-查看每一行消耗了多少記憶體">藉助記憶體分析庫 memory_profiler 查看每一行消耗了多少記憶體？</a></h2>
+<pre><code class="language-sh">pip install memory_profiler
+</code></pre>
+<pre><code class="language-python"># 2. 藉助記憶體分析庫 memory_profiler 查看每一行消耗了多少記憶體？
+from memory_profiler import profile
+
+
+# precision 精確到小數點後幾位
+# stream 此模組分析結果保存到‘memory_profiler.log’ 記錄檔。如果沒有此參數，分析結果會在控制檯輸出
+# @profile(precision=4, stream=open('memory_profiler.log', 'w+'))
+@profile(precision=4)
+def process():
+    print('memory analysis------------')
+    pass
+
+process()
+pri
+</code></pre>
+<p>Mem 是總消耗的記憶體</p>
+<ul>
+<li>Increment 是第幾行程式碼運行完後增加的記憶體</li>
+<li>通過memory_profiler 我們可以分析到每一行運行完後佔用的記憶體。這部分記憶體在處理程序沒結束的時候是不好被回收掉的，因此在這裡如果有哪一行邏輯運行一直在增加記憶體消耗，則這行可能是罪魁禍首。</li>
+</ul>
+<hr />
+<h2 id="simple--memory_profiler--example"><a class="header" href="#simple--memory_profiler--example">simple  memory_profiler  example</a></h2>
+<pre><code class="language-python">from memory_profiler import profile
+
+@profile
+def my_func():
+    a = [1] * (10 ** 6)
+    b = [2] * (2 * 10 ** 7)
+    del b
+    return a
+
+if __name__ == '__main__':
+    my_func()
+
+</code></pre>
+<h2 id="python-引用放掉記憶體"><a class="header" href="#python-引用放掉記憶體">python 引用放掉記憶體</a></h2>
+<pre><code class="language-python">from memory_profiler import profile
+import time
+import gc
+
+'''
+在上面的程式碼中，我們創建了兩個類 A 和 B，並使用這些類創建了一個實例。由於類 B 引用了類 A 的實例，因此類 A 的實例將不能被內存管理器自動回收。因此，這將導致無法釋放內存的情況。
+'''
+# Example of un-collectable memory in Python
+class A:
+    def __init__(self, data):
+        self.data = data
+        self.b = B(self)
+
+class B:
+    def __init__(self, a):
+        self.large_memory = bytearray(1024 * 1024)
+        self.a = a
+
+ 
+@profile
+def call():
+    a = A(10)
+    del a
+ 
+def main():
+    while True:
+        time.sleep(1)
+        call()
+ 
+if __name__ == &quot;__main__&quot;:
+    main()
+
+</code></pre>
+<h2 id="test-memory-leak"><a class="header" href="#test-memory-leak">Test memory leak</a></h2>
+<pre><code class="language-python">from memory_profiler import profile
+import datetime as dt
+import requests
+import time
+import httpx
+import gc
+ 
+@profile
+def call():
+    url = &quot;https://api.bitopro.com/v3/provisioning/trading-pairs&quot;
+    response = httpx.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        print(response.status_code, dt.datetime.now())
+        response.close()
+        gc.collect()
+    else:
+        print(&quot;Request failed with status code:&quot;, response.status_code)
+    
+ 
+def main():
+    while True:
+        time.sleep(1)
+        call()
+ 
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<h2 id="每5秒委託成交統計"><a class="header" href="#每5秒委託成交統計"><a href="https://www.twse.com.tw/zh/page/trading/exchange/MI_5MINS.html">每5秒委託成交統計</a></a></h2>
+<pre><code class="language-python">from datetime import timedelta
+import time
+import polars as pl
+import datetime as dt 
+import requests
+import json
+
+
+def get_webmsg(year, month, day):
+    print(year, month, day)
+    date = str(year) + &quot;{0:0=2d}&quot;.format(month) + &quot;{0:0=2d}&quot;.format(day)
+    url_twse = (
+        &quot;http://www.twse.com.tw/exchangeReport/MI_5MINS?response=json&amp;date=&quot; + date
+    )
+    print(url_twse)
+    res = requests.post(url_twse)
+    data_json = json.loads(res.text)
+    if data_json != {'stat': '很抱歉，沒有符合條件的資料!'}:
+        df = pl.DataFrame(
+            data_json[&quot;data&quot;],
+            schema=[
+                &quot;時間&quot;,
+                &quot;累積委託買進筆數&quot;,
+                &quot;累積委託買進數量&quot;,
+                &quot;累積委託賣出筆數&quot;,
+                &quot;累積委託賣出數量&quot;,
+                &quot;累積成交筆數&quot;,
+                &quot;累積成交數量&quot;,
+                &quot;累積成交金額&quot;,
+            ],
+        )
+        return df
+    return pl.DataFrame()
+
+
+if __name__ == '__main__':
+    start_date = dt.datetime(2019, 1, 1) #.strftime(&quot;%Y-%m-%d&quot;)
+    end_date = dt.datetime(2023, 1, 20) #.strftime(&quot;%Y-%m-%d&quot;)
+
+    while start_date &lt; end_date:
+        time.sleep(1)
+        print(get_webmsg(start_date.year, start_date.month, start_date.day))
+        start_date = start_date + timedelta(days=1)
+</code></pre>
+<h2 id="polars"><a class="header" href="#polars">polars</a></h2>
+<p>https://github.com/pola-rs/polars</p>
+<pre><code class="language-sh">pip install polars
+</code></pre>
+<pre><code class="language-python">import polars as pl
+
+df = pl.DataFrame(
+    {
+        &quot;A&quot;: [1, 2, 3, 4, 5],
+        &quot;fruits&quot;: [&quot;banana&quot;, &quot;banana&quot;, &quot;apple&quot;, &quot;apple&quot;, &quot;banana&quot;],
+        &quot;B&quot;: [5, 4, 3, 2, 1],
+        &quot;cars&quot;: [&quot;beetle&quot;, &quot;audi&quot;, &quot;beetle&quot;, &quot;beetle&quot;, &quot;beetle&quot;],
+    }
+)
+
+print(df)
+df = df.sort(&quot;fruits&quot;).select(
+    [
+        &quot;fruits&quot;,
+        &quot;cars&quot;,
+        pl.lit(&quot;fruits&quot;).alias(&quot;literal_string_fruits&quot;),
+        pl.col(&quot;B&quot;).filter(pl.col(&quot;cars&quot;) == &quot;beetle&quot;).sum(),
+        pl.col(&quot;A&quot;).filter(pl.col(&quot;B&quot;) &gt; 2).sum().over(&quot;cars&quot;).alias(&quot;sum_A_by_cars&quot;),
+        pl.col(&quot;A&quot;).sum().over(&quot;fruits&quot;).alias(&quot;sum_A_by_fruits&quot;),
+        pl.col(&quot;A&quot;).reverse().over(&quot;fruits&quot;).alias(&quot;rev_A_by_fruits&quot;),
+        pl.col(&quot;A&quot;).sort_by(&quot;B&quot;).over(&quot;fruits&quot;).alias(&quot;sort_A_by_B_by_fruits&quot;),
+    ]
+)
+print(df)
+</code></pre>
+<h2 id="multiprocessing-queue-with-non-blocking"><a class="header" href="#multiprocessing-queue-with-non-blocking">multiprocessing queue with non blocking</a></h2>
+<pre><code class="language-python">from loguru import logger
+import multiprocessing
+import time
+
+
+def processFun(conn):
+    while True:
+        try:
+            print(conn.get(timeout=5)) # 等5秒沒數據就丟異常
+        except Exception as e:
+            logger.exception(e)
+        print(&quot;接收到數據了&quot;, conn.qsize())
+
+
+if __name__ == &quot;__main__&quot;:
+    # 創建管道
+    conn = multiprocessing.Queue(10)
+    # 創建子進程
+    process = multiprocessing.Process(target=processFun, args=(conn,))
+    # 啟動子進程
+    process.start()
+    i = 0
+    while True:
+        time.sleep(6)
+        print(i)
+        conn.put(i)
+        i += 1
+</code></pre>
+<h2 id="dispatching-multiple-websocketapps---long-lived-connection"><a class="header" href="#dispatching-multiple-websocketapps---long-lived-connection">Dispatching Multiple WebSocketApps - Long-lived Connection</a></h2>
+<pre><code class="language-python"># import websocket, rel
+#
+# addr = &quot;wss://api.gemini.com/v1/marketdata/%s&quot;
+# for symbol in [&quot;BTCUSD&quot;, &quot;ETHUSD&quot;, &quot;ETHBTC&quot;]:
+#    ws = websocket.WebSocketApp(addr % (symbol,), on_message=lambda w, m : print(m))
+#    ws.run_forever(dispatcher=rel, reconnect=3)
+#
+#
+# rel.signal(2, rel.abort) # Keyboard Interrupt
+# rel.dispatch()
+
+from multiprocessing import Process
+import time
+import websocket
+import rel
+import signal
+import os
+
+
+def on_message(ws, message):
+    print(message)
+
+
+def on_error(ws, error):
+    print(error)
+
+
+def on_close(ws, close_status_code, close_msg):
+    print(&quot;### closed ###&quot;)
+
+
+def on_open(ws):
+    print(&quot;Opened connection&quot;)
+
+
+def receive_signal(signum, stack):
+    print(&quot;Received:&quot;, signum, os.getpid())
+    ws.close()
+    rel.abort()
+    ws.run_forever(dispatcher=rel, reconnect=5)  # Set dispatcher to automatic␣
+    rel.signal(2, rel.abort)  # Keyboard Interrupt
+    rel.dispatch()
+
+
+def monitor(pid, ws):
+    print(&quot;Waiting ...&quot;)
+    time.sleep(3)
+    os.kill(pid, signal.SIGUSR1)
+
+
+if __name__ == &quot;__main__&quot;:
+    print(os.getpid())
+    # websocket.enableTrace(True)
+    ws = websocket.WebSocketApp(
+        &quot;wss://api.gemini.com/v1/marketdata/BTCUSD&quot;,
+        on_open=on_open,
+        on_message=on_message,
+        on_error=on_error,
+        on_close=on_close,
+    )
+    signal.signal(signal.SIGUSR1, receive_signal)
+    monitor_task = Process(target=monitor, args=(os.getpid(), ws),)
+
+    monitor_task.start()
+    ws.run_forever(dispatcher=rel, reconnect=5)  # Set dispatcher to automatic␣
+    rel.signal(2, rel.abort)  # Keyboard Interrupt
+    rel.dispatch()
+    monitor_task.join()
+</code></pre>
+<h2 id="how-can-i-send-a-signal-from-a-python-program"><a class="header" href="#how-can-i-send-a-signal-from-a-python-program">How can I send a signal from a python program?</a></h2>
+<pre><code class="language-python">import signal
+import os
+import time
+
+def receive_signal(signum, stack):
+    print('Received:', signum)
+
+signal.signal(signal.SIGUSR1, receive_signal)
+signal.signal(signal.SIGUSR2, receive_signal)
+
+print('My PID is:', os.getpid())
+
+while True:
+    print('Waiting...')
+    time.sleep(3)
+    os.kill(os.getpid(), signal.SIGUSR1) 
+</code></pre>
+<h2 id="記憶體監控"><a class="header" href="#記憶體監控">記憶體監控</a></h2>
+<pre><code class="language-python">from loguru import logger
+import os
+import time
+import platform
+import psutil
+import signal
+import sys
+
+
+class Watcher:
+    def __init__(self):
+        self.child = os.fork()
+        if self.child == 0:
+            return
+        else:
+            self.watch()
+
+    def watch(self):
+        try:
+            os.wait()
+        except KeyboardInterrupt:
+            self.kill()
+        sys.exit()
+
+    def kill(self):
+        try:
+            print(&quot;kill&quot;)
+            os.kill(self.child, signal.SIGKILL)
+        except OSError:
+            pass
+
+
+logger.add(
+    f&quot;{__file__}.log&quot;,
+    encoding=&quot;utf-8&quot;,
+    enqueue=True,
+    retention=&quot;10 days&quot;,
+    # filter=error_only,
+)
+
+
+def getListOfProcessSortedByMemory():
+    &quot;&quot;&quot;
+    Get list of running process sorted by Memory Usage
+    &quot;&quot;&quot;
+    listOfProcObjects = []
+    # Iterate over the list
+    for proc in psutil.process_iter():
+        try:
+            # Fetch process details as dict
+            pinfo = proc.as_dict(attrs=[&quot;pid&quot;, &quot;name&quot;, &quot;username&quot;])
+            pinfo[&quot;vms&quot;] = proc.memory_info().vms / (1024 * 1024)
+            # Append dict to list
+            listOfProcObjects.append(pinfo)
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    # Sort list of dict by key vms i.e. memory usage
+    listOfProcObjects = sorted(
+        listOfProcObjects, key=lambda procObj: procObj[&quot;vms&quot;], reverse=True
+    )
+    return listOfProcObjects
+
+
+def get_all_memory_usage():
+    # Getting all memory using os.popen()
+    total_memory, used_memory, free_memory = map(
+        int, os.popen(&quot;free -t -m&quot;).readlines()[-1].split()[1:]
+    )
+
+    # Memory usage
+    logger.info(f&quot;RAM memory % used: {round((used_memory / total_memory) * 100, 2)}&quot;)
+    return round((used_memory / total_memory) * 100, 2)
+
+
+if __name__ == &quot;__main__&quot;:
+    if platform.system().lower() == &quot;linux&quot;:
+        Watcher()
+
+    while True:
+        time.sleep(10)
+        listOfRunningProcess = getListOfProcessSortedByMemory()
+        if get_all_memory_usage() &gt; 50:
+            for elem in listOfRunningProcess[:20]:
+                # print(elem)
+                logger.info(elem)
+</code></pre>
+<pre><code class="language-python">import datetime as dt
+from datetime import timedelta
+
+print(dt.datetime(year=2022, month=12, day=2, hour=18, minute=0, second=0, microsecond=0) - timedelta(hours=8))
+</code></pre>
+<h2 id="視化神器highcharts"><a class="header" href="#視化神器highcharts">視化神器Highcharts</a></h2>
+<pre><code class="language-python">from highcharts import Highchart
+import datetime
+from IPython.display import HTML, display
+import yfinance as yf
+import os
+
+# 取得股價歷史資料(含臺股\美股\加密貨幣)
+
+symbol = &quot;2330.TW&quot;  # 臺股上市:TW 臺股上櫃:TWO
+start = &quot;2018-01-01&quot;  # 起始時間
+end = &quot;2022-12-31&quot;  # 結束時間
+
+ohlcv = yf.Ticker(symbol).history(&quot;max&quot;).loc[start:end]
+
+
+# 客製化調整參數
+color = &quot;#4285f4&quot;  # 線的顏色 (red/green/blue/purple)
+linewidth = 2  # 線的粗細
+title = symbol  # 標題名稱
+width = 800  # 圖的寬度
+height = 500  # 圖的高度
+
+# 繪圖設定
+H = Highchart(width=width, height=height)
+
+x = ohlcv.index
+y = round(ohlcv.Close, 2)
+
+data = [[index, s] for index, s in zip(x, y)]
+H.add_data_set(data, &quot;line&quot;, &quot;data&quot;, color=color)
+
+H.set_options(&quot;xAxis&quot;, {&quot;type&quot;: &quot;datetime&quot;})
+H.set_options(&quot;title&quot;, {&quot;text&quot;: title, &quot;style&quot;: {&quot;color&quot;: &quot;black&quot;}})  # 設定title
+H.set_options(
+    &quot;plotOptions&quot;, {&quot;line&quot;: {&quot;lineWidth&quot;: linewidth, &quot;dataLabels&quot;: {&quot;enabled&quot;: False}}}
+)  # 設定線的粗度
+H.set_options(&quot;tooltip&quot;, {&quot;shared&quot;: True, &quot;crosshairs&quot;: True})  # 設定為可互動式
+
+# 顯示圖表
+H.save_file(&quot;chart&quot;)
+display(HTML(&quot;chart.html&quot;))
+os.remove(&quot;chart.html&quot;)
+</code></pre>
+<h2 id="test-redis"><a class="header" href="#test-redis">Test Redis</a></h2>
+<pre><code class="language-python">import redis
+
+botID = 101
+r = redis.StrictRedis(host=&quot;localhost&quot;, port=6379, db=2)
+
+r.hset(
+    f&quot;BOT_INFO:{botID}&quot;, mapping={&quot;grid_step&quot;: &quot;50&quot;},
+)
+
+fee = 0.1
+r.hset(
+    f&quot;BOT_INFO:{botID}&quot;, mapping={&quot;spotman_grid_fee&quot;: str(fee)},
+)
+
+print(r.exists(&quot;BOT_INFO:28&quot;))
+if not r.hexists(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;) or (
+    r.hexists(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;)
+    and float(r.hget(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;)) == 0.0
+):
+    spotman_grid_fee = 0.0
+else:
+    spotman_grid_fee = fee
+
+print(spotman_grid_fee)
+
+# r.set(&quot;foo&quot;, &quot;bar&quot;)
+## print(r.get('foo'))
+#
+# botID = 28
+# r.hset(
+#    f&quot;BOT_INFO:{botID}&quot;, mapping={&quot;spotman_grid_fee&quot;: 0},
+# )
+#
+# spotman_grid_fee = float(r.hget(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;))yy
+# print(spotman_grid_fee == 0.0)
+#
+# print(r.hexists(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;))
+# print(r.hget(f&quot;BOT_INFO:{botID}&quot;, &quot;grid_step&quot;))
+
+
+# if r.hexists(
+#    f&quot;BOT_INFO:{botID}&quot;, &quot;bot_id&quot;
+# ):
+
+# botID = 6804
+# r = redis.StrictRedis(
+#    host=&quot;staging-redis-trading.ruv0v5.ng.0001.apne1.cache.amazonaws.com&quot;,
+#    port=6379,
+#    db=1,
+# )
+# print(r.hget(f&quot;BOT_INFO:{botID}&quot;, &quot;grid_step&quot;))
+# print(not r.hexists(f&quot;BOT_INFO:{botID}&quot;, &quot;spotman_grid_fee&quot;))
+</code></pre>
+<h2 id="python爬蟲教學有效利用python網頁爬蟲爬取免費的proxy-ip清單"><a class="header" href="#python爬蟲教學有效利用python網頁爬蟲爬取免費的proxy-ip清單">[Python爬蟲教學]有效利用Python網頁爬蟲爬取免費的Proxy IP清單</a></h2>
+<pre><code class="language-python">import requests
+import re
+
+
+def get_proxy():
+    # https://www.learncodewithmike.com/2021/10/python-scrape-free-proxy-ip.html?m=1
+    response = requests.get(&quot;https://www.sslproxies.org/&quot;)
+    proxy_ips = re.findall(&quot;\d+\.\d+\.\d+\.\d+:\d+&quot;, response.text)  # 「\d+」代表數字一個位數以上
+    valid_ips = []
+
+    for ip in proxy_ips:
+        try:
+            result = requests.get(
+                &quot;https://ip.seeip.org/jsonip?&quot;,
+                proxies={&quot;http&quot;: ip, &quot;https&quot;: ip},
+                timeout=5,
+            )
+            print(result.json())
+            valid_ips.append(ip)
+        except:
+            print(f&quot;{ip} invalid&quot;)
+
+    with open(&quot;proxy_list.txt&quot;, &quot;w&quot;) as file:
+        for ip in valid_ips:
+            file.write(ip + &quot;\n&quot;)
+        file.close()
+
+
+if __name__ == &quot;__main__&quot;:
+    # get_proxy()
+    proxy_dict = {}
+    with open(&quot;./proxy_list.txt&quot;) as f:
+        proxy_list = f.read().splitlines()
+        # print(proxy_list, type(proxy_list))
+    &quot;&quot;&quot;代理IP地址（高匿）&quot;&quot;&quot;
+    #proxys = {
+    #    &quot;http&quot;: &quot;http://118.27.113.167:8080&quot;,
+    #    &quot;https&quot;: &quot;https://118.27.113.167:8080&quot;,
+    #}
+    &quot;&quot;&quot;head 資訊&quot;&quot;&quot;
+    head = {
+        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36&quot;,
+        &quot;Connection&quot;: &quot;keep-alive&quot;,
+    }
+    &quot;&quot;&quot;http://icanhazip.com會返回當前的IP地址&quot;&quot;&quot;
+    for proxy in proxy_list:
+        proxy_dict[&quot;http&quot;] = &quot;http://&quot; + proxy
+        proxy_dict[&quot;https&quot;] = &quot;https://&quot; + proxy
+        try:
+            p = requests.get(&quot;http://icanhazip.com&quot;, headers=head, proxies=proxy_dict, timeout=5)
+            print(p.text)
+        except Exception as e:
+            print(e)
+            continue
+</code></pre>
+<h2 id="同學你的多線程可別再亂-join-了"><a class="header" href="#同學你的多線程可別再亂-join-了">同學,你的多線程可別再亂 join 了!</a></h2>
+<p>如果你在網上搜索「Python 多線程」，那麼你會看到很多文章裡面用到了一個關鍵詞，叫做.join()。但是很多人的代碼裡面都在亂用 join()，例如：</p>
+<pre><code class="language-python">import time
+import threading
+
+def sleep_5_seconds():
+    time.sleep(5)
+    print('睡眠5秒結束')
+
+def sleep_3_seconds():
+    time.sleep(3)
+    print('睡眠3秒結束')
+
+
+
+def sleep_8_seconds():
+    time.sleep(8)
+    print('睡眠8秒結束')
+
+
+thread_1 = threading.Thread(target=sleep_8_seconds)
+thread_2 = threading.Thread(target=sleep_5_seconds)
+thread_3 = threading.Thread(target=sleep_5_seconds)
+thread_1.start()
+thread_2.start()
+thread_3.start()
+thread_1.join()
+thread_2.join()
+thread_3.join()
+
+
+</code></pre>
+<p>運行效果如下圖所示：</p>
+<p>更有甚者，這樣寫代碼：</p>
+<p>thread_1.start()
+thread_1.join()
+thread_2.start()
+thread_2.join()
+thread_3.start()
+thread_3.join()</p>
+<p>運行效果如下圖所示：</p>
+<p>發現三個線程是串行執行的，要運行一共8+5+3=16秒才能結束，於是得出結論——Python 由於有 GIL 鎖的原因，所以多線程是一個線程運行完才運行另一個線程。</p>
+<p>抱有這種想法的人，是根本不知道.join()有什麼用，就在跟著別人亂用，以為只要使用多線程，那麼每個線程都必須要 join。</p>
+<p>實際上，根本不是這樣的，你只需要 join運行時間最長的那個線程就可以了：</p>
+<p>你會發現這樣的運行效果，跟每個線程 join 一次是完全一樣的。</p>
+<p>要理解這個問題，我們需要知道，join 有什麼作用。</p>
+<p>當我們沒有 join 的時候，我們會發現子線程似乎也能正常運行，如下圖所示：</p>
+<p>三個子線程啟動以後，主線程會繼續運行後面的代碼。</p>
+<p>那 join 到底有什麼用呢？join 會卡住主線程，並讓當前已經 start 的子線程繼續運行，直到調用.join的這個線程運行完畢。</p>
+<p>所以，如果代碼寫為：</p>
+<p>thread_1.start()
+thread_1.join()
+thread_2.start()
+thread_2.join()
+thread_3.start()
+thread_3.join()</p>
+<p>當代碼運行到thread_1.join()時，主線程就卡住了，後面的thread_2.start()根本沒有執行。此時當前只有 thread_1執行過.start()方法，所以此時只有 thread_1再運行。這個線程需要執行8秒鐘。等8秒過後，thread_1結束，於是主線程才會運行到thread_2.start()，第二個線程才會開始運行。所以這個例子裡面，三個線程串行運行，完全是寫代碼的人有問題，而不是什麼 GIL 鎖的問題。</p>
+<p>而當我們把代碼寫為：</p>
+<p>thread_1.start()
+thread_2.start()
+thread_3.start()
+thread_1.join()
+thread_2.join()
+thread_3.join()</p>
+<p>當代碼執行到thread_1.join()時，當前三個子線程均已經執行過.start()方法了，所以此時主線程雖然卡住了，但是三個子線程會繼續運行。其中線程3先結束，然後線程2結束。此時線程1還剩3秒鐘，所以此時thread_1.join()依然是卡住的狀態，直到線程1結束，thread_1.join()解除阻塞，代碼運行到thread_2.join()中，但由於thread_2早就結束了，所以這行代碼一閃而過，不會卡住。同理，thread_3.join()也是一閃而過。所以整個過程中，thread_2.join()和thread_3.join()根本沒有起到任何作用。直接就結束了。</p>
+<p>所以，你只需要 join 時間最長的這個線程就可以了。時間短的線程沒有 join 的必要。根本不需要把這麼多個 join 堆在一起。</p>
+<p>為什麼會有 join 這個功能呢？我們設想這樣一個場景。你的爬蟲使用10個線程爬取100個 URL，主線程需要等到所有URL 都已經爬取完成以後，再來分析數據。此時就可以通過 join 先把主線程卡住，等到10個子線程全部運行結束了，再用主線程進行後面的操作。</p>
+<p>那麼可能有人會問，如果我不知道哪個線程先運行完，那個線程後運行完怎麼辦？這個時候是不是就要每個線程都執行 join 操作了呢？</p>
+<p>確實，這種情況下，每個線程使用 join是合理的：</p>
+<pre><code class="language-python">thread_list = []
+for _ in range(10):
+    thread = threading.Thread(target=xxx, args=(xxx, xxx)) 換行thread.start()
+    thread_list.append(thread)
+
+for thread in thread_list:
+    thread.join()
+</code></pre>
+<h2 id="監控指定process狀態"><a class="header" href="#監控指定process狀態">監控指定Process狀態</a></h2>
+<pre><code class="language-py">import threading, logging, time
+import multiprocessing
+import psutil
+
+
+class Producer(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+        self.stop_event = threading.Event()
+
+    def stop(self):
+        self.stop_event.set()
+
+    def run(self):
+        while not self.stop_event.is_set():
+            # print(&quot;Producer is working...&quot;)
+            time.sleep(1)
+
+
+class Consumer(multiprocessing.Process):
+    def __init__(self):
+        multiprocessing.Process.__init__(self)
+        self.stop_event = multiprocessing.Event()
+
+    def stop(self):
+        self.stop_event.set()
+
+    def run(self):
+        while not self.stop_event.is_set():
+            print(&quot;Consumer is working...&quot;)
+            time.sleep(10)
+            try:
+                a = 1 / 0
+            except Exception as ex:
+                print(ex)
+                continue
+
+
+class Monitor(multiprocessing.Process):
+    def __init__(self, target_pid):
+        multiprocessing.Process.__init__(self)
+        self.stop_event = multiprocessing.Event()
+        self.target_pid = target_pid
+
+    def stop(self):
+        self.stop_event.set()
+
+    def run(self):
+        while not self.stop_event.is_set():
+            p = psutil.Process(self.target_pid)
+            print(&quot;Monitor is working...&quot;, self.target_pid, p.status)
+            time.sleep(1)
+
+
+def main():
+    tasks = [Producer(), Consumer()]
+
+    for t in tasks:
+        t.start()
+
+    print(tasks[1].pid)
+    t = Monitor(tasks[1].pid)
+    t.start()
+    time.sleep(3600)
+
+    for task in tasks:
+        task.stop()
+
+    for task in tasks:
+        task.join()
+
+
+if __name__ == &quot;__main__&quot;:
+    logging.basicConfig(
+        format=&quot;%(asctime)s.%(msecs)s:%(name)s:%(thread)d:%(levelname)s:%(process)d:%(message)s&quot;,
+        level=logging.INFO,
+    )
+    main()
+</code></pre>
+<h2 id="檔案拆成15g-一個資料夾"><a class="header" href="#檔案拆成15g-一個資料夾">檔案拆成1.5G 一個資料夾</a></h2>
+<pre><code class="language-py">#!/bin/env python3
+
+from pathlib import Path
+import os
+import shutil
+
+number = 0
+current_size = 0
+pattern = &quot;new-folder-%03d&quot;
+
+new_directory = pattern % number
+Path(pattern % number).mkdir(parents=True, exist_ok=True)
+
+# 預設抓 /path/picture/* 該目錄內檔案，若是要包含子目錄，請使用像是 rglob('*.jpg') 替代
+for item in Path(&quot;Camera&quot;).rglob(&quot;*&quot;):
+    current_size += item.stat().st_size
+    if current_size &gt;= 1024 * 1024 * 1500:
+        number += 1
+        current_size = 0
+        new_directory = pattern % number
+        Path(new_directory).mkdir(parents=True, exist_ok=True)
+    shutil.move(
+        os.path.join(item.parent, item.name), os.path.join(new_directory, item.name)
+    )
+</code></pre>
+<h2 id="刪除指定日期之前的row"><a class="header" href="#刪除指定日期之前的row">刪除指定日期之前的Row</a></h2>
+<pre><code class="language-python">import pandas as pd
+
+csiti = 23454
+units = list(range(0, 400))
+begin_date = '2019-10-16'
+
+df = pd.DataFrame({'csiti':csiti, 
+                   'units':units,
+                   'forecast_date':pd.date_range(begin_date, periods=len(units), freq='1S')})
+
+
+df.set_index(&quot;forecast_date&quot;, inplace=True)
+
+
+df.index = pd.to_datetime(df.index)
+print(df)
+
+res = df[~(df.index &lt; '2019-10-16 00:06')]
+print(id(res))
+# print(res, type(res.index.tolist()[-1]))
+
+
+# Insert row to dataframe
+res.loc[res.index.tolist()[-1]] = [12345, 362]
+print(res)
+print(id(res))
+
+# Check if a date index exist in Pandas dataframe
+print(pd.to_datetime('2019-10-16 00:06') not in df.index)
+print(pd.to_datetime('2019-10-16 00:07') not in df.index)
+</code></pre>
+<h2 id="yfinance"><a class="header" href="#yfinance">yfinance</a></h2>
+<pre><code class="language-py">import yfinance as yf
+
+dji_data = yf.download(tickers = &quot;^DJI&quot;, interval = &quot;1d&quot;, period = &quot;10d&quot;)
+dji_data['Rets'] = round(dji_data['Close'].pct_change() * 100, 2)
+print(dji_data)
+
+sox_data = yf.download(tickers=&quot;^SOX&quot;, interval = &quot;1d&quot;, period=&quot;10d&quot;)
+sox_data['Rets'] = round(sox_data['Close'].pct_change() * 100, 2)
+print(sox_data)
+
+ixic_data = yf.download(tickers=&quot;^IXIC&quot;, interval = &quot;1d&quot;, period=&quot;10d&quot;)
+ixic_data['Rets'] = round(ixic_data['Close'].pct_change() * 100, 2)
+print(ixic_data)
+</code></pre>
+<h2 id="plotly--畫k-bars"><a class="header" href="#plotly--畫k-bars">plotly  畫K bars</a></h2>
+<pre><code class="language-python"># Raw Package
+import numpy as np
+import pandas as pd
+from pandas_datareader import data as pdr
+
+# Market Data 
+import yfinance as yf
+
+#Graphing/Visualization
+import datetime as dt 
+import plotly.graph_objs as go 
+
+# Override Yahoo Finance 
+yf.pdr_override()
+
+# Create input field for our desired stock 
+stock=input(&quot;Enter a stock ticker symbol: &quot;)
+
+# Retrieve stock data frame (df) from yfinance API at an interval of 1m 
+df = yf.download(tickers=stock,period='1d',interval='1m')
+
+print(df)
+
+# Declare plotly figure (go)
+fig=go.Figure()
+
+fig.add_trace(go.Candlestick(x=df.index,
+                open=df['Open'],
+                high=df['High'],
+                low=df['Low'],
+                close=df['Close'], name = 'market data'))
+
+fig.update_layout(
+    title= str(stock)+' Live Share Price:',
+    yaxis_title='Stock Price (USD per Shares)')               
+
+fig.update_xaxes(
+    rangeslider_visible=True,
+    rangeselector=dict(
+        buttons=list([
+            dict(count=15, label=&quot;15m&quot;, step=&quot;minute&quot;, stepmode=&quot;backward&quot;),
+            dict(count=45, label=&quot;45m&quot;, step=&quot;minute&quot;, stepmode=&quot;backward&quot;),
+            dict(count=1, label=&quot;HTD&quot;, step=&quot;hour&quot;, stepmode=&quot;todate&quot;),
+            dict(count=3, label=&quot;3h&quot;, step=&quot;hour&quot;, stepmode=&quot;backward&quot;),
+            dict(step=&quot;all&quot;)
+        ])
+    )
+)
+
+fig.show()
+</code></pre>
+<pre><code class="language-python">import asyncio
+import aiohttp
+import multiprocessing
+import threading
+
+
+async def get_thread_id():
+    return (multiprocessing.current_process().pid, threading.get_ident())
+
+
+def get_exchange_rate(url, exchange_name, conn):
+    if exchange_name == &quot;RYBIT&quot;:
+        asyncio.run(handle_rybit_exchange(url, conn))
+    elif exchange_name == &quot;ACE&quot;:
+        asyncio.run(handle_ace_exchange(url, conn))
+    elif exchange_name == &quot;MAX&quot;:
+        asyncio.run(handle_max_exchange(url, conn))
+    elif exchange_name == &quot;BITOPRO&quot;:
+        asyncio.run(handle_bitopro_exchange(url, conn))
+    else:
+        print(f&quot;Unknown exchange: {exchange_name}&quot;)
+
+
+async def handle_rybit_exchange(url, conn):
+    while True:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    buy_rate = data.get(&quot;data&quot;).get(&quot;buy_rate&quot;)
+                    sell_rate = data.get(&quot;data&quot;).get(&quot;sell_rate&quot;)
+                    process_id, thread_id = await get_thread_id()
+                    print(f&quot;RYBIT Process ID:{process_id}, Thread ID:{thread_id}&quot;)
+                    print(&quot;RYBIT 買入匯率:&quot;, buy_rate)
+                    print(&quot;RYBIT 賣出匯率:&quot;, sell_rate)
+                    conn.send((&quot;RYBIT&quot;, buy_rate, sell_rate))
+                else:
+                    print(&quot;RYBIT 發生錯誤，HTTP 狀態碼為:&quot;, response.status)
+        await asyncio.sleep(1)
+
+
+async def handle_ace_exchange(url, conn):
+    while True:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    process_id, thread_id = await get_thread_id()
+                    print(f&quot;ACE Process ID:{process_id}, Thread ID:{thread_id}&quot;)
+                    print(f&quot;ACE USDT/TWD 買入委託價格: {data['orderbook']['bids'][0][1]}&quot;)
+                    print(f&quot;ACE USDT/TWD 賣出委託價格: {data['orderbook']['asks'][0][1]}&quot;)
+                    conn.send((&quot;ACE&quot;, data[&quot;orderbook&quot;][&quot;bids&quot;][0][1], data[&quot;orderbook&quot;][&quot;asks&quot;][0][1]))
+                else:
+                    print(&quot;ACE 發生錯誤，HTTP 狀態碼為:&quot;, response.status)
+        await asyncio.sleep(1)
+
+
+async def handle_max_exchange(url, conn):
+    while True:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    usdt_twd = data.get(&quot;usdttwd&quot;)
+                    buy_price = usdt_twd.get(&quot;buy&quot;)
+                    sell_price = usdt_twd.get(&quot;sell&quot;)
+                    process_id, thread_id = await get_thread_id()
+                    print(f&quot;MAX Process ID:{process_id}, Thread ID:{thread_id}&quot;)
+                    print(f&quot;MAX USDT/TWD buy: {buy_price}&quot;)
+                    print(f&quot;MAX USDT/TWD sell: {sell_price}&quot;)
+                    conn.send((&quot;MAX&quot;, buy_price, sell_price))
+                else:
+                    print(&quot;MAX 發生錯誤，HTTP 狀態碼為:&quot;, response.status)
+        await asyncio.sleep(1)
+
+
+async def handle_bitopro_exchange(url, conn):
+    while True:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    bid_price = data[&quot;bids&quot;][0][&quot;price&quot;]
+                    ask_price = data[&quot;asks&quot;][0][&quot;price&quot;]
+                    process_id, thread_id = await get_thread_id()
+                    print(f&quot;BITOPRO Process ID:{process_id}, Thread ID:{thread_id}&quot;)
+                    print(f&quot;BITOPRO 買入委託價格：{bid_price}&quot;)
+                    print(f&quot;BITOPRO 賣出委託價格：{ask_price}&quot;)
+                    conn.send((&quot;BITOPRO&quot;, bid_price, ask_price))
+                else:
+                    print(&quot;BITOPRO 發生錯誤，HTTP 狀態碼為:&quot;, response.status)
+        await asyncio.sleep(1)
+
+
+def collect_exchange_rates(conn):
+    exchange_rates = {}
+    while True:
+        exchange_name, buy_rate, sell_rate = conn.recv()
+        exchange_rates[exchange_name] = {&quot;buy&quot;: buy_rate, &quot;sell&quot;: sell_rate}
+        print(f&quot;Exchange rates: {exchange_rates}&quot;)
+
+async def main():
+    exchanges = [
+        {
+            &quot;name&quot;: &quot;RYBIT&quot;,
+            &quot;url&quot;: &quot;https://www.rybit.com/wallet-api/v1/kgi/exchange-rates/?symbol=USDT_TWD&quot;,
+        },
+        {
+            &quot;name&quot;: &quot;ACE&quot;,
+            &quot;url&quot;: &quot;https://ace.io/polarisex/oapi/list/orderBooks/USDT/TWD&quot;,
+        },
+        {&quot;name&quot;: &quot;MAX&quot;, &quot;url&quot;: &quot;https://max-api.maicoin.com/api/v2/tickers&quot;},
+        {&quot;name&quot;: &quot;BITOPRO&quot;, &quot;url&quot;: &quot;https://api.bitopro.com/v3/order-book/usdt_twd&quot;},
+    ]
+    parent_conn, child_conn = multiprocessing.Pipe()
+    processes = []
+    for exchange in exchanges:
+        p = multiprocessing.Process(
+            target=get_exchange_rate, args=(exchange[&quot;url&quot;], exchange[&quot;name&quot;], child_conn)
+        )
+        processes.append(p)
+        p.start()
+
+    collector = multiprocessing.Process(target=collect_exchange_rates, args=(parent_conn,))
+    collector.start()
+
+    for p in processes:
+        p.join()
+
+
+if __name__ == &quot;__main__&quot;:
+    asyncio.run(main())
+</code></pre>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../python/shioaji.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../mermaid/mermaid.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../python/shioaji.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../mermaid/mermaid.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>

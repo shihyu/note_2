@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CAS - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../ubuntu/ubuntu_setup.html">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../tools/network.html">Network</a></li><li class="chapter-item "><a href="../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../c++/move.html">Move</a></li><li class="chapter-item expanded "><a href="../c++/CAS.html" class="active">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../docker/command.html">Command</a></li><li class="chapter-item "><a href="../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../go/oo.html">OO</a></li><li class="chapter-item "><a href="../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../go/interface.html">interface</a></li><li class="chapter-item "><a href="../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item "><a href="../python/other.html">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../strategy/note.html">Resource</a></li><li class="chapter-item "><a href="../strategy/nansen.html">Nansen</a></li><li class="chapter-item "><a href="../strategy/example.html">Example</a></li><li class="chapter-item "><a href="../strategy/other.html">Other</a></li><li class="chapter-item "><a href="../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../strategy/finlab.html">Finlab</a></li><li class="chapter-item "><a href="../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架五Sizer.html">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="前言"><a class="header" href="#前言">前言</a></h2>
+<p>私以為個人的技術水平應該是一個螺旋式上升的過程：先從書本去瞭解一個大概，然後在實踐中加深對相關知識的理解，遇到問題後再次回到書本，然後繼續實踐……接觸C++並行程式設計已經一年多，從慢慢啃《C++並行程式設計實戰》這本書開始，不停在期貨高頻交易軟體的開發實踐中去理解、運用、最佳化多執行緒相關技術。多執行緒知識的學習也是先從最基本的執行緒建立、互斥鎖、條件變數到更高級的執行緒安全資料結構、執行緒池等等技術，當然在項目中也用到了簡單的無鎖程式設計相關知識，今天把一些體會心得跟大家分享一下，如有錯誤，還望大家批評指正。</p>
+<h2 id="多執行緒並行讀寫"><a class="header" href="#多執行緒並行讀寫">多執行緒並行讀寫</a></h2>
+<p>在編寫多執行緒程序時，最重要的問題就是多執行緒間共享資料的保護。多個執行緒之間共享地址空間，所以多個執行緒共享處理程序中的全域變數和堆，都可以對全域變數和堆上的資料進行讀寫，但是如果兩個執行緒同時修改同一個資料，可能造成某執行緒的修改丟失；如果一個執行緒寫的同時，另一個執行緒去讀該資料時可能會讀到寫了一半的資料。這些行為都是執行緒不安全的行為，會造成程式執行邏輯出現錯誤。舉個最簡單的例子：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+using namespace std;
+
+int  i = 0;
+mutex mut;
+
+void iplusplus() {
+    int c = 10000000;  //循環次數
+    while (c--) {
+        i++;
+    }
+}
+int main()
+{
+    thread thread1(iplusplus);  //建立並運行執行緒1
+    thread thread2(iplusplus);  //建立並運行執行緒2
+    thread1.join();  // 等待執行緒1運行完畢
+    thread2.join();  // 等待執行緒2運行完畢
+    cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>上面程式碼main函數中建立了兩個執行緒thread1和thread2，兩個執行緒都是運行iplusplus函數，該函數功能就是運行i++語句10000000次，按照常識，兩個執行緒各對i自增10000000次，最後i的結果應該是20000000，但是運行後結果卻是如下：</p>
+<p><img src="images/v2-031d9901f4adb2325eac0efb9380812d_720w.webp" alt="img" /></p>
+<p>i並不等於20000000，這是在多執行緒讀寫情況下沒有對執行緒間共享的變數i進行保護所導致的問題。</p>
+<h2 id="有鎖程式設計"><a class="header" href="#有鎖程式設計">有鎖程式設計</a></h2>
+<p>對於保護多執行緒共享資料，最常用也是最基本的方法就是使用C++11執行緒標準庫提供的互斥鎖mutex保護臨界區，保證同一時間只能有一個執行緒可以獲取鎖，持有鎖的執行緒可以對共享變數進行修改，修改完畢後釋放鎖，而不持有鎖的執行緒阻塞等待直到獲取到鎖，然後才能對共享變數進行修改，這種方法幾乎是並行程式設計中的標準做法。大體流程如下：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;atomic&gt;
+#include &lt;chrono&gt;
+
+using namespace std;
+int  i = 0;
+mutex mut; //互斥鎖
+
+void iplusplus() {
+    int c = 10000000;  //循環次數
+    while (c--) {
+        mut.lock();  //互斥鎖加鎖
+        i++;
+        mut.unlock(); //互斥鎖解鎖
+    }
+}
+int main()
+{
+    chrono::steady_clock::time_point start_time = chrono::steady_clock::now();//開始時間
+    thread thread1(iplusplus);
+    thread thread2(iplusplus);
+    thread1.join();  // 等待執行緒1運行完畢
+    thread2.join();  // 等待執行緒2運行完畢
+    cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; endl;
+    chrono::steady_clock::time_point stop_time = chrono::steady_clock::now();//結束時間
+    chrono::duration&lt;double&gt; time_span = chrono::duration_cast&lt;chrono::microseconds&gt;(stop_time - start_time);
+    std::cout &lt;&lt; &quot;共耗時：&quot; &lt;&lt; time_span.count() &lt;&lt; &quot; ms&quot; &lt;&lt; endl; // 耗時
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+<p>程式碼14行和16行分別為互斥鎖加鎖和解鎖程式碼，29行我們列印程式執行耗時，程式碼運行結果如下：</p>
+<p><img src="images/v2-2ecdc6816641dec702b50b329d925d13_720w.webp" alt="img" /></p>
+<p>可以看到，通過加互斥鎖，i的運行結果是正確的，由此解決了多執行緒同時寫一個資料產生的執行緒安全問題，程式碼總耗時3.37328ms。</p>
+<h2 id="無鎖程式設計"><a class="header" href="#無鎖程式設計">無鎖程式設計</a></h2>
+<p>原子操作是無鎖程式設計的基石，原子操作是不可分隔的操作，一般通過CAS(Compare and
+Swap)操作實現，CAS操作需要輸入兩個數值，一個舊值（期望操作前的值）和一個新值，在操作期間先比較下舊值有沒有發生變化，如果沒有發生變化，才交換成新值，發生了變化則不交換。C++11的執行緒庫為我們提供了一系列原子類型，同時提供了相對應的原子操作，我們通過使用這些原子類型即可擺脫每次對共享變數進行操作都進行的加鎖解鎖動作，節省了系統開銷，同時避免了執行緒因阻塞而頻繁的切換。原子類型的基本使用方法如下：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;atomic&gt;
+#include &lt;chrono&gt;
+
+using namespace std;
+atomic&lt;int&gt; i = 0;
+
+void iplusplus() {
+    int c = 10000000;  //循環次數
+    while (c--) {
+        i++;
+    }
+}
+int main()
+{
+    chrono::steady_clock::time_point start_time = chrono::steady_clock::now();//開始時間
+    thread thread1(iplusplus);
+    thread thread2(iplusplus);
+    thread1.join();  // 等待執行緒1運行完畢
+    thread2.join();  // 等待執行緒2運行完畢
+    cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; endl;
+    chrono::steady_clock::time_point stop_time = chrono::steady_clock::now();//結束時間
+    chrono::duration&lt;double&gt; time_span = chrono::duration_cast&lt;chrono::microseconds&gt;(stop_time - start_time);
+    std::cout &lt;&lt; &quot;共耗時：&quot; &lt;&lt; time_span.count() &lt;&lt; &quot; ms&quot; &lt;&lt; endl; // 耗時
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+<p>程式碼的第8行定義了一個原子類型（int）變數i，在第13行多執行緒修改i的時候即可免去加鎖和解鎖的步驟，同時又能保證變數i的執行緒安全性。程式碼運行結果如下：</p>
+<p><img src="images/v2-3b9ca8e34703c8daa7493486f01cbcbe_720w.webp" alt="img" /></p>
+<p>可以看到i的值是符合預期的，程式碼運行總耗時1.12731ms，僅為有鎖程式設計的耗時3.37328ms的1/3，由此可以看出無鎖程式設計由於避免了加鎖而相對於有鎖程式設計提高了一定的性能。</p>
+<h2 id="總結"><a class="header" href="#總結">總結</a></h2>
+<p>無鎖程式設計最大的優勢是什麼？是性能提高嗎？其實並不是，我們的測試程式碼中臨界區非常短，只有一個語句，所以顯得加鎖解鎖操作對程序性能影響很大，但在實際應用中，我們的臨界區一般不會這麼短，臨界區越長，加鎖和解鎖操作的性能損耗越微小，無鎖程式設計和有鎖程式設計之間的性能差距也就越微小。</p>
+<p>我認為無鎖程式設計最大的優勢在於兩點：</p>
+<ol>
+<li>避免了死鎖的產生。由於無鎖程式設計避免了使用鎖，所以也就不會出現並行程式設計中最讓人頭疼的死鎖問題，對於提高程序健壯性有很大積極意義</li>
+<li>程式碼更加清晰與簡潔。對於一個多執行緒共享的變數，保證其安全性我們只需在聲明時將其聲明為原子類型即可，在程式碼中使用的時候和使用一個普通變數一樣，而不用每次使用都要在前面寫個加鎖操作，在後面寫一個解鎖操作。我寫的C++期貨高頻交易軟體中，有一個全域變數fund，儲存的是當前資金量，程序採用執行緒池運行交易策略，交易策略中頻繁使用到fund變數，如果採用加鎖的方式，使用起來極其繁瑣，為了保護一個fund變數需要非常頻繁的加鎖解鎖，後來將fund變數改為原子類型，後面使用就不用再考慮加鎖問題，整個程序閱讀起來清晰很多。</li>
+</ol>
+<p>如果是為了提高性能將程序大幅改寫成無鎖程式設計，一般來說結果可能會讓我們失望，而且無鎖程式設計裡面需要注意的地方也非常多，比如ABA問題，記憶體順序問題，正確實現無鎖程式設計比實現有鎖程式設計要困難很多，除非有必要（確定了性能瓶頸）才去考慮使用無鎖程式設計，否則還是使用互斥鎖更好，畢竟程序的高性能是建立在程序正確性的基礎上，如果程序不正確，一切性能提升都是徒勞無功。</p>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../c++/move.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../riscv/riscv.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../c++/move.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../riscv/riscv.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>

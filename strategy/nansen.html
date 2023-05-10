@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nansen - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../ubuntu/ubuntu_setup.html">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../tools/network.html">Network</a></li><li class="chapter-item "><a href="../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../c++/move.html">Move</a></li><li class="chapter-item "><a href="../c++/CAS.html">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../docker/command.html">Command</a></li><li class="chapter-item "><a href="../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../go/oo.html">OO</a></li><li class="chapter-item "><a href="../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../go/interface.html">interface</a></li><li class="chapter-item "><a href="../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item "><a href="../python/other.html">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../strategy/note.html">Resource</a></li><li class="chapter-item expanded "><a href="../strategy/nansen.html" class="active">Nansen</a></li><li class="chapter-item "><a href="../strategy/example.html">Example</a></li><li class="chapter-item "><a href="../strategy/other.html">Other</a></li><li class="chapter-item "><a href="../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../strategy/finlab.html">Finlab</a></li><li class="chapter-item "><a href="../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架五Sizer.html">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h4 id="nansen"><a class="header" href="#nansen"><strong>Nansen</strong></a></h4>
+<p>Nansen專注於追蹤鏈上活動，以&quot;為鏈上地址打標簽&quot;而出名，其中最有名的標簽就是“smart money”--聰明錢。擁有聰明錢標簽的是加密世界中的精英們的錢包地址，他們的交易行為通常能帶來不菲的收益，其他交易者自然也想要跟隨他們的交易行為。</p>
+<p>Nansen擁有很強的快速迭代能力，比如在NFT市場興起之後，快速推出了一係列NFT相關的產品服務，如NFT Paradise、 NFT God Mode、NFT Wallet Profiler等。</p>
+<p><strong>【主要功能】</strong></p>
+<p>Nansen提供的功能主要有portfolio、smart alerts、watchlist等。在Nansen的主界麵上，可以查看主要公鏈的宏觀數據、defi數據、穩定幣數據和NFT市場的基本情況，包括主要NFT的市值、地板價、成交量、成交額和持有錢包數等。</p>
+<p><img src="https://cdn-img.panewslab.com/panews/images/79VH92a9Br.png" alt="鏈上數據分析工具盤點" /></p>
+<p>portfolio：Nansen的用戶可以使用錢包地址登錄他們的網站，登錄後，就可以在頁麵上查看錢包地址下所有的資產、交易記錄、資產分析等。</p>
+<p><img src="https://cdn-img.panewslab.com/panews/images/VMx9I300FC.png" alt="鏈上數據分析工具盤點" /></p>
+<p>smart alerts：Nansen允許用戶訂閱智能警報，在他們訂閱的地址進行活動時他們會收到通知。</p>
+<p>watchlist：用戶可以向watchlist中添加想要監測的錢包地址，來隨時監測該地址的動向。</p>
+<p>目前Nansen提供一部分免費功能，但絕大部分功能需要付費使用，這也是nansen的主要收入來源。</p>
+<p><strong>【是否支持自定義數據】</strong></p>
+<p>目前Nansen提供的數據都是經過他們處理的，不支持用戶自定義的數據分析。由於他們麵向的主要是需要高可用數據的機構投資者，因此提供的數據基本都是已經建模處理過後的成品數據。</p>
+<p><strong>【覆蓋區塊鏈】</strong></p>
+<p>Nansen已經支持了包括 Layer 2 在內的41條公鏈上的數據。</p>
+<p><strong>【數據延遲】</strong></p>
+<p>分鐘級彆延遲。</p>
+<p><strong>【研報】</strong></p>
+<p>Nansen擁有一個由18名分析師組成的分析團隊，在他們網站的nansen research板塊中為用戶提供研報，研究的內容涵蓋了L1/L2, NFT, GAMING, DEFI和宏觀趨勢等。</p>
+<p>https://pro.nansen.ai/</p>
+<p>交易所資金流動狀況
+https://pro.nansen.ai/exchange-flows/exchanges</p>
+<p>https://portfolio.nansen.ai/dashboard/binance
+https://portfolio.nansen.ai/dashboard/okx
+https://portfolio.nansen.ai/dashboard/bybit
+https://portfolio.nansen.ai/dashboard/bitfinix</p>
+<h4 id="通知--slack--tele"><a class="header" href="#通知--slack--tele">通知  slack , tele</a></h4>
+<p><a href="https://pro.nansen.ai/alert-triggers">Smart Alerts</a></p>
+<p><a href="https://www.youtube.com/watch?v=wwCZ11lAC4Y&amp;ab_channel=mrblock%E5%8D%80%E5%A1%8A%E5%85%88%E7%94%9F">Nansen.ai - 如何追蹤大戶</a></p>
+<p><a href="https://www.youtube.com/watch?v=yiirdqwDJHQ&amp;ab_channel=GRENADE%E6%89%8B%E6%A6%B4%E5%BD%88">Nansen：鏈上數據分析初步指南</a></p>
+<hr />
+<p><a href="https://disp.cc/b/DigiCurrency/fyaw">幣安出現什麼徵兆時要塊陶？</a></p>
+<p>作為一個hodler 熊市時我其實不太關注市場消息
+這也導致此次FTX事件中後知後覺 被關廁所損失近40萬鎂</p>
+<p>雖然主要資產是放在冷錢包中, 但這個損失還是不少
+如果回到11/05, 是否有什麼確切證據可以知道FTX已經發生擠兌?</p>
+<p>(板上的示警文章已看過, 有板友也因此得救, 但我想知道的是確實數據)</p>
+<ol>
+<li>
+<p>以前常用的例如 Whale Alert:
+https://twitter.com/whale_alert</p>
+<p>能否事先看出來? 在搜尋列輸入過濾條件
+ftx from:whale_alert since:2022-11-05
+從11/05到寫這篇文章的期間只有30筆alert, 坦白說看不出什麼跡象</p>
+<p>過濾條件:
+binance from:whale_alert since:2022-11-05
+可以看到過去幾天有相當大額的#USDC burned (可能為提現)</p>
+<p>實際來說, 一家交易所如果要避開whale alert的偵測, 只要切細成較小額度
+就能辦到, 例如100M USD切成1M x 100, 就偵測不到
+所以也許FTX原本就是都切成小額居多, 而幣安比較沒這樣做
+無論如何, 用whale alert似乎不太靠譜</p>
+</li>
+<li>
+<p>使用鏈上數據分析, 例如Nansen:
+https://pro.nansen.ai/</p>
+<p>有七天試用期, 長期用要繳費, 另外它有twitter:
+https://twitter.com/nansen_ai</p>
+<p>正在示警各穩定幣和ETH大量流出:</p>
+<p>Exchange ETH &amp; ERC20 tokens netflow in the last hour</p>
+<p>Binance -$72.9M
+Huobi -$12.7M
+Gateio -$7.3M
+Cryptocom -$4.7M
+OKX -$3.1M</p>
+<p>Bittrex +$771K
+Bitkub +$496K
+Paribu +$191K
+Bitpanda +$55K
+Probit +$51K</p>
+<p>*ETH &amp; ERC20 tokens only, from addresses that we have labeled</p>
+</li>
+</ol>
+<p><img src="images/FhbNHaSVEAEQY6k" alt="" /></p>
+<p>Most of the withdrawals/negative netflows are in</p>
+<p>USDT -$24.3M
+ETH -$11.7M
+USDC -$10.7M
+LDO -$6.8M
+BUSD -$6.5M</p>
+<p><img src="images/FhbQIu3UUAIBiFF" alt="" /></p>
+<p>過去7天交易所流出排行:
+https://twitter.com/nansen_ai/status/1591617986275966976/photo/1</p>
+<p>Jump Trading in the last 24 hours:</p>
+<p>Total withdrawals from exchanges:
+$32.5M</p>
+<p>Total deposits: 
+$1.5M</p>
+<p>*ETH &amp; ERC20 tokens only, from addresses that we have labeled</p>
+<p><img src="images/FhaMvBCaMAEUOgF" alt="" /></p>
+<p>In the last 7 days: </p>
+<p>Total withdrawals:
+$691M</p>
+<p>Total deposits: 
+$229M</p>
+<p><img src="images/FhaQFh2aEAARRju" alt="" /></p>
+<p>過去30天交易所流出排行:
+https://twitter.com/nansen_ai/status/1591617991648890880/photo/1</p>
+<p>In the last 30 days:</p>
+<p>Total withdrawals:
+$1.5B</p>
+<p>Total deposits: 
+$750M</p>
+<p><img src="images/FhaPvMbaEAMoTlw" alt="" /></p>
+<p>不意外的看到FTX流出42B, 但只回補了39B, 而幣安則流出45B
+此外鏈新聞在11/07示警FTX流出大量穩定幣也是採用nansen的數據:
+https://abmedia.io/20221107-ftx-stable-coin-outflow</p>
+<p><a href="https://abmedia.io/20221107-ftx-stable-coin-outflow"><strong>用戶避風頭？FTX穩定幣發生大量提幣，幣安流入超過3億！ | 鏈新聞 ABMedia</strong></a>
+[<img src="https://abmedia.io/20221107-ftx-stable-coin-outflow" alt="圖]" />資產機構 Alameda Research 的資產結構疑雲事件在近期引起不少討論，甚至引起 FTX 及幣安執行長的網路論戰、籌碼較勁。若從鏈上數據角度出發，可發現此事件已對 FTX 用戶造成影響並引發大量提幣，使數億美元的穩定幣從 FTX 流出。 ...</p>
+<p><img src="https://abmedia.io/wp-content/uploads/2022/11/GTLQ0G88P7WP72YDEL9MLV5VSDLXD34IW0H6TIG147JE1W98AP2ROJS7GNC0IQEO.png" alt="" /></p>
+<p>但這篇新聞的圖表並非來自twitter, 且它還列出各家交易所穩定幣餘額
+並示警FTX在11/07時就只剩261M美金的穩定幣了</p>
+<p>看來使用Nansen是可以看得出來, 前提是付費使用者以及有習慣看圖表</p>
+<ol start="3">
+<li>
+<p>追蹤名人的推特:
+除了以上提到的以外, CZ呀、kraken官方..等等的也許能得到警訊</p>
+</li>
+<li>
+<p>查看交易所列出的錢包:
+在這個恐慌期中, 各家交易所又想起了PoR的重要性, 但這也不是能短時間做好的,
+以幣安為例, 就先給出了它的冷熱錢包:
+https://reurl.cc/LXMAmy</p>
+<p>其中BUSD和BNB先不用管, 專注看它的BTC, ETH, 和USDC錢包即可</p>
+<p>這三種錢包加總約有十幾B美金的價值, 但別忘了FTX光11/08單日就被提款50B
+如果爆發恐慌擠兌, 以幣安市佔為FTX 4倍來估算, 這點錢應該是瞬間就空了</p>
+</li>
+</ol>
+<p>實際動作：
+鑒於FTX的爆炸, 我開始轉出除了kraken以外交易所裡的資產
+BTC和ETH直接打入冷錢包, 其餘小幣都賣成穩定幣
+以幣安來說就是都賣成BUSD, 然後走erc20匯出成USDC</p>
+<p>如果很多人也正在跟我做一樣的事, 則BTC和ETH相對抗跌
+也不排除有人是賣小幣買成ETH存冷錢包的
+而其他幣無可避免要先崩一波了</p>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../strategy/note.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../strategy/example.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../strategy/note.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../strategy/example.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>

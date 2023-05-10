@@ -1,0 +1,2482 @@
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.5.10)  10 MAY 2023 17:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**The-Art-of-Writing-Efficient-Programs.tex
+(./The-Art-of-Writing-Efficient-Programs.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count163
+\c@chapter=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip49
+\@affilsep=\skip50
+\c@Maxaffil=\count172
+\c@authors=\count173
+\c@affil=\count174
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-02-03 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count175
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count176
+\g__pdf_backend_annotation_int=\count177
+))
+Package: ctex 2019/05/29 v2.4.16 Chinese adapter in LaTeX (CTEX)
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count178
+\g__xparse_grabber_int=\count179
+\l__xparse_m_args_int=\count180
+\l__xparse_v_nesting_int=\count181
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2019/05/29 v2.4.16 Document and package hooks (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2019/05/29 v2.4.16 Patching commands (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\l__ctex_tmp_int=\count182
+\l__ctex_tmp_box=\box46
+\l__ctex_tmp_dim=\dimen135
+\g__ctex_section_depth_int=\count183
+\g__ctex_font_size_int=\count184
+
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2019/05/29 v2.4.16 Option configuration file (CTEX)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2019/05/29 v2.4.16 XeLaTeX adapter (CTEX)
+
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2020/02/14 v3.8.1 Typesetting CJK scripts with XeLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2020-02-14 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen136
+\l__xtemplate_tmp_int=\count185
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip51
+)
+\l__xeCJK_tmp_int=\count186
+\l__xeCJK_tmp_box=\box47
+\l__xeCJK_tmp_dim=\dimen137
+\l__xeCJK_tmp_skip=\skip52
+\g__xeCJK_space_factor_int=\count187
+\l__xeCJK_begin_int=\count188
+\l__xeCJK_end_int=\count189
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip53
+\g__xeCJK_node_int=\count190
+\c__xeCJK_CJK_node_dim=\dimen138
+\c__xeCJK_CJK-space_node_dim=\dimen139
+\c__xeCJK_default_node_dim=\dimen140
+\c__xeCJK_default-space_node_dim=\dimen141
+\c__xeCJK_CJK-widow_node_dim=\dimen142
+\c__xeCJK_normalspace_node_dim=\dimen143
+\l__xeCJK_ccglue_skip=\skip54
+\l__xeCJK_ecglue_skip=\skip55
+\l__xeCJK_punct_kern_skip=\skip56
+\l__xeCJK_last_penalty_int=\count191
+\l__xeCJK_last_bound_dim=\dimen144
+\l__xeCJK_last_kern_dim=\dimen145
+\l__xeCJK_widow_penalty_int=\count192
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2302.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen146
+\l__xeCJK_mixed_punct_width_dim=\dimen147
+\l__xeCJK_middle_punct_width_dim=\dimen148
+\l__xeCJK_fixed_margin_width_dim=\dimen149
+\l__xeCJK_mixed_margin_width_dim=\dimen150
+\l__xeCJK_middle_margin_width_dim=\dimen151
+\l__xeCJK_bound_punct_width_dim=\dimen152
+\l__xeCJK_bound_margin_width_dim=\dimen153
+\l__xeCJK_margin_minimum_dim=\dimen154
+\l__xeCJK_kerning_total_width_dim=\dimen155
+\l__xeCJK_same_align_margin_dim=\dimen156
+\l__xeCJK_different_align_margin_dim=\dimen157
+\l__xeCJK_kerning_margin_width_dim=\dimen158
+\l__xeCJK_kerning_margin_minimum_dim=\dimen159
+\l__xeCJK_bound_dim=\dimen160
+\l__xeCJK_reverse_bound_dim=\dimen161
+\l__xeCJK_margin_dim=\dimen162
+\l__xeCJK_minimum_bound_dim=\dimen163
+\l__xeCJK_kerning_margin_dim=\dimen164
+\g__xeCJK_family_int=\count193
+\l__xeCJK_fam_int=\count194
+\g__xeCJK_fam_allocation_int=\count195
+\l__xeCJK_verb_case_int=\count196
+\l__xeCJK_verb_exspace_skip=\skip57
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count197
+\l__fontspec_language_int=\count198
+\l__fontspec_strnum_int=\count199
+\l__fontspec_tmp_int=\count266
+\l__fontspec_tmpa_int=\count267
+\l__fontspec_tmpb_int=\count268
+\l__fontspec_tmpc_int=\count269
+\l__fontspec_em_int=\count270
+\l__fontspec_emdef_int=\count271
+\l__fontspec_strong_int=\count272
+\l__fontspec_strongdef_int=\count273
+\l__fontspec_tmpa_dim=\dimen165
+\l__fontspec_tmpb_dim=\dimen166
+\l__fontspec_tmpc_dim=\dimen167
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2020/02/14 v3.8.1 Configuration file for xeCJK package
+))
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2020/02/14 v3.8.1 xeCJK font effect
+
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box48
+\UL@hyphenbox=\box49
+\UL@skip=\skip58
+\UL@hook=\toks16
+\UL@height=\dimen168
+\UL@pe=\count274
+\UL@pixel=\dimen169
+\ULC@box=\box50
+Package: ulem 2019/11/18
+\ULdepth=\dimen170
+)
+\l__xeCJK_space_skip=\skip59
+\c__xeCJK_ulem-begin_node_dim=\dimen171
+\c__xeCJK_null_box=\box51
+\l__xeCJK_fntef_box=\box52
+\l__xeCJK_under_symbol_box=\box53
+\c__xeCJK_filll_skip=\skip60
+)
+\ccwd=\dimen172
+\l__ctex_ccglue_skip=\skip61
+)
+\l__ctex_ziju_dim=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2019/04/07 v2.7 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count275
+
+(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2019/04/07 v2.7 Chinese numerals with UTF8 encoding
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+File: ctex-scheme-chinese.def 2019/05/29 v2.4.16 Chinese scheme for generic (CT
+EX)
+
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2019/05/29 v2.4.16 Caption with encoding UTF8 (CTEX)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+File: ctex-fontset-fandol.def 2019/05/29 v2.4.16 Fandol fonts definition (CTEX)
+
+
+
+Package fontspec Warning: Font "FandolSong-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
+(fontspec)             'FandolSong-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold
+},ItalicFont={FandolKai-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2019/05/29 v2.4.16 Configuration file (CTEX)
+)
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault'
+(xeCJK)                (FandolSong-Regular(0)).
+
+
+Package fontspec Info: Could not resolve font "LiHei Pro/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "LiHei Pro/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "LiHei Pro/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'LiHeiPro(0)' created for font 'LiHei Pro'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"LiHei
+(fontspec)             Pro/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKsfdefault'
+(xeCJK)                (FandolHei-Regular).
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKttdefault'
+(xeCJK)                (FandolFang-Regular).
+
+(/usr/share/texlive/texmf-dist/tex/latex/tocvsec2/tocvsec2.sty
+Package: tocvsec2 2014/03/10 v1.3a variable ToC section entries
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@max@tocdepth=\count276
+\c@max@secnumdepth=\count277
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box54
+\extrarowheight=\dimen175
+\NC@list=\toks17
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen176
+\TX@old@table=\dimen177
+\TX@old@col=\dimen178
+\TX@target=\dimen179
+\TX@delta=\dimen180
+\TX@cols=\count278
+\TX@ftn=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen181
+\lightrulewidth=\dimen182
+\cmidrulewidth=\dimen183
+\belowrulesep=\dimen184
+\belowbottomsep=\dimen185
+\aboverulesep=\dimen186
+\abovetopsep=\dimen187
+\cmidrulesep=\dimen188
+\cmidrulekern=\dimen189
+\defaultaddspace=\dimen190
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen191
+\@belowrulesep=\dimen192
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen193
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count283
+\multirow@dima=\skip65
+\bigstrutjot=\dimen194
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bbding/bbding.sty
+Package: bbding 1999/04/15 v1.01 Dingbats symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks19
+\float@box=\box56
+\@float@everytoks=\toks20
+\@floatcapt=\box57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language27
+LaTeX Info: Redefining \_ on input line 43.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen195
+\Gin@req@width=\dimen196
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip66
+\subfigcapskip=\skip67
+\subfigcaptopadj=\dimen197
+\subfigbottomskip=\skip68
+\subfigcapmargin=\dimen198
+\subfiglabelskip=\skip69
+\c@subfigure=\count285
+\c@lofdepth=\count286
+\c@subtable=\count287
+\c@lotdepth=\count288
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip70
+\subfig@bottom=\skip71
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen199
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count292
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen256
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count293
+\Field@Width=\dimen257
+\Fld@charsize=\dimen258
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2020/01/14 v7.00d Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box58
+\c@Hy@AnnotLevel=\count297
+\HyField@AnnotCount=\count298
+\Fld@listcount=\count299
+\c@bookmark@seq@number=\count300
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip72
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
+
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count301
+\Gm@cntv=\count302
+\c@Gm@tempcnt=\count303
+\Gm@bindingoffset=\dimen259
+\Gm@wd@mp=\dimen260
+\Gm@odd@mp=\dimen261
+\Gm@even@mp=\dimen262
+\Gm@layoutwidth=\dimen263
+\Gm@layoutheight=\dimen264
+\Gm@layouthoffset=\dimen265
+\Gm@layoutvoffset=\dimen266
+\Gm@dimlist=\toks22
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
+Package hyperref Info: Option `breaklinks' set `true' on input line 41.
+
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip73
+\enit@outerparindent=\dimen267
+\enit@toks=\toks23
+\enit@inbox=\box59
+\enit@count@id=\count304
+\enitdp@description=\count305
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count306
+\lst@gtempboxa=\box60
+\lst@token=\toks24
+\lst@length=\count307
+\lst@currlwidth=\dimen268
+\lst@column=\count308
+\lst@pos=\count309
+\lst@lostspace=\dimen269
+\lst@width=\dimen270
+\lst@newlines=\count310
+\lst@lineno=\count311
+\lst@maxwidth=\dimen271
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count312
+\lst@skipnumbers=\count313
+\lst@framebox=\box61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen272
+\pgfutil@tempdimb=\dimen273
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box62
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen274
+\pgf@y=\dimen275
+\pgf@xa=\dimen276
+\pgf@ya=\dimen277
+\pgf@xb=\dimen278
+\pgf@yb=\dimen279
+\pgf@xc=\dimen280
+\pgf@yc=\dimen281
+\pgf@xd=\dimen282
+\pgf@yd=\dimen283
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count314
+\c@pgf@countb=\count315
+\c@pgf@countc=\count316
+\c@pgf@countd=\count317
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count318
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)
+\pgfsys@objnum=\count319
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count320
+\pgfsyssoftpath@bigbuffer@items=\count321
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen284
+\pgfmath@count=\count322
+\pgfmath@box=\box63
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count323
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen285
+\pgf@picmaxx=\dimen286
+\pgf@picminy=\dimen287
+\pgf@picmaxy=\dimen288
+\pgf@pathminx=\dimen289
+\pgf@pathmaxx=\dimen290
+\pgf@pathminy=\dimen291
+\pgf@pathmaxy=\dimen292
+\pgf@xx=\dimen293
+\pgf@xy=\dimen294
+\pgf@yx=\dimen295
+\pgf@yy=\dimen296
+\pgf@zx=\dimen297
+\pgf@zy=\dimen298
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen299
+\pgf@path@lasty=\dimen300
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen301
+\pgf@shorten@start@additional=\dimen302
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box64
+\pgf@hbox=\box65
+\pgf@layerbox@main=\box66
+\pgf@picture@serial@count=\count324
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen303
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen304
+\pgf@pt@y=\dimen305
+\pgf@pt@temp=\dimen306
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen307
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen308
+\pgf@sys@shading@range@num=\count325
+\pgf@shadingcount=\count326
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box67
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box68
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen309
+\pgf@nodesepend=\dimen310
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks35
+\verbatim@line=\toks36
+\verbatim@in@stream=\read3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks37
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count327
+)
+\tcb@titlebox=\box69
+\tcb@upperbox=\box70
+\tcb@lowerbox=\box71
+\tcb@phantombox=\box72
+\c@tcbbreakpart=\count328
+\c@tcblayer=\count329
+\tcolorbox@number=\count330
+\tcb@temp=\box73
+\tcb@temp=\box74
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@out=\write4
+\tcb@record@out=\write5
+
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.22'
+\c@tcbrastercolumn=\count331
+\c@tcbrasterrow=\count332
+\c@tcbraster=\count333
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen311
+\pgffor@skip=\dimen312
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count334
+\pgfplotmarksize=\dimen313
+)
+\tikz@lastx=\dimen314
+\tikz@lasty=\dimen315
+\tikz@lastxsaved=\dimen316
+\tikz@lastysaved=\dimen317
+\tikz@lastmovetox=\dimen318
+\tikz@lastmovetoy=\dimen319
+\tikzleveldistance=\dimen320
+\tikzsiblingdistance=\dimen321
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count335
+\tikznumberofchildren=\count336
+\tikznumberofcurrentchild=\count337
+\tikz@fig@count=\count338
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count339
+\pgfmatrixcurrentcolumn=\count340
+\pgf@matrix@numberofcolumns=\count341
+)
+\tikz@expandcount=\count342
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+\tcb@waterbox=\box81
+
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.22'
+\tcb@testbox=\box82
+\tcb@totalupperbox=\box83
+\tcb@totallowerbox=\box84
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.22'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks40
+\ex@=\dimen322
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen323
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count343
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count344
+\leftroot@=\count345
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count346
+\DOTSCASE@=\count347
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box85
+\strutbox@=\box86
+\big@size=\dimen324
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count348
+\c@MaxMatrixCols=\count349
+\dotsspace@=\muskip18
+\c@parentequation=\count350
+\dspbrk@lvl=\count351
+\tag@help=\toks41
+\row@=\count352
+\column@=\count353
+\maxfields@=\count354
+\andhelp@=\toks42
+\eqnshift@=\dimen325
+\alignsep@=\dimen326
+\tagshift@=\dimen327
+\tagwidth@=\dimen328
+\totwidth@=\dimen329
+\lineht@=\dimen330
+\@envbody=\toks43
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks44
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.22'
+\tcbfitdim=\dimen331
+\tcb@lowerfitdim=\dimen332
+\tcb@upperfitdim=\dimen333
+\tcb@cur@hbadness=\count355
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.22'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+
+Package listingsutf8 Warning: Package loading is aborted because of missing \pd
+f@unescapehex.
+(listingsutf8)                It is provided by pdfTeX >= 1.30.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count356
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.22'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.22'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.22'
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
+.tex
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '4.22'
+)) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+File: bkm-dvipdfm.def 2019/12/03 v1.28 bookmark driver for dvipdfm (HO)
+\BKM@id=\count357
+))
+\c@subsubsubsection=\count358
+
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2020/02/14 v3.8.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count359
+\l__xeCJK_listings_flag_int=\count360
+)
+(./The-Art-of-Writing-Efficient-Programs.aux)
+\openout1 = `The-Art-of-Writing-Efficient-Programs.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 298.
+LaTeX Font Info:    ... okay on input line 298.
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 298.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 298.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 298.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 298.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 298.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 298.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 298.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 298.
+LaTeX Font Info:    Redeclaring math accent \check on input line 298.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 298.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 298.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 298.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 298.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 298.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 298.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 298.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 298.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 298.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 298.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 298.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 298.
+\AtBeginShipoutBox=\box87
+Package hyperref Info: Link coloring ON on input line 298.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count361
+)
+LaTeX Info: Redefining \ref on input line 298.
+LaTeX Info: Redefining \pageref on input line 298.
+LaTeX Info: Redefining \nameref on input line 298.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 469.47049pt, 56.9055pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47049pt
+* \textheight=700.50723pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-31.87398pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count362
+ABD: EveryShipout initializing macros
+File: cover.jpg Graphic file (type bmp)
+<cover.jpg>
+ [1
+
+]
+
+LaTeX Font Warning: Font shape `TU/LiHeiPro(0)/b/n' undefined
+(Font)              using `TU/LiHeiPro(0)/m/n' instead on input line 325.
+
+
+LaTeX Font Warning: Font shape `TU/LiHeiPro(0)/m/it' undefined
+(Font)              using `TU/LiHeiPro(0)/m/n' instead on input line 327.
+
+[2] [3] (./content/preface.tex
+Overfull \hbox (2.31868pt too wide) in paragraph at lines 24--25
+[]\TU/LiHeiPro(0)/m/n/10.95 雖 然 本 書 使 用 的 是 \TU/lmr/m/n/10.95 C++\TU/LiHeiPro(0
+)/m/n/10.95 ，|  但 本 書 的 概 念 可 以 轉 移 或 應 用 到 其 他 編 譯 語 言，|  如 \TU/lmr/m/n/10.95 
+C\TU/LiHeiPro(0)/m/n/10.95 、| \TU/lmr/m/n/10.95 Java\TU/LiHeiPro(0)/m/n/10.95 、
+| \TU/lmr/m/n/10.95 Rust\TU/LiHeiPro(0)/m/n/10.95 、|
+ []
+
+[4] [5]) [6] (./The-Art-of-Writing-Efficient-Programs.toc
+Missing character: There is no 础 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 问 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 评 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 预 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+ [7
+
+]
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 资 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 开 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 赖 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 杂 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 开 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 测 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 试 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 访 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 问 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+ [8]
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 贵 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 级 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 锁 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 编 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 栈 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+ [9]
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 队 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 线 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 链 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 编 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 编 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 语 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+ [10]
+Missing character: There is no 编 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 译 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 编 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 译 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 码 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 进 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 关 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 虑 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 为 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 访 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 问 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 权 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 计 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 结 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 题 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 练 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+Missing character: There is no 习 in font LiHei Pro/OT:script=hani;language=dflt
+;!
+
+[11])
+\tf@toc=\write6
+\openout6 = `The-Art-of-Writing-Efficient-Programs.toc'.
+
+ [12] (./content/1/Section-1.tex) [13] (./content/1/chapter1/0.tex)
+(./content/1/chapter1/1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+File: content/1/chapter1/images/1.jpg Graphic file (type bmp)
+<content/1/chapter1/images/1.jpg>
+
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+ [14]
+[15]) (./content/1/chapter1/2.tex
+File: content/1/chapter1/images/2.jpg Graphic file (type bmp)
+<content/1/chapter1/images/2.jpg>
+File: content/1/chapter1/images/3.jpg Graphic file (type bmp)
+<content/1/chapter1/images/3.jpg>
+ [16]
+File: content/1/chapter1/images/4.jpg Graphic file (type bmp)
+<content/1/chapter1/images/4.jpg>
+) (./content/1/chapter1/3.tex
+File: content/1/chapter1/images/5.jpg Graphic file (type bmp)
+<content/1/chapter1/images/5.jpg>
+ [17]
+File: content/1/chapter1/images/6.jpg Graphic file (type bmp)
+<content/1/chapter1/images/6.jpg>
+
+[18]
+File: content/1/chapter1/images/7.jpg Graphic file (type bmp)
+<content/1/chapter1/images/7.jpg>
+ [19]) (./content/1/chapter1/4.tex) (./content/1/chapter1/5.tex [20])
+(./content/1/chapter1/6.tex [21]) (./content/1/chapter1/7.tex) [22]
+(./content/1/chapter2/0.tex) (./content/1/chapter2/1.tex)
+(./content/1/chapter2/2.tex
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
+ [23]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9.03374> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 14.
+ [24] [25]
+File: content/1/chapter2/images/1.jpg Graphic file (type bmp)
+<content/1/chapter2/images/1.jpg>
+File: content/1/chapter2/images/2.jpg Graphic file (type bmp)
+<content/1/chapter2/images/2.jpg>
+File: content/1/chapter2/images/3.jpg Graphic file (type bmp)
+<content/1/chapter2/images/3.jpg>
+
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+ [26]
+Overfull \hbox (33.10155pt too wide) in paragraph at lines 139--140
+[]\TU/LiHeiPro(0)/m/n/10.95 分 析 器 顯 示，|  大 多 時 間 都 花 在 比 較 函 數 \TU/lmtt/m/n/10.
+95 compare() \TU/LiHeiPro(0)/m/n/10.95 上，|  而 排 序 幾 乎 不 花 時 間 \TU/lmr/m/n/10.95
+ (\TU/LiHeiPro(0)/m/n/10.95 第 二 行 是 \TU/lmtt/m/n/10.95 std::sort\TU/LiHeiPro(0)
+/m/n/10.95 ，|
+ []
+
+[27]
+File: content/1/chapter2/images/4.jpg Graphic file (type bmp)
+<content/1/chapter2/images/4.jpg>
+File: content/1/chapter2/images/5.jpg Graphic file (type bmp)
+<content/1/chapter2/images/5.jpg>
+
+Overfull \hbox (5.36517pt too wide) in paragraph at lines 216--217
+[]\TU/LiHeiPro(0)/m/n/10.95 後 面 的 章 節 中，|  我 們 再 來 解 釋 這 個 現 象 的 根 本 原 因。|  本 節
+ 的 目 的 是 闡 明 永 遠 不 要 猜 測 性 能： “顯
+ []
+
+) [28] (./content/1/chapter2/3.tex [29]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(./The-Art-of-Writing-Efficient-Programs.listing) [30]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing) [31]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing)
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing) [32])
+(./content/1/chapter2/4.tex [33]
+File: content/1/chapter2/images/6.jpg Graphic file (type bmp)
+<content/1/chapter2/images/6.jpg>
+File: content/1/chapter2/images/7.jpg Graphic file (type bmp)
+<content/1/chapter2/images/7.jpg>
+
+Underfull \vbox (badness 2894) has occurred while \output is active []
+
+ [34]
+File: content/1/chapter2/images/8.jpg Graphic file (type bmp)
+<content/1/chapter2/images/8.jpg>
+
+[35]
+File: content/1/chapter2/images/9.jpg Graphic file (type bmp)
+<content/1/chapter2/images/9.jpg>
+File: content/1/chapter2/images/10.jpg Graphic file (type bmp)
+<content/1/chapter2/images/10.jpg>
+File: content/1/chapter2/images/11.jpg Graphic file (type bmp)
+<content/1/chapter2/images/11.jpg>
+ [36]
+File: content/1/chapter2/images/12.jpg Graphic file (type bmp)
+<content/1/chapter2/images/12.jpg>
+ [37]
+File: content/1/chapter2/images/13.jpg Graphic file (type bmp)
+<content/1/chapter2/images/13.jpg>
+File: content/1/chapter2/images/14.jpg Graphic file (type bmp)
+<content/1/chapter2/images/14.jpg>
+File: content/1/chapter2/images/15.jpg Graphic file (type bmp)
+<content/1/chapter2/images/15.jpg>
+
+Underfull \vbox (badness 2042) has occurred while \output is active []
+
+ [38]
+File: content/1/chapter2/images/16.jpg Graphic file (type bmp)
+<content/1/chapter2/images/16.jpg>
+
+[39]
+File: content/1/chapter2/images/17.jpg Graphic file (type bmp)
+<content/1/chapter2/images/17.jpg>
+ [40]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+ (./The-Art-of-Writing-Efficient-Programs.listing)
+File: content/1/chapter2/images/18.jpg Graphic file (type bmp)
+<content/1/chapter2/images/18.jpg>
+ [41]
+File: content/1/chapter2/images/19.jpg Graphic file (type bmp)
+<content/1/chapter2/images/19.jpg>
+
+Underfull \vbox (badness 5741) has occurred while \output is active []
+
+ [42]
+File: content/1/chapter2/images/20.jpg Graphic file (type bmp)
+<content/1/chapter2/images/20.jpg>
+File: content/1/chapter2/images/21.jpg Graphic file (type bmp)
+<content/1/chapter2/images/21.jpg>
+
+[43]) (./content/1/chapter2/5.tex [44] [45]
+File: content/1/chapter2/images/22.jpg Graphic file (type bmp)
+<content/1/chapter2/images/22.jpg>
+File: content/1/chapter2/images/23.jpg Graphic file (type bmp)
+<content/1/chapter2/images/23.jpg>
+File: content/1/chapter2/images/24.jpg Graphic file (type bmp)
+<content/1/chapter2/images/24.jpg>
+ [46] [47]
+File: content/1/chapter2/images/25.jpg Graphic file (type bmp)
+<content/1/chapter2/images/25.jpg>
+File: content/1/chapter2/images/26.jpg Graphic file (type bmp)
+<content/1/chapter2/images/26.jpg>
+ [48] [49]
+Overfull \hbox (15.06688pt too wide) in paragraph at lines 240--241
+[]\TU/LiHeiPro(0)/m/n/10.95 不 會 因 為 定 義 了 一 個 基 準 固 件 而 發 生 任 何 事 情，|  我 們 需 要 
+將 它 註 冊 到 庫 中。|  這 裡 使 用 \TU/lmtt/m/n/10.95 BENCHMARK
+ []
+
+
+Overfull \hbox (18.31905pt too wide) in paragraph at lines 246--247
+[]\TU/LiHeiPro(0)/m/n/10.95 這 行 代 碼 用 參 數 \TU/lmtt/m/n/10.95 1<<20 \TU/LiHeiPro
+(0)/m/n/10.95 註 冊 了 基 準 固 件 \TU/lmtt/m/n/10.95 BM_-loop_-int\TU/LiHeiPro(0)/m/n
+/10.95 ，|  這 個 參 數 可 以 通 過 調 用 \TU/lmtt/m/n/10.95 state.range(0)
+ []
+
+[50]
+File: content/1/chapter2/images/27.jpg Graphic file (type bmp)
+<content/1/chapter2/images/27.jpg>
+File: content/1/chapter2/images/28.jpg Graphic file (type bmp)
+<content/1/chapter2/images/28.jpg>
+ [51] [52]
+File: content/1/chapter2/images/29.jpg Graphic file (type bmp)
+<content/1/chapter2/images/29.jpg>
+ [53]) (./content/1/chapter2/6.tex) (./content/1/chapter2/7.tex)
+[54] (./content/1/chapter3/0.tex) (./content/1/chapter3/1.tex
+Overfull \hbox (2.1773pt too wide) in paragraph at lines 1--2
+[] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
+] [] [] [] [] [] []$[][]\TU/lmr/m/n/10.95 )\TU/LiHeiPro(0)/m/n/10.95 。|  我 們 也 
+將 使 用 \TU/lmr/bx/n/10.95 LLVM \TU/LiHeiPro(0)/m/n/10.95 機 器 代 碼 分 析 器 \TU/lmr/b
+x/n/10.95 (LLVMMCA)\TU/LiHeiPro(0)/m/n/10.95 ：|
+ []
+
+
+Overfull \hbox (1.33072pt too wide) in paragraph at lines 1--2
+[][]$[] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] []
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [][]$[][]\TU/
+LiHeiPro(0)/m/n/10.95 。|  如 果 想 使 用 \TU/lmr/m/n/10.95 MCA\TU/LiHeiPro(0)/m/n/10
+.95 ，|  那 麼 需 要 基 於 \TU/lmr/m/n/10.95 llvm
+ []
+
+) (./content/1/chapter3/2.tex
+File: content/1/chapter3/images/1.jpg Graphic file (type bmp)
+<content/1/chapter3/images/1.jpg>
+ [55]) (./content/1/chapter3/3.tex [56]
+File: content/1/chapter3/images/2.jpg Graphic file (type bmp)
+<content/1/chapter3/images/2.jpg>
+File: content/1/chapter3/images/3.jpg Graphic file (type bmp)
+<content/1/chapter3/images/3.jpg>
+ [57]
+File: content/1/chapter3/images/4.jpg Graphic file (type bmp)
+<content/1/chapter3/images/4.jpg>
+File: content/1/chapter3/images/5.jpg Graphic file (type bmp)
+<content/1/chapter3/images/5.jpg>
+
+[58]
+File: content/1/chapter3/images/6.jpg Graphic file (type bmp)
+<content/1/chapter3/images/6.jpg>
+File: content/1/chapter3/images/7.jpg Graphic file (type bmp)
+<content/1/chapter3/images/7.jpg>
+ [59]
+File: content/1/chapter3/images/8.jpg Graphic file (type bmp)
+<content/1/chapter3/images/8.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+File: content/1/chapter3/images/9.jpg Graphic file (type bmp)
+<content/1/chapter3/images/9.jpg>
+
+Overfull \hbox (9.03708pt too wide) in paragraph at lines 144--145
+[]\TU/LiHeiPro(0)/m/n/10.95 只 要 操 作 數 在 寄 存 器 中 了，|  處 理 器 就 可 以 同 時 執 行 多 個 操 
+作，|  這 就 是 所 謂 的 指 令 級 並 行 \TU/lmr/bx/n/10.95 (ILP)\TU/LiHeiPro(0)/m/n/10.95 。|
+
+ []
+
+File: content/1/chapter3/images/10.jpg Graphic file (type bmp)
+<content/1/chapter3/images/10.jpg>
+[60]
+File: content/1/chapter3/images/11.jpg Graphic file (type bmp)
+<content/1/chapter3/images/11.jpg>
+File: content/1/chapter3/images/12.jpg Graphic file (type bmp)
+<content/1/chapter3/images/12.jpg>
+ [61]
+File: content/1/chapter3/images/13.jpg Graphic file (type bmp)
+<content/1/chapter3/images/13.jpg>
+) (./content/1/chapter3/4.tex [62]
+File: content/1/chapter3/images/14.jpg Graphic file (type bmp)
+<content/1/chapter3/images/14.jpg>
+File: content/1/chapter3/images/15.jpg Graphic file (type bmp)
+<content/1/chapter3/images/15.jpg>
+ [63]
+File: content/1/chapter3/images/16.jpg Graphic file (type bmp)
+<content/1/chapter3/images/16.jpg>
+File: content/1/chapter3/images/17.jpg Graphic file (type bmp)
+<content/1/chapter3/images/17.jpg>
+ [64])
+(./content/1/chapter3/5.tex [65]
+File: content/1/chapter3/images/18.jpg Graphic file (type bmp)
+<content/1/chapter3/images/18.jpg>
+File: content/1/chapter3/images/19.jpg Graphic file (type bmp)
+<content/1/chapter3/images/19.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+[67]
+File: content/1/chapter3/images/20.jpg Graphic file (type bmp)
+<content/1/chapter3/images/20.jpg>
+File: content/1/chapter3/images/21.jpg Graphic file (type bmp)
+<content/1/chapter3/images/21.jpg>
+ [68]
+Overfull \hbox (15.49393pt too wide) in paragraph at lines 108--109
+\TU/LiHeiPro(0)/m/n/10.95 測 幾 乎 是 完 美 的，|  刷 新 流 水 只 在 循 環 的 末 端 發 生。|  條 件 基 準
+ 測 試 也 有 基 於 隨 機 數 的 分 支，| \TU/lmtt/m/n/10.95 if(b1[i])\TU/LiHeiPro(0)/m/n/10.9
+5 ，|
+ []
+
+File: content/1/chapter3/images/22.jpg Graphic file (type bmp)
+<content/1/chapter3/images/22.jpg>
+[69]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+ (./The-Art-of-Writing-Efficient-Programs.listing)
+File: content/1/chapter3/images/23.jpg Graphic file (type bmp)
+<content/1/chapter3/images/23.jpg>
+
+Overfull \hbox (9.88756pt too wide) in paragraph at lines 144--145
+\TU/LiHeiPro(0)/m/n/10.95 完 全 可 預 測 的 循 環 結 束 條 件，|  因 此 \TU/lmr/m/n/10.95 11% 
+\TU/LiHeiPro(0)/m/n/10.95 相 當 糟 糕。|  我 們 應 該 將 它 與 其 他 基 準 \TU/lmtt/m/n/10.95 B
+M_-branch_-predicted
+ []
+
+File: content/1/chapter3/images/24.jpg Graphic file (type bmp)
+<content/1/chapter3/images/24.jpg>
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+(./The-Art-of-Writing-Efficient-Programs.listing) [70]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing)
+File: content/1/chapter3/images/25.jpg Graphic file (type bmp)
+<content/1/chapter3/images/25.jpg>
+File: content/1/chapter3/images/26.jpg Graphic file (type bmp)
+<content/1/chapter3/images/26.jpg>
+) (./content/1/chapter3/6.tex
+[71]) (./content/1/chapter3/7.tex [72]
+File: content/1/chapter3/images/27.jpg Graphic file (type bmp)
+<content/1/chapter3/images/27.jpg>
+File: content/1/chapter3/images/28.jpg Graphic file (type bmp)
+<content/1/chapter3/images/28.jpg>
+ [73] [74]
+File: content/1/chapter3/images/29.jpg Graphic file (type bmp)
+<content/1/chapter3/images/29.jpg>
+ [75])
+(./content/1/chapter3/8.tex [76]
+File: content/1/chapter3/images/30.jpg Graphic file (type bmp)
+<content/1/chapter3/images/30.jpg>
+ [77]
+File: content/1/chapter3/images/31.jpg Graphic file (type bmp)
+<content/1/chapter3/images/31.jpg>
+File: content/1/chapter3/images/32.jpg Graphic file (type bmp)
+<content/1/chapter3/images/32.jpg>
+ [78]
+File: content/1/chapter3/images/33.jpg Graphic file (type bmp)
+<content/1/chapter3/images/33.jpg>
+ [79]) (./content/1/chapter3/9.tex
+[80]) (./content/1/chapter3/10.tex) [81] (./content/1/chapter4/0.tex)
+(./content/1/chapter4/1.tex
+Overfull \hbox (1.33072pt too wide) in paragraph at lines 1--2
+[][]$[] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] []
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [][]$[][]\TU/
+LiHeiPro(0)/m/n/10.95 。|  如 果 想 使 用 \TU/lmr/m/n/10.95 MCA\TU/LiHeiPro(0)/m/n/10
+.95 ，|  那 麼 需 要 基 於 \TU/lmr/m/n/10.95 llvm
+ []
+
+) (./content/1/chapter4/2.tex [82]
+File: content/1/chapter4/images/1.jpg Graphic file (type bmp)
+<content/1/chapter4/images/1.jpg>
+) (./content/1/chapter4/3.tex [83]
+File: content/1/chapter4/images/2.jpg Graphic file (type bmp)
+<content/1/chapter4/images/2.jpg>
+ [84]
+[85] [86] [87]) (./content/1/chapter4/4.tex
+File: content/1/chapter4/images/3.jpg Graphic file (type bmp)
+<content/1/chapter4/images/3.jpg>
+ [88]
+File: content/1/chapter4/images/4.jpg Graphic file (type bmp)
+<content/1/chapter4/images/4.jpg>
+ [89]
+File: content/1/chapter4/images/5.jpg Graphic file (type bmp)
+<content/1/chapter4/images/5.jpg>
+ [90]
+File: content/1/chapter4/images/6.jpg Graphic file (type bmp)
+<content/1/chapter4/images/6.jpg>
+ [91]
+File: content/1/chapter4/images/7.jpg Graphic file (type bmp)
+<content/1/chapter4/images/7.jpg>
+ [92]
+File: content/1/chapter4/images/8.jpg Graphic file (type bmp)
+<content/1/chapter4/images/8.jpg>
+)
+(./content/1/chapter4/5.tex
+File: content/1/chapter4/images/9.jpg Graphic file (type bmp)
+<content/1/chapter4/images/9.jpg>
+
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+ [93]
+[94]
+File: content/1/chapter4/images/10.jpg Graphic file (type bmp)
+<content/1/chapter4/images/10.jpg>
+File: content/1/chapter4/images/11.jpg Graphic file (type bmp)
+<content/1/chapter4/images/11.jpg>
+ [95]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+ (./The-Art-of-Writing-Efficient-Programs.listing)
+File: content/1/chapter4/images/12.jpg Graphic file (type bmp)
+<content/1/chapter4/images/12.jpg>
+ [96]
+File: content/1/chapter4/images/13.jpg Graphic file (type bmp)
+<content/1/chapter4/images/13.jpg>
+File: content/1/chapter4/images/14.jpg Graphic file (type bmp)
+<content/1/chapter4/images/14.jpg>
+ [97] [98]
+File: content/1/chapter4/images/15.jpg Graphic file (type bmp)
+<content/1/chapter4/images/15.jpg>
+File: content/1/chapter4/images/16.jpg Graphic file (type bmp)
+<content/1/chapter4/images/16.jpg>
+
+[99] [100]) (./content/1/chapter4/6.tex
+File: content/1/chapter4/images/17.jpg Graphic file (type bmp)
+<content/1/chapter4/images/17.jpg>
+ [101]
+File: content/1/chapter4/images/18.jpg Graphic file (type bmp)
+<content/1/chapter4/images/18.jpg>
+ [102] [103]
+Overfull \hbox (41.16075pt too wide) in paragraph at lines 104--105
+[]\TU/LiHeiPro(0)/m/n/10.95 然 後，|  在 位 置 \TU/lmtt/m/n/10.95 timing_-array + dat
+a[i] \TU/LiHeiPro(0)/m/n/10.95 讀 取 內 存，|  其 中 \TU/lmtt/m/n/10.95 i \TU/LiHeiPro
+(0)/m/n/10.95 要 麼 是 \TU/lmtt/m/n/10.95 ok_-index\TU/LiHeiPro(0)/m/n/10.95 ，|  要
+ 麼 是 \TU/lmtt/m/n/10.95 evil_-index\TU/LiHeiPro(0)/m/n/10.95 ，|
+ []
+
+[104] [105] [106] [107]) (./content/1/chapter4/7.tex)
+(./content/1/chapter4/8.tex [108]) [109] (./content/1/chapter5/0.tex)
+(./content/1/chapter5/1.tex) (./content/1/chapter5/2.tex [110] [111] [112]
+File: content/1/chapter5/images/1.jpg Graphic file (type bmp)
+<content/1/chapter5/images/1.jpg>
+
+[113]
+File: content/1/chapter5/images/2.jpg Graphic file (type bmp)
+<content/1/chapter5/images/2.jpg>
+File: content/1/chapter5/images/3.jpg Graphic file (type bmp)
+<content/1/chapter5/images/3.jpg>
+ [114]) (./content/1/chapter5/3.tex [115] [116]
+File: content/1/chapter5/images/4.jpg Graphic file (type bmp)
+<content/1/chapter5/images/4.jpg>
+File: content/1/chapter5/images/5.jpg Graphic file (type bmp)
+<content/1/chapter5/images/5.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117])
+(./content/1/chapter5/4.tex [118]
+File: content/1/chapter5/images/6.jpg Graphic file (type bmp)
+<content/1/chapter5/images/6.jpg>
+ [119]
+File: content/1/chapter5/images/7.jpg Graphic file (type bmp)
+<content/1/chapter5/images/7.jpg>
+
+Overfull \hbox (9.31792pt too wide) in paragraph at lines 56--57
+[]\TU/LiHeiPro(0)/m/n/10.95 處 理 器 以 字 節 或 整 數 的 形 式 處 理 數 據，|  這 取 決 於 變 量 的 類 
+型。|  在 我 們 的 例 子 中，|  一 個 \TU/lmtt/m/n/10.95 unsigned
+ []
+
+[120] [121]
+File: content/1/chapter5/images/8.jpg Graphic file (type bmp)
+<content/1/chapter5/images/8.jpg>
+) (./content/1/chapter5/5.tex [122] [123] [124]
+File: content/1/chapter5/images/9.jpg Graphic file (type bmp)
+<content/1/chapter5/images/9.jpg>
+File: content/1/chapter5/images/10.jpg Graphic file (type bmp)
+<content/1/chapter5/images/10.jpg>
+ [125]
+File: content/1/chapter5/images/11.jpg Graphic file (type bmp)
+<content/1/chapter5/images/11.jpg>
+ [126]
+File: content/1/chapter5/images/12.jpg Graphic file (type bmp)
+<content/1/chapter5/images/12.jpg>
+ [127]
+File: content/1/chapter5/images/13.jpg Graphic file (type bmp)
+<content/1/chapter5/images/13.jpg>
+
+[128]) (./content/1/chapter5/6.tex [129]
+File: content/1/chapter5/images/14.jpg Graphic file (type bmp)
+<content/1/chapter5/images/14.jpg>
+ [130]) (./content/1/chapter5/7.tex
+[131]) (./content/1/chapter5/8.tex) [132] (./content/2/Section-2.tex) [133]
+(./content/2/chapter6/0.tex) (./content/2/chapter6/1.tex)
+(./content/2/chapter6/2.tex [134]) (./content/2/chapter6/3.tex [135]
+Underfull \vbox (badness 4205) has occurred while \output is active []
+
+ [136]
+[137]
+File: content/2/chapter6/images/1.jpg Graphic file (type bmp)
+<content/2/chapter6/images/1.jpg>
+ [138] [139]
+File: content/2/chapter6/images/2.jpg Graphic file (type bmp)
+<content/2/chapter6/images/2.jpg>
+ [140] [141]) (./content/2/chapter6/4.tex [142] [143] [144]
+File: content/2/chapter6/images/3.jpg Graphic file (type bmp)
+<content/2/chapter6/images/3.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [145]
+File: content/2/chapter6/images/4.jpg Graphic file (type bmp)
+<content/2/chapter6/images/4.jpg>
+
+[146] [147] [148] [149]
+Overfull \hbox (32.03938pt too wide) in paragraph at lines 225--226
+\TU/LiHeiPro(0)/m/n/10.95 賦 值 操 作 符，|  也 許 還 有 很 多 特 性，|  類 似 於 \TU/lmtt/m/n/10
+.95 std::unique_-ptr\TU/LiHeiPro(0)/m/n/10.95 。|  標 準 不 保 證 訪 問 存 儲 在 \TU/lmtt/
+m/n/10.95 std::unique_-ptr
+ []
+
+
+Overfull \hbox (20.66234pt too wide) in paragraph at lines 227--228
+\TU/LiHeiPro(0)/m/n/10.95 們 實 現 了 發 佈 協 議。|  注 意，| \TU/lmtt/m/n/10.95 publish()
+ \TU/LiHeiPro(0)/m/n/10.95 方 法 不 會 刪 除 舊 數 據，|  假 設 生 產 者 線 程 只 調 用 一 次 \TU/lmt
+t/m/n/10.95 publish()\TU/LiHeiPro(0)/m/n/10.95 ，|
+ []
+
+[150]
+File: content/2/chapter6/images/5.jpg Graphic file (type bmp)
+<content/2/chapter6/images/5.jpg>
+File: content/2/chapter6/images/6.jpg Graphic file (type bmp)
+<content/2/chapter6/images/6.jpg>
+ [151]
+Overfull \hbox (44.08438pt too wide) in paragraph at lines 276--277
+[]\TU/LiHeiPro(0)/m/n/10.95 討 論 線 程 安 全 的 共 享 指 針 時，|  理 解 指 針 需 要 什 麼 保 證 非 常 
+重 要。| \TU/lmr/m/n/10.95 C++ \TU/LiHeiPro(0)/m/n/10.95 標 準 共 享 指 針 \TU/lmtt/m/n/
+10.95 std::shared_-ptr
+ []
+
+[152]
+File: content/2/chapter6/images/7.jpg Graphic file (type bmp)
+<content/2/chapter6/images/7.jpg>
+File: content/2/chapter6/images/8.jpg Graphic file (type bmp)
+<content/2/chapter6/images/8.jpg>
+ [153]) (./content/2/chapter6/5.tex) (./content/2/chapter6/6.tex) [154]
+(./content/2/chapter7/0.tex) (./content/2/chapter7/1.tex)
+(./content/2/chapter7/2.tex [155]
+File: content/2/chapter7/images/1.jpg Graphic file (type bmp)
+<content/2/chapter7/images/1.jpg>
+File: content/2/chapter7/images/2.jpg Graphic file (type bmp)
+<content/2/chapter7/images/2.jpg>
+ [156]) (./content/2/chapter7/3.tex [157]
+[158] [159]
+File: content/2/chapter7/images/3.jpg Graphic file (type bmp)
+<content/2/chapter7/images/3.jpg>
+File: content/2/chapter7/images/4.jpg Graphic file (type bmp)
+<content/2/chapter7/images/4.jpg>
+File: content/2/chapter7/images/5.jpg Graphic file (type bmp)
+<content/2/chapter7/images/5.jpg>
+ [160]
+Overfull \hbox (5.2995pt too wide) in paragraph at lines 156--157
+[]\TU/LiHeiPro(0)/m/n/10.95 注 意，|  為 了 允 許 只 進 行 查 找，|  這 裡 \TU/lmtt/m/n/10.95 
+top() \TU/LiHeiPro(0)/m/n/10.95 聲 明 為 \TU/lmtt/m/n/10.95 const\TU/LiHeiPro(0)/m
+/n/10.95 ，|  這 裡 必 須 將 互 斥 量 聲 明 為 \TU/lmtt/m/n/10.95 mutable\TU/LiHeiPro(0)/m/
+n/10.95 。|
+ []
+
+[161]
+Overfull \hbox (1.98166pt too wide) in paragraph at lines 160--161
+[]\TU/LiHeiPro(0)/m/n/10.95 不 能 在 \TU/lmtt/m/n/10.95 top() \TU/LiHeiPro(0)/m/n/
+10.95 中 省 略 鎖，|  原 因 是 不 能 確 定 另 一 個 線 程 在 同 一 時 間 沒 有 使 用 \TU/lmtt/m/n/10.95 p
+ush() \TU/LiHeiPro(0)/m/n/10.95 或 \TU/lmtt/m/n/10.95 pop()\TU/LiHeiPro(0)/m/n/1
+0.95 。|
+ []
+
+File: content/2/chapter7/images/6.jpg Graphic file (type bmp)
+<content/2/chapter7/images/6.jpg>
+
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [162]
+File: content/2/chapter7/images/7.jpg Graphic file (type bmp)
+<content/2/chapter7/images/7.jpg>
+File: content/2/chapter7/images/8.jpg Graphic file (type bmp)
+<content/2/chapter7/images/8.jpg>
+
+[163]
+File: content/2/chapter7/images/9.jpg Graphic file (type bmp)
+<content/2/chapter7/images/9.jpg>
+ [164] [165]
+File: content/2/chapter7/images/10.jpg Graphic file (type bmp)
+<content/2/chapter7/images/10.jpg>
+File: content/2/chapter7/images/11.jpg Graphic file (type bmp)
+<content/2/chapter7/images/11.jpg>
+File: content/2/chapter7/images/12.jpg Graphic file (type bmp)
+<content/2/chapter7/images/12.jpg>
+ [166]
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+File: content/2/chapter7/images/13.jpg Graphic file (type bmp)
+<content/2/chapter7/images/13.jpg>
+[167] [168]
+File: content/2/chapter7/images/14.jpg Graphic file (type bmp)
+<content/2/chapter7/images/14.jpg>
+ [169] [170]
+File: content/2/chapter7/images/15.jpg Graphic file (type bmp)
+<content/2/chapter7/images/15.jpg>
+File: content/2/chapter7/images/16.jpg Graphic file (type bmp)
+<content/2/chapter7/images/16.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171])
+(./content/2/chapter7/4.tex [172]
+File: content/2/chapter7/images/17.jpg Graphic file (type bmp)
+<content/2/chapter7/images/17.jpg>
+File: content/2/chapter7/images/18.jpg Graphic file (type bmp)
+<content/2/chapter7/images/18.jpg>
+File: content/2/chapter7/images/19.jpg Graphic file (type bmp)
+<content/2/chapter7/images/19.jpg>
+ [173] [174] [175]
+File: content/2/chapter7/images/20.jpg Graphic file (type bmp)
+<content/2/chapter7/images/20.jpg>
+File: content/2/chapter7/images/21.jpg Graphic file (type bmp)
+<content/2/chapter7/images/21.jpg>
+ [176] [177]
+File: content/2/chapter7/images/22.jpg Graphic file (type bmp)
+<content/2/chapter7/images/22.jpg>
+
+Overfull \hbox (6.70111pt too wide) in paragraph at lines 196--197
+\TU/LiHeiPro(0)/m/n/10.95 只 有 一 個 線 程 在 子 隊 列 上 操 作，|  因 此 不 需 要 線 程 安 全 \TU/lm
+r/m/n/10.95 (\TU/LiHeiPro(0)/m/n/10.95 子 隊 列 甚 至 可 以 是 \TU/lmtt/m/n/10.95 std::
+queue\TU/lmr/m/n/10.95 )\TU/LiHeiPro(0)/m/n/10.95 。|  操 作 \TU/lmr/m/n/10.95 (\T
+U/lmtt/m/n/10.95 push
+ []
+
+File: content/2/chapter7/images/23.jpg Graphic file (type bmp)
+<content/2/chapter7/images/23.jpg>
+[178] [179]) (./content/2/chapter7/5.tex
+File: content/2/chapter7/images/24.jpg Graphic file (type bmp)
+<content/2/chapter7/images/24.jpg>
+ [180]
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+ [181]
+File: content/2/chapter7/images/25.jpg Graphic file (type bmp)
+<content/2/chapter7/images/25.jpg>
+File: content/2/chapter7/images/26.jpg Graphic file (type bmp)
+<content/2/chapter7/images/26.jpg>
+
+[182]
+File: content/2/chapter7/images/27.jpg Graphic file (type bmp)
+<content/2/chapter7/images/27.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [183]
+[184]
+File: content/2/chapter7/images/28.jpg Graphic file (type bmp)
+<content/2/chapter7/images/28.jpg>
+File: content/2/chapter7/images/29.jpg Graphic file (type bmp)
+<content/2/chapter7/images/29.jpg>
+ [185]) (./content/2/chapter7/6.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [186])
+(./content/2/chapter7/7.tex) [187] (./content/2/chapter8/0.tex)
+(./content/2/chapter8/1.tex) (./content/2/chapter8/2.tex [188])
+(./content/2/chapter8/3.tex
+Overfull \hbox (73.8234pt too wide) in paragraph at lines 1--2
+\TU/LiHeiPro(0)/m/n/10.95 入 的 \TU/lmtt/m/n/10.95 std::lock() \TU/LiHeiPro(0)/m/
+n/10.95 現 在 有 一 個 相 應 的 \TU/lmr/m/n/10.95 RAII \TU/LiHeiPro(0)/m/n/10.95 對 象，| 
+\TU/lmtt/m/n/10.95 std::scoped_-lock\TU/LiHeiPro(0)/m/n/10.95 。|  添 加 了 共 享 互 斥
+ 鎖 \TU/lmtt/m/n/10.95 std::shared_-mutex\TU/LiHeiPro(0)/m/n/10.95 ，|
+ []
+
+[189]
+File: content/2/chapter8/images/1.jpg Graphic file (type bmp)
+<content/2/chapter8/images/1.jpg>
+ [190]
+File: content/2/chapter8/images/2.jpg Graphic file (type bmp)
+<content/2/chapter8/images/2.jpg>
+File: content/2/chapter8/images/3.jpg Graphic file (type bmp)
+<content/2/chapter8/images/3.jpg>
+File: content/2/chapter8/images/4.jpg Graphic file (type bmp)
+<content/2/chapter8/images/4.jpg>
+ [191]) (./content/2/chapter8/4.tex
+File: content/2/chapter8/images/5.jpg Graphic file (type bmp)
+<content/2/chapter8/images/5.jpg>
+ [192]
+File: content/2/chapter8/images/6.jpg Graphic file (type bmp)
+<content/2/chapter8/images/6.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [193]
+File: content/2/chapter8/images/7.jpg Graphic file (type bmp)
+<content/2/chapter8/images/7.jpg>
+
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+ [194]
+File: content/2/chapter8/images/8.jpg Graphic file (type bmp)
+<content/2/chapter8/images/8.jpg>
+
+[195] [196] [197]
+Overfull \hbox (3.50372pt too wide) in paragraph at lines 225--226
+[]\TU/lmtt/m/n/10.95 promise_-type \TU/LiHeiPro(0)/m/n/10.95 類 型 必 須 是 \TU/lmtt
+/m/n/10.95 generator \TU/LiHeiPro(0)/m/n/10.95 類 的 嵌 套 類 型 \TU/lmr/m/n/10.95 (\
+TU/LiHeiPro(0)/m/n/10.95 或 者，|  協 程 返 回 的 類 型\TU/lmr/m/n/10.95 )\TU/LiHeiPro(0)
+/m/n/10.95 。|  但 是 \TU/lmtt/m/n/10.95 promise
+ []
+
+
+Overfull \hbox (12.5703pt too wide) in paragraph at lines 233--234
+[]\TU/LiHeiPro(0)/m/n/10.95 第 二 個 非 空 函 數 \TU/lmtt/m/n/10.95 yield_-value()\TU/
+LiHeiPro(0)/m/n/10.95 ，|  在 每 次 使 用 操 作 符 \TU/lmtt/m/n/10.95 co_-yield \TU/LiHe
+iPro(0)/m/n/10.95 時 調 用，|  它 的 參 數 是 \TU/lmtt/m/n/10.95 co_-yield
+ []
+
+
+Overfull \hbox (83.89857pt too wide) in paragraph at lines 235--236
+\TU/LiHeiPro(0)/m/n/10.95 調 用 \TU/lmtt/m/n/10.95 return_-void()\TU/LiHeiPro(0)/
+m/n/10.95 。|  最 後，|  如 果 協 同 程 序 拋 出 了 一 個 從 其 主 體 中 逃 逸 的 異 常，|  則 調 用 \TU/lmt
+t/m/n/10.95 unhandled_-exception()\TU/LiHeiPro(0)/m/n/10.95 。|
+ []
+
+[198] [199] [200]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+ (./The-Art-of-Writing-Efficient-Programs.listing
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3.
+)
+Overfull \hbox (2.9562pt too wide) in paragraph at lines 341--342
+[]\TU/LiHeiPro(0)/m/n/10.95 我 們 提 到 \TU/lmtt/m/n/10.95 co_-await \TU/LiHeiPro(0
+)/m/n/10.95 是 暫 停 協 程 的 通 用 操 作 符。|  實 際 上，| \TU/lmtt/m/n/10.95 co_-yield x \TU
+/LiHeiPro(0)/m/n/10.95 操 作 符 等 價 於 \TU/lmtt/m/n/10.95 co_-await
+ []
+
+) (./content/2/chapter8/5.tex) (./content/2/chapter8/6.tex [201]) [202]
+(./content/3/Section-3.tex) [203] (./content/3/chapter9/0.tex)
+(./content/3/chapter9/1.tex) (./content/3/chapter9/2.tex [204])
+(./content/3/chapter9/3.tex [205] [206]
+File: content/3/chapter9/images/1.jpg Graphic file (type bmp)
+<content/3/chapter9/images/1.jpg>
+ [207]
+File: content/3/chapter9/images/2.jpg Graphic file (type bmp)
+<content/3/chapter9/images/2.jpg>
+ [208] [209]
+File: content/3/chapter9/images/3.jpg Graphic file (type bmp)
+<content/3/chapter9/images/3.jpg>
+File: content/3/chapter9/images/4.jpg Graphic file (type bmp)
+<content/3/chapter9/images/4.jpg>
+
+Underfull \vbox (badness 2556) has occurred while \output is active []
+
+ [210]
+Underfull \vbox (badness 2376) has occurred while \output is active []
+
+ [211]
+[212]) (./content/3/chapter9/4.tex [213]
+Overfull \hbox (11.74905pt too wide) in paragraph at lines 40--41
+[]\TU/LiHeiPro(0)/m/n/10.95 這 裡 是 通 過 初 始 化 一 個 字 符 串 來 表 示 的，| \TU/lmtt/m/n/10
+.95 random_-number() \TU/LiHeiPro(0)/m/n/10.95 返 回 隨 機 整 數 值 \TU/lmr/m/n/10.95 
+(\TU/LiHeiPro(0)/m/n/10.95 可 能 只 是 \TU/lmtt/m/n/10.95 rand()\TU/LiHeiPro(0)/m/n
+/10.95 ，|
+ []
+
+File: content/3/chapter9/images/5.jpg Graphic file (type bmp)
+<content/3/chapter9/images/5.jpg>
+[214]
+File: content/3/chapter9/images/6.jpg Graphic file (type bmp)
+<content/3/chapter9/images/6.jpg>
+ [215]
+File: content/3/chapter9/images/7.jpg Graphic file (type bmp)
+<content/3/chapter9/images/7.jpg>
+ [216]
+File: content/3/chapter9/images/8.jpg Graphic file (type bmp)
+<content/3/chapter9/images/8.jpg>
+File: content/3/chapter9/images/9.jpg Graphic file (type bmp)
+<content/3/chapter9/images/9.jpg>
+
+Underfull \vbox (badness 7362) has occurred while \output is active []
+
+ [217]
+File: content/3/chapter9/images/10.jpg Graphic file (type bmp)
+<content/3/chapter9/images/10.jpg>
+
+[218]) (./content/3/chapter9/5.tex [219]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing) [220])
+(./content/3/chapter9/6.tex) (./content/3/chapter9/7.tex) [221]
+(./content/3/chapter10/0.tex) (./content/3/chapter10/1.tex)
+(./content/3/chapter10/2.tex [222] [223] [224]
+Overfull \hbox (46.32794pt too wide) in paragraph at lines 148--149
+[]\TU/LiHeiPro(0)/m/n/10.95 因 此，|  析 構 函 數 的 執 行 時 間 與 \TU/lmtt/m/n/10.95 vecto
+r \TU/LiHeiPro(0)/m/n/10.95 的 大 小 \TU/lmr/m/n/10.95 N \TU/LiHeiPro(0)/m/n/10.95
+ 成 正 比。|  考 慮 一 個 由 整 數 組 成 的 \TU/lmtt/m/n/10.95 rstd::vector<int>\TU/LiHeiPro(
+0)/m/n/10.95 ，|
+ []
+
+[225] [226]
+Overfull \hbox (3.75435pt too wide) in paragraph at lines 213--214
+\TU/LiHeiPro(0)/m/n/10.95 開 發 者 不 想 簡 單 地 將 謂 詞 直 接 複 製 到 \TU/lmr/m/n/10.95 Lam
+bda \TU/LiHeiPro(0)/m/n/10.95 中 有 其 他 的 原 因\TU/lmr/m/n/10.95 )\TU/LiHeiPro(0)/m
+/n/10.95 。|  即 使 編 譯 器 沒 有 內 聯 \TU/lmtt/m/n/10.95 find_-if()\TU/LiHeiPro(0)/m/n
+/10.95 ，|
+ []
+
+
+Overfull \hbox (2.44135pt too wide) in paragraph at lines 223--224
+\TU/LiHeiPro(0)/m/n/10.95 性 能 的 最 大 影 響 是 \TU/lmr/m/n/10.95 (\TU/LiHeiPro(0)/m/
+n/10.95 除 非 編 譯 器 可 以 反 虛 化 調 用\TU/lmr/m/n/10.95 ) \TU/LiHeiPro(0)/m/n/10.95 不 
+能 內 聯。|  一 個 簡 單 的 函 數，|  如 \TU/lmtt/m/n/10.95 int f() return
+ []
+
+[227] [228] [229]
+Overfull \hbox (5.12328pt too wide) in paragraph at lines 359--360
+\TU/LiHeiPro(0)/m/n/10.95 量。|  目 前 為 止，| \TU/lmtt/m/n/10.95 restrict \TU/LiHeiP
+ro(0)/m/n/10.95 關 鍵 字 還 不 是 \TU/lmr/m/n/10.95 C++ \TU/LiHeiPro(0)/m/n/10.95 標 準
+ 的 一 部 分。|  即 便 如 此，|  還 是 可 以 使 用 \TU/lmtt/m/n/10.95 restrict\TU/LiHeiPro(0)/m
+/n/10.95 ，|
+ []
+
+[230]
+File: content/3/chapter10/images/1.jpg Graphic file (type bmp)
+<content/3/chapter10/images/1.jpg>
+ [231]
+File: content/3/chapter10/images/2.jpg Graphic file (type bmp)
+<content/3/chapter10/images/2.jpg>
+ [232] [233]) (./content/3/chapter10/3.tex [234])
+(./content/3/chapter10/4.tex) [235] (./content/3/chapter11/0.tex)
+(./content/3/chapter11/1.tex) (./content/3/chapter11/2.tex
+Overfull \hbox (8.57355pt too wide) in paragraph at lines 1--2
+[]\TU/LiHeiPro(0)/m/n/10.95 未 定 義 行 為 \TU/lmr/m/n/10.95 (UB) \TU/LiHeiPro(0)/m/
+n/10.95 的 概 念 有 些 神 祕，|  對 不 瞭 解 情 況 的 人 來 說，|  它 是 一 種 未 初 始 化 的 警 告。| \TU/lmr
+/m/n/10.95 Usenet
+ []
+
+[236] [237]) (./content/3/chapter11/3.tex [238]) (./content/3/chapter11/4.tex
+File: content/3/chapter11/images/1.jpg Graphic file (type bmp)
+<content/3/chapter11/images/1.jpg>
+
+[239]
+File: content/3/chapter11/images/2.jpg Graphic file (type bmp)
+<content/3/chapter11/images/2.jpg>
+File: content/3/chapter11/images/3.jpg Graphic file (type bmp)
+<content/3/chapter11/images/3.jpg>
+ [240]
+File: content/3/chapter11/images/4.jpg Graphic file (type bmp)
+<content/3/chapter11/images/4.jpg>
+File: content/3/chapter11/images/5.jpg Graphic file (type bmp)
+<content/3/chapter11/images/5.jpg>
+ [241]
+File: content/3/chapter11/images/6.jpg Graphic file (type bmp)
+<content/3/chapter11/images/6.jpg>
+ [242]
+File: content/3/chapter11/images/7.jpg Graphic file (type bmp)
+<content/3/chapter11/images/7.jpg>
+ [243] [244]) (./content/3/chapter11/5.tex [245]
+File: content/3/chapter11/images/8.jpg Graphic file (type bmp)
+<content/3/chapter11/images/8.jpg>
+
+[246]
+File: content/3/chapter11/images/9.jpg Graphic file (type bmp)
+<content/3/chapter11/images/9.jpg>
+ [247]
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+ (./The-Art-of-Writing-Efficient-Programs.listing)
+\openout4 = `The-Art-of-Writing-Efficient-Programs.listing'.
+
+
+(./The-Art-of-Writing-Efficient-Programs.listing)) (./content/3/chapter11/6.tex
+[248]) (./content/3/chapter11/7.tex) [249] (./content/3/chapter12/0.tex)
+(./content/3/chapter12/1.tex) (./content/3/chapter12/2.tex [250])
+(./content/3/chapter12/3.tex [251]
+Overfull \hbox (12.8757pt too wide) in paragraph at lines 18--19
+[]\TU/LiHeiPro(0)/m/n/10.95 對 於 接 口 洩 漏 太 多 實 現 信 息 的 反 面 例 子，|  考 慮 另 一 個 \TU/
+lmr/m/n/10.95 STL \TU/LiHeiPro(0)/m/n/10.95 容 器，|  無 序 \TU/lmtt/m/n/10.95 set\T
+U/lmr/m/n/10.95 (\TU/LiHeiPro(0)/m/n/10.95 或 \TU/lmtt/m/n/10.95 map\TU/lmr/m/n/
+10.95 )\TU/LiHeiPro(0)/m/n/10.95 。| \TU/lmtt/m/n/10.95 std::unor
+ []
+
+[252]
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+File: content/3/chapter12/images/1.jpg Graphic file (type bmp)
+<content/3/chapter12/images/1.jpg>
+[253] [254] [255]
+File: content/3/chapter12/images/2.jpg Graphic file (type bmp)
+<content/3/chapter12/images/2.jpg>
+ [256]) (./content/3/chapter12/4.tex [257] [258]
+Overfull \hbox (4.78485pt too wide) in paragraph at lines 59--60
+[]\TU/LiHeiPro(0)/m/n/10.95 為 此，|  需 要 一 個 條 件 \TU/lmtt/m/n/10.95 lock_-guard\T
+U/LiHeiPro(0)/m/n/10.95 。|  可 以 構 建 一 個 使 用 \TU/lmtt/m/n/10.95 std::optional \T
+U/LiHeiPro(0)/m/n/10.95 或 \TU/lmtt/m/n/10.95 std::unique_-ptr\TU/LiHeiPro(0)/m/
+n/10.95 ，|
+ []
+
+[259] [260] [261]) (./content/3/chapter12/5.tex [262])
+(./content/3/chapter12/6.tex
+Underfull \vbox (badness 3364) has occurred while \output is active []
+
+ [263]
+[264]) [265] (./content/3/chapter12/7.tex [266]) (./content/3/chapter12/8.tex)
+(./content/3/chapter12/9.tex) [267] (./content/Assessments/1.tex)
+(./content/Assessments/2.tex) (./content/Assessments/3.tex [268])
+(./content/Assessments/4.tex) (./content/Assessments/5.tex [269])
+(./content/Assessments/6.tex) (./content/Assessments/7.tex [270])
+(./content/Assessments/8.tex) (./content/Assessments/9.tex [271])
+(./content/Assessments/10.tex) (./content/Assessments/11.tex [272])
+(./content/Assessments/12.tex) [273]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 869.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 869.
+
+(./The-Art-of-Writing-Efficient-Programs.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 869.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 869.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 869.
+ ) 
+Here is how much of TeX's memory you used:
+ 36659 strings out of 481370
+ 801239 string characters out of 5926567
+ 1381183 words of memory out of 5000000
+ 52702 multiletter control sequences out of 15000+600000
+ 540209 words of font info for 80 fonts, out of 8000000 for 9000
+ 264 hyphenation exceptions out of 8191
+ 64i,14n,103p,956b,2054s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on The-Art-of-Writing-Efficient-Programs.pdf (273 pages).

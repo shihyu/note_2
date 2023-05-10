@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Other - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../ubuntu/ubuntu_setup.html">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../tools/network.html">Network</a></li><li class="chapter-item "><a href="../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../c++/move.html">Move</a></li><li class="chapter-item "><a href="../c++/CAS.html">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../docker/command.html">Command</a></li><li class="chapter-item "><a href="../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../go/oo.html">OO</a></li><li class="chapter-item "><a href="../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../go/interface.html">interface</a></li><li class="chapter-item "><a href="../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item "><a href="../python/other.html">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../strategy/note.html">Resource</a></li><li class="chapter-item "><a href="../strategy/nansen.html">Nansen</a></li><li class="chapter-item "><a href="../strategy/example.html">Example</a></li><li class="chapter-item expanded "><a href="../strategy/other.html" class="active">Other</a></li><li class="chapter-item "><a href="../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../strategy/finlab.html">Finlab</a></li><li class="chapter-item "><a href="../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架五Sizer.html">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="統計大盤每年平均日k振幅"><a class="header" href="#統計大盤每年平均日k振幅">統計大盤每年平均日K振幅</a></h2>
+<pre><code class="language-python">import yfinance as yf
+import pandas as pd
+
+# Fetch the TWSE index
+twse = yf.Ticker(&quot;^TWII&quot;)
+
+# Get the historical data for the longest possible time
+history = twse.history(period=&quot;max&quot;)
+
+# Calculate the daily range
+history[&quot;Range&quot;] = history[&quot;High&quot;] - history[&quot;Low&quot;]
+
+# Group the data by year and calculate the average daily range
+yearly_adr = history.groupby(pd.Grouper(freq=&quot;Y&quot;))[&quot;Range&quot;].mean()
+
+# Print the yearly ADR
+print(yearly_adr)
+</code></pre>
+<h2 id="統計假突破次數"><a class="header" href="#統計假突破次數">統計假突破次數</a></h2>
+<pre><code class="language-python">'''
+統計假突破次數的方法因策略而異，以下提供一個假設進場條件的範例：
+
+假設在 5 日均線上，且 5 日均線上穿 20 日均線時買進，其他時間賣出。
+接下來我們將 K 線資料與以 5 日、20 日為週期的均線做比較，並建立一個叫做假突破的佈林通道，當價格穿越了假突破的通道時，就表示有一個假突破信號。 通道的計算方式為：
+上通道：上一期假突破的最高價+1.5*(上一期假突破的最高價-上一期假突破的最低價)
+下通道：上一期假突破的最低價-1.5*(上一期假突破的最高價-上一期假突破的最低價)
+當發現股價穿越了假突破區間時，即可記錄一次假突破。
+'''
+import numpy as np
+import pandas as pd
+import yfinance as yf
+
+# 下載開高低收成交量（ohlcv）資料
+symbol = 'AAPL' # 蘋果公司
+ohlcv = yf.download(symbol, start=&quot;2016-01-01&quot;, end=&quot;2021-11-17&quot;)
+
+# 設定進場和出場訊號
+ohlcv['ma5'] = ohlcv['Close'].rolling(window=5).mean()
+ohlcv['ma20'] = ohlcv['Close'].rolling(window=20).mean()
+
+ohlcv[&quot;in_signal&quot;] = np.where(ohlcv['ma5'] &gt; ohlcv['ma20'].shift(1), 1, 0)
+ohlcv[&quot;out_signal&quot;] = np.where(ohlcv['ma5'] &lt;= ohlcv['ma20'].shift(1), 1, 0)
+
+# 設定假突破的條件
+ohlcv_in = ohlcv[ohlcv['in_signal'] == 1]
+ohlcv_out = ohlcv[ohlcv['out_signal'] == 1]
+
+fake_breakout_upper = np.nan
+fake_breakout_lower = np.nan
+
+fake_breakout_upper_list = []
+fake_breakout_lower_list = []
+in_signal_flag = False
+
+for date, row in ohlcv.iterrows():
+    if in_signal_flag:
+        if row['High'] &gt; fake_breakout_upper:
+            fake_breakout_upper = row['High']
+        if row['Low'] &lt; fake_breakout_lower:
+            fake_breakout_lower = row['Low']
+        
+        if row['Low'] &lt;= fake_breakout_lower and row['Close'] &gt; fake_breakout_lower and not np.isnan(fake_breakout_lower):
+            fake_breakout_upper_list.append(fake_breakout_upper)
+            fake_breakout_lower_list.append(fake_breakout_lower)
+            
+            fake_breakout_upper = np.nan
+            fake_breakout_lower = np.nan
+            
+            in_signal_flag = False
+            
+    else:
+        if date in ohlcv_in.index:
+            fake_breakout_upper = row['High']
+            fake_breakout_lower = row['Low']
+            in_signal_flag = True
+            
+counts = len(fake_breakout_upper_list)
+
+print(f&quot;假突破次數: {counts}&quot;)
+</code></pre>
+<h1 id="how-to-implement-a-grid-trading-strategy-python-tutorial"><a class="header" href="#how-to-implement-a-grid-trading-strategy-python-tutorial">How to implement a Grid Trading Strategy (Python Tutorial)</a></h1>
+<p>https://medium.com/@chris_42047/how-to-implement-a-grid-trading-strategy-python-tutorial-338b38fc5e84</p>
+<pre><code class="language-python">from pandas.tseries.holiday import USFederalHolidayCalendar
+from pandas.tseries.offsets import CustomBusinessDay
+
+US_BUSINESS_DAY = CustomBusinessDay(calendar=USFederalHolidayCalendar())
+from pandas.tseries.holiday import USFederalHolidayCalendar
+from pandas.tseries.offsets import CustomBusinessDay
+
+US_BUSINESS_DAY = CustomBusinessDay(calendar=USFederalHolidayCalendar())
+import pandas as pd
+from backtesting import Strategy
+from backtesting import Backtest
+import pandas_ta as ta
+import yfinance as yf
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+
+def CHOP(df, chop_len, atr_len):
+    #  Calculate Choppiness
+    chop_series = ta.chop(
+        high=df[&quot;High&quot;],
+        low=df[&quot;Low&quot;],
+        close=df[&quot;Close&quot;],
+        length=chop_len,
+        atr_length=atr_len,
+    )
+    return chop_series
+
+
+def plot_chart(
+    i, symbol, df, current_price, buy_grid, sell_grid, buy_stop_loss, sell_stop_loss
+):
+    light_palette = {}
+    light_palette[&quot;bg_color&quot;] = &quot;#ffffff&quot;
+    light_palette[&quot;plot_bg_color&quot;] = &quot;#ffffff&quot;
+    light_palette[&quot;grid_color&quot;] = &quot;#e6e6e6&quot;
+    light_palette[&quot;text_color&quot;] = &quot;#2e2e2e&quot;
+    light_palette[&quot;dark_candle&quot;] = &quot;black&quot;
+    light_palette[&quot;light_candle&quot;] = &quot;steelblue&quot;
+    light_palette[&quot;volume_color&quot;] = &quot;#c74e96&quot;
+    light_palette[&quot;border_color&quot;] = &quot;#2e2e2e&quot;
+    light_palette[&quot;color_1&quot;] = &quot;#5c285b&quot;
+    light_palette[&quot;color_2&quot;] = &quot;#802c62&quot;
+    light_palette[&quot;color_3&quot;] = &quot;#a33262&quot;
+    light_palette[&quot;color_4&quot;] = &quot;#c43d5c&quot;
+    light_palette[&quot;color_5&quot;] = &quot;#de4f51&quot;
+    light_palette[&quot;color_6&quot;] = &quot;#f26841&quot;
+    light_palette[&quot;color_7&quot;] = &quot;#fd862b&quot;
+    light_palette[&quot;color_8&quot;] = &quot;#ffa600&quot;
+    light_palette[&quot;color_9&quot;] = &quot;#3366d6&quot;
+    palette = light_palette
+    #  Array of colors for support/resistance lines
+    buy_grid_colors = [&quot;#e28743&quot;, &quot;#e28743&quot;, &quot;#e28743&quot;, &quot;#e28743&quot;, &quot;#e28743&quot;]
+    sell_grid_colors = [&quot;#2596be&quot;, &quot;#2596be&quot;, &quot;#2596be&quot;, &quot;#2596be&quot;, &quot;#2596be&quot;]
+    #  Create sub plots
+    fig = make_subplots(
+        rows=1,
+        cols=1,
+        subplot_titles=[f&quot;{i} {symbol} Chart&quot;,],
+        specs=[[{&quot;secondary_y&quot;: False}]],
+        vertical_spacing=0.04,
+        shared_xaxes=True,
+    )
+    #  Plot close price
+    fig.add_trace(
+        go.Scatter(
+            x=df.index, y=df[&quot;Close&quot;], line=dict(color=&quot;blue&quot;, width=1), name=f&quot;Close&quot;
+        ),
+        row=1,
+        col=1,
+    )
+    #  Current price
+    fig.add_hline(
+        y=current_price,
+        line_width=0.6,
+        line_dash=&quot;solid&quot;,
+        line_color=&quot;blue&quot;,
+        row=1,
+        col=1,
+    )
+    #  Add buy and sell grids
+    i = 0
+    for level in buy_grid:
+        line_color = (
+            buy_grid_colors[i] if i &lt; len(buy_grid_colors) else buy_grid_colors[0]
+        )
+        fig.add_hline(
+            y=level,
+            line_width=0.6,
+            line_dash=&quot;dash&quot;,
+            line_color=line_color,
+            row=1,
+            col=1,
+        )
+        i += 1
+    #  stop loss
+    fig.add_hline(
+        y=buy_stop_loss,
+        line_width=0.6,
+        line_dash=&quot;solid&quot;,
+        line_color=&quot;red&quot;,
+        row=1,
+        col=1,
+    )
+    i = 0
+    for level in sell_grid:
+        line_color = (
+            sell_grid_colors[i] if i &lt; len(sell_grid_colors) else sell_grid_colors[0]
+        )
+        fig.add_hline(
+            y=level, line_width=1, line_dash=&quot;dash&quot;, line_color=line_color, row=1, col=1
+        )
+        i += 1
+    #  stop loss
+    fig.add_hline(
+        y=sell_stop_loss,
+        line_width=1,
+        line_dash=&quot;solid&quot;,
+        line_color=&quot;red&quot;,
+        row=1,
+        col=1,
+    )
+    fig.update_layout(
+        title={&quot;text&quot;: &quot;&quot;, &quot;x&quot;: 0.5},
+        font=dict(family=&quot;Verdana&quot;, size=12, color=palette[&quot;text_color&quot;]),
+        autosize=True,
+        width=1280,
+        height=720,
+        xaxis={&quot;rangeslider&quot;: {&quot;visible&quot;: False}},
+        plot_bgcolor=palette[&quot;plot_bg_color&quot;],
+        paper_bgcolor=palette[&quot;bg_color&quot;],
+    )
+    fig.update_yaxes(visible=False, secondary_y=True)
+    #  Change grid color
+    fig.update_xaxes(
+        showline=True,
+        linewidth=1,
+        linecolor=palette[&quot;grid_color&quot;],
+        gridcolor=palette[&quot;grid_color&quot;],
+    )
+    fig.update_yaxes(
+        showline=True,
+        linewidth=1,
+        linecolor=palette[&quot;grid_color&quot;],
+        gridcolor=palette[&quot;grid_color&quot;],
+    )
+    file_name = f&quot;{i}_{symbol}_grid_trading_1.png&quot;
+    fig.write_image(file_name, format=&quot;png&quot;)
+    return fig
+
+
+class GridStrategy(Strategy):
+    chop_len = 14
+    atr_len = 1
+    num_grid_lines = 5  #  number of grid lines for buy/sell
+    grid_interval = 10 / 10000  # 10 pips, 50 pips, or 100 pips or whatever
+    take_profit_interval = 20 / 10000  #  pips
+    stop_loss_interval = 10 / 10000  # pips
+    buy_grid_prices = []
+    sell_grid_prices = []
+    executed_buy_grid_prices = []
+    executed_sell_grid_prices = []
+    last_purchase_price = 0
+    long_hold = 0
+    short_hold = 0
+    buy_stop_loss_price = 0
+    sell_stop_loss_price = 0
+    grid_in_progress = False
+    grid_start_index = 0  #  time index when grid starts
+    grid_max_interval = 2000  #  max time steps to run the grid
+    i = 0
+
+    def init(self):
+        super().init()
+        #  Calculate indicators
+        self.chop = self.I(CHOP, self.data.df, self.chop_len, self.atr_len)
+
+    def reset_grid(self):
+        self.grid_in_progress = False
+        self.buy_grid_prices = []
+        self.sell_grid_prices = []
+        self.grid_start_index = 0
+        self.buy_stop_loss_price = 0
+        self.sell_stop_loss_price = 0
+
+    def next(self):
+        super().init()
+        self.i += 1
+        #  Check ranging or trending markets
+        is_ranging = False
+        if self.chop[-1] &gt; 50 and self.chop[-2] &lt;= 50:
+            is_ranging = True
+        #  Set up new grid for ranging -&gt; against the trend
+        current_price = self.data.Close[-1]
+        if not self.grid_in_progress and is_ranging:
+            self.reset_grid()
+            self.grid_in_progress = True
+            self.grid_start_index = self.i
+            #  Stop loss
+            buy_stop_loss = (
+                current_price
+                - (self.num_grid_lines * self.grid_interval)
+                - self.stop_loss_interval
+            )
+            sell_stop_loss = (
+                current_price
+                + (self.num_grid_lines * self.grid_interval)
+                + self.stop_loss_interval
+            )
+            #  Set buy/sell grid prices
+            for i in range(1, self.num_grid_lines + 1):
+                #  Calculate buy grid price
+                grid_buy_price = current_price - (i * self.grid_interval)
+                buy_take_profit = grid_buy_price + self.take_profit_interval
+                self.buy_grid_prices.append(grid_buy_price)
+                #  Create buy order
+                self.buy(
+                    size=0.1, limit=grid_buy_price, sl=buy_stop_loss, tp=buy_take_profit
+                )
+                #  Calculate sell grid price
+                grid_sell_price = current_price + (i * self.grid_interval)
+                sell_take_profit = grid_sell_price - self.take_profit_interval
+                self.sell_grid_prices.append(grid_sell_price)
+                #  Create sell order
+                self.sell(
+                    size=0.1,
+                    limit=grid_sell_price,
+                    sl=sell_stop_loss,
+                    tp=sell_take_profit,
+                )
+            #  Optional - Plot the grid
+            # plot_chart(self.i, symbol, df, current_price, self.buy_grid_prices, self.sell_grid_prices, buy_stop_loss, sell_stop_loss)
+
+
+def run_backtest(df):
+    # If exclusive orders (each new order auto-closes previous orders/position),
+    # cancel all non-contingent orders and close all open trades beforehand
+    bt = Backtest(
+        df,
+        GridStrategy,
+        cash=10000,
+        commission=0.00075,
+        trade_on_close=True,
+        exclusive_orders=False,
+        hedging=False,
+    )
+    stats = bt.run()
+    print(stats)
+    bt.plot()
+
+
+# MAIN
+if __name__ == &quot;__main__&quot;:
+    symbol = &quot;EURUSD=X&quot;
+    #  Download data
+    # intervals: 1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo
+    interval = &quot;1m&quot;
+    #  periods:  1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
+    data = yf.download(tickers=symbol, period=&quot;5d&quot;, interval=interval)
+    df = pd.DataFrame(data)
+    df.dropna(inplace=True)
+    df.reset_index(inplace=True)
+    #  Run backtest
+    run_backtest(df)
+</code></pre>
+<hr />
+<h2 id="td-ameritrade-api"><a class="header" href="#td-ameritrade-api">TD Ameritrade API</a></h2>
+<pre><code class="language-py">import requests
+import datetime
+import pandas as pd
+
+apikey = &quot;&quot;
+url = &quot;https://api.tdameritrade.com/v1/marketdata/hours&quot;
+payload = {&quot;apikey&quot;: apikey, &quot;markets&quot;: &quot;EQUITY&quot;}
+response = requests.get(url=url, params=payload)
+data = response.json()
+print(data)
+</code></pre>
+<hr />
+<h1 id="網格買賣單數量計算"><a class="header" href="#網格買賣單數量計算">網格買/賣單數量計算</a></h1>
+<ul>
+<li>
+<p>base_diff_ratio :</p>
+<ul>
+<li>此值動態計算得到, 如果大於1則設定為1 </li>
+<li>網格預估需要的base數量與實際外站能買到base數量比例 </li>
+<li>ex: 網格預估5顆 但實際外站買到4.5顆, - base_diff_ratio = (4.5 / 5) = 0.9</li>
+</ul>
+</li>
+<li>
+<p>各價位點計算</p>
+</li>
+</ul>
+<pre><code class="language-py">def round_to_rule(value: float, rule: str) -&gt; float:
+    return round(value, int(rule))
+
+
+def round_to_rule_floor(n, decimals=0):
+    multiplier = 10 ** int(decimals)
+    return math.floor(n * multiplier) / multiplier
+
+# 網格間距
+grid_step = round_to_rule_floor((upper_limit - lower_limit) / float(grid_count), quotePrecision) 
+
+price_points = []
+price_points.append(upper_limit)
+while True:
+    price_point = round_to_rule(price_points[-1] - grid_step, quotePrecision)
+
+    if upper_limit &gt;= price_point and price_point &gt;= lower_limit:
+        price_points.append(price_point)
+
+    if price_point &lt;= lower_limit:
+        print(f&quot;各價位點:{price_points}&quot;)
+        break
+
+</code></pre>
+<h2 id="全買單--現價--上限"><a class="header" href="#全買單--現價--上限">全買單  (現價 &gt; 上限)</a></h2>
+<p><code>註: 全買單沒有站外買幣需要因此 base_diff_ratio 固定為1</code></p>
+<pre><code>current_price = 658990 
+capital = 1000 
+grid_count = 2 
+upper_limit = 4 
+lower_limit = 1 
+base_diff_ratio = 1
+</code></pre>
+<pre><code># capital = capital * base_diff_ratio * 0.998;  
+1000 * 1 * 0.998 = 998
+
+# grid_position = capital / (SUM(各價位點, 不包含最下面那格)  
+round(998 / (4+3+2), 8) = 110.88888888888889
+
+# fee = (grid_position * 最高價 * 0.002 * grid_count) + (1 * grid_count) 
+(110.88888888888889 * 4 * 0.002 * 2) + (1 * 2) = 3.774222222222222
+
+# capital = capital - fee  
+(998 - 3.774222222222222) = 994.2257777777778
+
+# grid_position = capital / (SUM(各價位點, 不包含最下面那格)  
+round(994.2257777777778 / (4+3+2), 8) = 110.46953086
+</code></pre>
+<h2 id="全賣單--現價--下限"><a class="header" href="#全賣單--現價--下限">全賣單  現價 &lt; 下限</a></h2>
+<p><code>註: 全賣單會先預扣買單所需要手續費 </code></p>
+<pre><code>current_price = 658990 
+capital = 1000 
+grid_count = 2 
+upper_limit = 800000 
+lower_limit = 700000 
+base_diff_ratio = 1.0894263392162356
+</code></pre>
+<pre><code># grid_position = capital / (SUM(各價位點, 不包含最下面那格) 
+round(1000 / (800000 + 750000), 8) = 0.00064516
+
+# fee = (grid_position * 最高價 * 0.002 * grid_count) + (1 * grid_count)  
+(0.00064516 * 800000 * 0.002 * 2) + (1 * 2) = 4.064512000000001
+
+# capital = (capital - fee) * 1 * 0.998;    # base_diff_ratio 大於1則設定為1
+(1000 - 4.064512000000001) * 1 * 0.998 = 993.943617024
+
+# grid_position = capital / (SUM(各價位點, 不包含最下面那格) 
+round(993.943617024 / (800000 + 750000), 8) = 0.00064125
+</code></pre>
+<h2 id="部份買單部份賣單-上限-現價-下限"><a class="header" href="#部份買單部份賣單-上限-現價-下限">部份買單部份賣單 (上限&gt; 現價 &gt;下限)</a></h2>
+<pre><code>current_price = 658990 
+capital = 1000 
+grid_count = 2 
+upper_limit = 800000 
+lower_limit = 600000 
+base_diff_ratio = 0.86
+</code></pre>
+<pre><code># capital = capital * base_diff_ratio * 0.998
+(1000 * 0.86 * 0.998) = 858.28
+
+# grid_position = capital / (SUM(各價位點, 不包含最下面那格)  
+round(858.28 / (800000 + 700000), 8) = 0.00057219
+
+# fee = (grid_position * 最高價 * 0.002 * grid_count) + (1 * grid_count) 
+(0.00057219 * 800000 * 0.002 * 2) + (1 * 2) = 3.8310079999999997
+
+# capital = capital - fee  
+(858.28 - 3.8310079999999997) = 854.448992
+
+# grid_position = capital / (SUM(各價位點, 不包含最下面那格)
+round(854.448992 / (800000 + 700000), 8) = 0.00056963
+</code></pre>
+<h1 id="網格顆數計算"><a class="header" href="#網格顆數計算">網格顆數計算</a></h1>
+<pre><code class="language-py">import math
+
+
+def round_to_rule(value: float, rule: str) -&gt; float:
+    return round(value, int(rule))
+
+
+def round_to_rule_floor(n, decimals=0):
+    multiplier = 10 ** int(decimals)
+    return math.floor(n * multiplier) / multiplier
+
+
+def get_fee(upper_limit, lower_limit, grid_count, basePrecision, quotePrecision):
+    price_points = []
+    grid_step = round_to_rule_floor(
+        (upper_limit - lower_limit) / float(grid_count), quotePrecision
+    )
+    print(f&quot;grid step:{grid_step}&quot;)
+    price_points.append(upper_limit)
+    while True:
+        price_point = round_to_rule(price_points[-1] - grid_step, quotePrecision)
+
+        if upper_limit &gt;= price_point and price_point &gt;= lower_limit:
+            price_points.append(price_point)
+
+        if price_point &lt;= lower_limit:
+            print(f&quot;各價位點:{price_points}&quot;)
+            break
+
+    # round(998 / (200000+ 160080.0+ 120160.0+ 80240.0+ 40320.0), 8) = 0.00166112
+    grid_position = round_to_rule(capital / sum(price_points[:-1]), basePrecision)
+    # print(grid_position)
+    return (
+        (grid_position * price_points[0] * 0.002 * grid_count) + (1 * grid_count),
+        price_points,
+    )
+
+
+def get_grid_position(
+    capital, upper_limit, lower_limit, grid_count, basePrecision, quotePrecision
+):
+    fee, price_points = get_fee(
+        upper_limit, lower_limit, grid_count, basePrecision, quotePrecision
+    )
+    # 資金扣除預留手續費
+    # 998 - ((0.0016611185086551265 * 200000 * 0.002 * 5) + (1+5)) = 988.6777629826897
+    if current_price &lt; lower_limit:
+        fee = 0
+
+    print(f&quot;get_grid_position fee:{fee}&quot;)
+    capital = capital - fee
+    print(f&quot;扣除手續費後的資金:{capital}&quot;)
+
+    # 扣掉預留費用，每格該下的btc數量，之後下單以這個為準
+    grid_position = round_to_rule(capital / sum(price_points[:-1]), basePrecision)
+    return grid_position
+
+
+if __name__ == &quot;__main__&quot;:
+    current_price = # Test Log - base price bitopro
+    capital = 1000
+    grid_count = 2
+    upper_limit = 800000
+    lower_limit = 600000
+    base_diff_ratio = # Test Log - base difference ratio
+    basePrecision = 8
+    quotePrecision = 0
+    fee = 0
+
+    # 目前價格小於網格最低價
+    if current_price &lt; lower_limit:
+        fee, _ = get_fee(
+            upper_limit, lower_limit, grid_count, basePrecision, quotePrecision
+        )
+
+    if base_diff_ratio &gt; 1.0:
+        capital = (capital - fee) * 0.998
+    else:
+        capital = (capital - fee) * base_diff_ratio * 0.998
+
+    print(f&quot;capital:{capital}, fee:{fee}&quot;)
+    grid_position = get_grid_position(
+        capital, upper_limit, lower_limit, grid_count, basePrecision, quotePrecision
+    )
+    print(f&quot;grid position:{grid_position}&quot;)
+</code></pre>
+<h2 id="defillama"><a class="header" href="#defillama">DeFiLlama</a></h2>
+<pre><code class="language-py">from defillama import DefiLlama
+import json
+
+import requests
+
+# initialize api client
+llama = DefiLlama()
+
+# Get all protocols data
+response = llama.get_all_protocols()
+#print(response, type(response[0]))
+print(json.dumps(response[0], indent=4, ensure_ascii=False))
+
+# Get a protocol data
+response = llama.get_protocol(name='uniswap')
+print(json.dumps(response, indent=4, ensure_ascii=False))
+
+# Get historical values of total TVL
+response = llama.get_historical_tvl()
+print(json.dumps(response[0], indent=4, ensure_ascii=False))
+
+# Get protocol TVL
+response = llama.get_protocol_tvl(name='uniswap')
+print(json.dumps(response, indent=4, ensure_ascii=False))
+</code></pre>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../strategy/example.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../strategy/sample.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../strategy/example.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../strategy/sample.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>

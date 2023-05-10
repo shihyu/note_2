@@ -1,0 +1,132 @@
+Hello Docker world!
+WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
+Package               Version
+--------------------- -----------
+aiohttp               3.8.4
+aiosignal             1.3.1
+anyio                 3.6.2
+async-timeout         4.0.2
+attrs                 22.2.0
+better-exceptions     0.3.3
+cachetools            5.3.0
+certifi               2022.12.7
+charset-normalizer    3.0.1
+click                 8.1.3
+dateparser            1.1.7
+Flask                 2.2.2
+frozenlist            1.3.3
+google-auth           2.16.0
+grpcio                1.51.1
+h11                   0.14.0
+httpcore              0.16.3
+httpx                 0.23.3
+idna                  3.4
+itsdangerous          2.1.2
+Jinja2                3.1.2
+kafka-python          2.0.2
+kubernetes            25.3.0
+loguru                0.6.0
+MarkupSafe            2.1.2
+multidict             6.0.4
+numpy                 1.24.2
+oauthlib              3.2.2
+pandas                1.5.3
+pip                   23.0
+protobuf              4.21.12
+psutil                5.9.4
+pyasn1                0.4.8
+pyasn1-modules        0.2.8
+python-binance        1.0.16
+python-dateutil       2.8.2
+pytz                  2022.7.1
+pytz-deprecation-shim 0.1.0.post0
+PyYAML                6.0
+redis                 4.5.1
+regex                 2022.10.31
+requests              2.28.2
+requests-oauthlib     1.3.1
+rfc3986               1.5.0
+rsa                   4.9
+setuptools            65.5.1
+six                   1.16.0
+sniffio               1.3.0
+tzdata                2022.7
+tzlocal               4.2
+ujson                 5.7.0
+urllib3               1.26.14
+websocket-client      1.5.1
+websockets            10.4
+Werkzeug              2.2.3
+wheel                 0.38.4
+yarl                  1.8.2
+200 2023-02-15 03:15:54.774034
+Filename: /usr/src/app/main.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    15  46.8867 MiB  46.8867 MiB           1   @profile(cb_func=cb_write_log_to_file, precision=4)
+    16                                         def call():
+    17  46.8867 MiB   0.0000 MiB           1       url = "https://api.bitopro.com/v3/provisioning/trading-pairs"
+    18  48.7109 MiB   1.8242 MiB           1       response = requests.get(url)
+
+
+Filename: /usr/src/app/main.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    15  46.8867 MiB  46.8867 MiB           1   @profile(cb_func=cb_write_log_to_file, precision=4)
+    16                                         def call():
+    17  46.8867 MiB   0.0000 MiB           1       url = "https://api.bitopro.com/v3/provisioning/trading-pairs"
+    18  48.7109 MiB   1.8242 MiB           1       response = requests.get(url)
+
+
+200 2023-02-15 03:15:55.183293
+200 2023-02-15 03:15:55.595570
+200 2023-02-15 03:15:56.005200
+200 2023-02-15 03:15:56.421938
+200 2023-02-15 03:15:56.841797
+200 2023-02-15 03:15:57.256110
+200 2023-02-15 03:15:57.666362
+^CTraceback (most recent call last):
+  File "/usr/src/app/main.py", line 38, in <module>
+    main()
+  File "/usr/src/app/main.py", line 32, in main
+    data = call()
+  File "/usr/src/app/memory_profiler.py", line 1356, in wrapper
+    val = prof(func)(*args, **kwargs)
+  File "/usr/src/app/memory_profiler.py", line 860, in f
+    return func(*args, **kwds)
+  File "/usr/src/app/main.py", line 18, in call
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.10/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.10/ssl.py", line 1130, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Ubuntu - Jason Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Jason Notes</a></li><li class="chapter-item expanded "><a href="../ubuntu/ubuntu_setup.html" class="active">Ubuntu</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ubuntu/command.html">Command</a></li><li class="chapter-item "><a href="../ubuntu/gcp.html">GCP ssh</a></li></ol></li><li class="chapter-item expanded "><a href="../android/android.html">Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../android/install_sdk.html">SDK install</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/asciinema.html">asciinema 把終端操作錄製成 gif 動畫</a></li><li class="chapter-item "><a href="../tools/finmind.html">Finmind</a></li><li class="chapter-item "><a href="../tools/add-enter-and-exit-trace-for-your-function.html">addr2line</a></li><li class="chapter-item "><a href="../tools/cmake.html">cmake</a></li><li class="chapter-item "><a href="../tools/network.html">Network</a></li><li class="chapter-item "><a href="../tools/python-pycryptodome-aes-symmetric-encryption-tutorial-examples.html">實作 AES 對稱式加密</a></li></ol></li><li class="chapter-item expanded "><a href="../html/html.html">HTML</a></li><li class="chapter-item expanded "><a href="../vim/vim.html">Vim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vim/copilot.html">copilot</a></li><li class="chapter-item "><a href="../vim/tabnine.html">tabnine</a></li></ol></li><li class="chapter-item expanded "><a href="../gdb/gdb.html">Gdb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../gdb/常用指令.html">常用指令</a></li><li class="chapter-item "><a href="../gdb/jemalloc.html">jemalloc</a></li><li class="chapter-item "><a href="../gdb/graphs.html">graphs</a></li><li class="chapter-item "><a href="../gdb/rust-gdb.html">rust gdb</a></li></ol></li><li class="chapter-item expanded "><a href="../c++/cpp.html">C++</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c++/smart_pointer.html">Smart pointer</a></li><li class="chapter-item "><a href="../c++/l&rvalue.html">L&amp;R value</a></li><li class="chapter-item "><a href="../c++/move.html">Move</a></li><li class="chapter-item "><a href="../c++/CAS.html">CAS</a></li></ol></li><li class="chapter-item expanded "><a href="../riscv/riscv.html">RISC-V</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../riscv/qemu_riscv_linux.html">QEMU上運行RISV-V Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../centos/centos.html">CentOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../centos/tqdb_setup.html">TQDB 安裝紀錄</a></li></ol></li><li class="chapter-item expanded "><a href="../ssh/ssh.html">SSH</a></li><li class="chapter-item expanded "><a href="../network/socket.html">Network</a></li><li class="chapter-item expanded "><a href="../docker/docker_helloworld.html">Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../docker/docker.html">Docker 基本教學</a></li><li class="chapter-item "><a href="../docker/example.html">簡單範例</a></li><li class="chapter-item "><a href="../docker/creating-the-perfect-python-dockerfile.html">Perfect python dockerfile</a></li><li class="chapter-item "><a href="../docker/dockerfile-from-docker-image.html">由 Docker image 反推其 Dockerfile</a></li><li class="chapter-item "><a href="../docker/python_connect_redis.html">Python連接Redis</a></li><li class="chapter-item "><a href="../docker/command.html">Command</a></li><li class="chapter-item "><a href="../docker/docker_compose.html">Docker compose</a></li><li class="chapter-item "><a href="../docker/docker_compse_example.html">Docker compose example</a></li><li class="chapter-item "><a href="../docker/python_redis.html">Python-Redis</a></li><li class="chapter-item "><a href="../docker/redash.html">Redash</a></li><li class="chapter-item "><a href="../docker/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../docker/clickhouse-setup.html">clickhouse-setup</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/rust.html">Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/note.html">Rust筆記</a></li><li class="chapter-item "><a href="../rust/basic.html">Rust 基本教學</a></li><li class="chapter-item "><a href="../rust/ownership.html">Rust 所有權系統</a></li><li class="chapter-item "><a href="../rust/lifetime.html">Rust 生命週期 (Lifetime)</a></li><li class="chapter-item "><a href="../rust/type.html">Rust 型別系統</a></li><li class="chapter-item "><a href="../rust/polars.html">Polars</a></li><li class="chapter-item "><a href="../rust/rust_call_c.html">Rust call C</a></li><li class="chapter-item "><a href="../rust/10-rust-an-introduction.html">給 C++ 使用者的 Rust 簡介</a></li><li class="chapter-item "><a href="../rust/rust_note.html">學習順序</a></li><li class="chapter-item "><a href="../rust/overview.html">大局觀</a></li><li class="chapter-item "><a href="../rust/String.html">理解字串</a></li><li class="chapter-item "><a href="../rust/easy_rust.html">Easy Rust</a></li><li class="chapter-item "><a href="../rust/rust_easy.html">Rust 新手</a></li><li class="chapter-item "><a href="../rust/module.html">Rust 模組結構</a></li><li class="chapter-item "><a href="../rust/rust_memory.html">Rust與記憶體</a></li><li class="chapter-item "><a href="../rust/rust_vs_cpp.html">Rust vs C++語法</a></li><li class="chapter-item "><a href="../rust/rust_file_format.html">Rust 檔案格式</a></li><li class="chapter-item "><a href="../rust/binary_lib.html">Rust 函數庫/執行檔</a></li><li class="chapter-item "><a href="../rust/print-function-name-dump-stack.html">印出函數名稱</a></li><li class="chapter-item "><a href="../rust/note.html">30天深入淺出Rust系列</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/rust_30_day.html">Rust 30 Day</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Move_Borrow_Ownership.html">變數的所有權與借出變數</a></li><li class="chapter-item "><a href="../rust/30天深入淺出Rust系列/Lifetime.html">Lifetime： Borrow 的存活時間</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../go/go.html">Go</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../go/note.html">Golang  Note</a></li><li class="chapter-item "><a href="../go/pytago.html">pytago</a></li><li class="chapter-item "><a href="../go/Go編程實戰派基礎入門.html">Go編程實戰派基礎入門</a></li><li class="chapter-item "><a href="../go/Go編程實戰派Web開發基礎.html">Go編程實戰派Web開發基礎</a></li><li class="chapter-item "><a href="../go/golang_debugger.html">Golang Deubgger</a></li><li class="chapter-item "><a href="../go/golang-go-module-tutorial.html">從一知半解到略懂 Go modules</a></li><li class="chapter-item "><a href="../go/go_mod.html">Go modules</a></li><li class="chapter-item "><a href="../go/trace.html">Golang大殺器之跟蹤剖析trace</a></li><li class="chapter-item "><a href="../go/Coroutine.html">行程、執行緒、協程，傻傻分得清楚！</a></li><li class="chapter-item "><a href="../go/goroutine-and-channel.html">Go併發</a></li><li class="chapter-item "><a href="../go/websocket.html">Websocket</a></li><li class="chapter-item "><a href="../go/returning-pointer-from-a-function-in-go.html">Returning Pointer from a Function in Go</a></li><li class="chapter-item "><a href="../go/golang-memory-management.html">GC 全面解析</a></li><li class="chapter-item "><a href="../go/golang-goroutine.html">Goroutine 與 GMP 原理全面分析</a></li><li class="chapter-item "><a href="../go/oo.html">OO</a></li><li class="chapter-item "><a href="../go/mutex-rwmutex.html">sync.Mutex 和 sync.RWMutex</a></li><li class="chapter-item "><a href="../go/interface.html">interface</a></li><li class="chapter-item "><a href="../go/example.html">Example</a></li></ol></li><li class="chapter-item expanded "><a href="../ml/ml.html">ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ml/pytorch.html">Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="../python/python.html">Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/Poetry完全入門指南.html">Poetry完全入門指南</a></li><li class="chapter-item "><a href="../python/搭建gRPC服務.html">搭建gRPC服務</a></li><li class="chapter-item "><a href="../python/python_debugger.html">Python Debugger</a></li><li class="chapter-item "><a href="../python/decorator.html">Python decorator</a></li><li class="chapter-item "><a href="../python/python-decorator.html">裝飾器看這一篇就夠了</a></li><li class="chapter-item "><a href="../python/import-concept.html">import-concept</a></li><li class="chapter-item "><a href="../python/process_thread.html">Process/Thread優缺點</a></li><li class="chapter-item "><a href="../python/processing_communcation.html">Processing 通訊</a></li><li class="chapter-item "><a href="../python/condition.html">Python中的wait和notify</a></li><li class="chapter-item "><a href="../python/生產者消費者模式.html">生產者消費者模式</a></li><li class="chapter-item "><a href="../python/Loguru.html">Loguru</a></li><li class="chapter-item "><a href="../python/WebSocket_reconnect.html">Python WebSocket長連接心跳與短連接</a></li><li class="chapter-item "><a href="../python/bloomrpc.html">bloomrpc</a></li><li class="chapter-item "><a href="../python/schedule.html">任務調度</a></li><li class="chapter-item "><a href="../python/Rust_bindings_for_Python.html">Rust bindings for Python</a></li><li class="chapter-item "><a href="../python/pandas.html">Pandas</a></li><li class="chapter-item "><a href="../python/coroutine.html">Coroutine</a></li><li class="chapter-item "><a href="../python/finmind.html">FinMind</a></li><li class="chapter-item "><a href="../python/telegram_bot.html">Telegram Bot</a></li><li class="chapter-item "><a href="../python/websocket_client_server.html">Websocket client/server</a></li><li class="chapter-item "><a href="../python/poetry.html">從零開始使用 Poetry</a></li><li class="chapter-item "><a href="../python/fil-memory-usage-profiler.html">Fil-memory-usage-profiler</a></li><li class="chapter-item "><a href="../python/plot.html">繪圖</a></li><li class="chapter-item "><a href="../python/shioaji.html">永豐shioaji</a></li><li class="chapter-item "><a href="../python/other.html">Other</a></li></ol></li><li class="chapter-item expanded "><a href="../mermaid/mermaid.html">Mermaid</a></li><li class="chapter-item expanded "><a href="../strategy/bollmaker.html">Strategy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/造市/market_market.html">造市</a></li><li class="chapter-item "><a href="../strategy/tw_futures.html">臺指</a></li><li class="chapter-item "><a href="../strategy/arbitrage.html">套利</a></li><li class="chapter-item "><a href="../strategy/海龜交易.html">海龜交易</a></li><li class="chapter-item "><a href="../strategy/Option/option.html">選擇權</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/Option/option_note.html">Option note</a></li></ol></li><li class="chapter-item "><a href="../strategy/vectorbt.html">VectorBT</a></li><li class="chapter-item "><a href="../strategy/orderbook.html">Orderbook</a></li><li class="chapter-item "><a href="../strategy/選股條件.html">選股條件</a></li><li class="chapter-item "><a href="../strategy/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../strategy/note.html">Resource</a></li><li class="chapter-item "><a href="../strategy/nansen.html">Nansen</a></li><li class="chapter-item "><a href="../strategy/example.html">Example</a></li><li class="chapter-item "><a href="../strategy/other.html">Other</a></li><li class="chapter-item "><a href="../strategy/sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/grid.html">Grid</a></li><li class="chapter-item "><a href="../strategy/pine-script.html">pine-script</a></li><li class="chapter-item "><a href="../strategy/sharpe_ratio.html">夏普值</a></li><li class="chapter-item "><a href="../strategy/display_mae_mfe_analysis.html">MAE&amp;MFE分析</a></li><li class="chapter-item "><a href="../strategy/海龜投資法則.html">海龜投資法則</a></li><li class="chapter-item "><a href="../strategy/edge-ratio-follow-application.html">彈性進出場的判斷</a></li><li class="chapter-item "><a href="../strategy/finlab.html">Finlab</a></li><li class="chapter-item "><a href="../strategy/backtrader/basis.html">Backtrader</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架一Backtrader介紹.html">Python回測框架一Backtrader介紹</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架二定期定額投資.html">Python 回測框架（二）定期定額投資</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架三技術指標.html">Python 回測框架（三）技術指標</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架四CrossOver和Signal.html">Python 回測框架（四）CrossOver 和 Signal</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架五Sizer.html">Python 回測框架（五）Sizer</a></li><li class="chapter-item "><a href="../strategy/backtrader/Python回測框架六Analyzers.html">Python 回測框架（六）Analyzers</a></li><li class="chapter-item "><a href="../strategy/backtrader/多股組合操作策略.html">多股組合操作</a></li><li class="chapter-item "><a href="../strategy/backtrader/均線交叉策略.html">均線交叉策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/唐奇安通道策略.html">唐奇安通道策略</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sizers模組.html">Sizers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Observers模組.html">Observers模組</a></li><li class="chapter-item "><a href="../strategy/backtrader/Pyfolio.html">Pyfolio</a></li><li class="chapter-item "><a href="../strategy/backtrader/Sample.html">Sample</a></li><li class="chapter-item "><a href="../strategy/backtrader/performance.html">Performance</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../mq/kafka.html">MQ</a></li><li class="chapter-item expanded "><a href="../mq/kafka-python.html">Kafka的通俗總結</a></li><li class="chapter-item expanded "><a href="../database/redis.html">Database</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../database/redis.html">Redis</a></li><li class="chapter-item "><a href="../database/hash.html">Redis Hash</a></li><li class="chapter-item "><a href="../database/clickhouse.html">ClickHouse</a></li><li class="chapter-item "><a href="../database/dolphin.html">Dolphin</a></li><li class="chapter-item "><a href="../database/sqlite.html">Sqlite</a></li></ol></li><li class="chapter-item expanded "><a href="../cryptotrade/cryptotrade.html">CryptoTrade</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cryptotrade/binance/binance.html">Binance</a></li><li class="chapter-item "><a href="../cryptotrade/binance/oco.html">如何將OCO訂單發送到Binance</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html">Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../git/git-remove-commited-files.html">git-remove-commited-files</a></li><li class="chapter-item "><a href="../git/cheat-sheet.html">Git 常用</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Jason Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shihyu/jason_note" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h1>
+<h3 id="開發環境安裝"><a class="header" href="#開發環境安裝">開發環境安裝</a></h3>
+<pre><code class="language-sh">git clone https://github.com/clvv/fasd
+git clone https://github.com/junegunn/fzf
+git clone https://github.com/sharkdp/fd
+git clone https://github.com/cgdb/cgdb
+git clone https://github.com/neovim/neovim.git
+git clone https://github.com/BurntSushi/ripgrep
+git clone https://github.com/ggreer/the_silver_searcher
+git clone https://github.com/universal-ctags/ctags
+</code></pre>
+<h3 id="選擇套件來源"><a class="header" href="#選擇套件來源">選擇套件來源</a></h3>
+<pre><code class="language-sh">sudo /usr/bin/software-properties-gtk
+</code></pre>
+<h3 id="ubuntu-2004-package"><a class="header" href="#ubuntu-2004-package">ubuntu 20.04 package</a></h3>
+<pre><code class="language-sh">sudo apt-get install autoconf automake linux-headers-`uname -r` \
+ libclang-dev p7zip guake p7zip-full liblzma-dev \
+ indicator-multiload filezilla pidgin pcmanx-gtk2 gparted meld \
+ speedcrunch vim ssh id-utils cflow autogen \
+ cutecom hexedit ccache clang pbzip2 smplayer plink putty-tools \
+ ghex doxygen doxygen-doc libstdc++6 lib32stdc++6 build-essential \
+ doxygen-gui graphviz git-core cconv alsa-oss wmctrl terminator \
+ curl gnome-tweak-tool cgdb dos2unix libreadline-dev \
+ hexedit ccache ruby subversion htop astyle ubuntu-restricted-extras \
+ libncurses5-dev xdot universal-ctags cscope \
+ libsdl1.2-dev gitk libncurses5-dev binutils-dev gtkterm \
+ libtool mpi-default-dev libbz2-dev libicu-dev python-dev scons csh \
+ enca ttf-anonymous-pro libperl4-corelibs-perl cgvg catfish gawk \
+ i2c-tools sshfs wavesurfer audacity fcitx fcitx-chewing libswitch-perl bin86 \
+ inotify-tools u-boot-tools subversion crash tree mscgen krename umbrello \
+ intel2gas kernelshark trace-cmd pppoe dcfldd flex bison help2man \
+ texinfo texi2html ghp-import autossh samba sdcv xournal cloc geogebra \
+ libluajit-5.1-dev libacl1-dev libgpmg1-dev libgtk-3-dev libgtk2.0-dev \
+ liblua5.2-dev libperl-dev libselinux1-dev libtinfo-dev libxaw7-dev \
+ libxpm-dev libxt-dev lua5.2 python3-dev ruby ruby-dev tcl-dev gnome-control-center
+</code></pre>
+<h2 id="foliate-支持epubmobiazw和azw3文件-它不支持pdf文件"><a class="header" href="#foliate-支持epubmobiazw和azw3文件-它不支持pdf文件">foliate 支持.epub，.mobi，.azw和.azw3文件。 它不支持PDF文件。</a></h2>
+<pre><code class="language-sh">sudo add-apt-repository ppa:apandada1/foliate
+sudo apt update
+sudo apt install foliate
+</code></pre>
+<h3 id="ubuntu-有線連線不見網路圖示不見解決方法"><a class="header" href="#ubuntu-有線連線不見網路圖示不見解決方法">ubuntu 有線連線不見（網路圖示不見）解決方法</a></h3>
+<pre><code class="language-sh">sudo apt-get install gnome-control-center
+sudo service network-manager stop
+sudo rm /var/lib/NetworkManager/NetworkManager.state
+sudo service network-manager start
+sudo gedit /etc/NetworkManager/NetworkManager.conf
+（把false改成true）
+sudo service network-manager restart
+</code></pre>
+<h3 id="gnome-open"><a class="header" href="#gnome-open">gnome-open</a></h3>
+<pre><code class="language-sh">sudo ln -s /usr/bin/xdg-open ~/.mybin/o
+</code></pre>
+<h3 id="將-tmp-設到-ramdisk-tmpfs-的方法"><a class="header" href="#將-tmp-設到-ramdisk-tmpfs-的方法">將 /tmp 設到 RamDisk (tmpfs) 的方法</a></h3>
+<pre><code class="language-sh">基本上只要打以下指令，就能將 /tmp 綁定到 /dev/shm
+mkdir /dev/shm/tmp
+chmod 1777 /dev/shm/tmp
+sudo mount --bind /dev/shm/tmp /tmp
+
+※ 註：為何是用 mount --bind 綁定，而不是 ln -s 軟連結，原因是 /tmp 目錄，系統不給刪除。
+
+不過每次開機都要打指令才能用，這樣是行不通的，必須讓它開機時自動執行，才會方便。
+
+用文書編輯器，建立 /etc/init.d/ramtmp.sh 內容如下：
+
+#!/bin/sh
+# RamDisk tmp
+PATH=/sbin:/bin:/usr/bin:/usr/sbin
+
+mkdir -p /dev/shm/tmp
+mkdir -p /dev/shm/cache
+mount --bind /dev/shm/tmp /tmp
+mount --bind /dev/shm/cache /home/shihyu/.cache
+chmod 1777 /dev/shm/tmp
+chmod 1777 /dev/shm/cache
+
+
+將此檔改權限為 755，使其可執行
+
+sudo chmod 755 /etc/init.d/ramtmp.sh
+
+在 /etc/rcS.d 中，建立相關軟連結(捷徑)，使其一開機就執行 以下指令僅能終端機操作
+
+cd /etc/rcS.d
+sudo ln -s ../init.d/ramtmp.sh S50ramtmp.sh
+</code></pre>
+<h3 id="im-config--新酷音"><a class="header" href="#im-config--新酷音">im-config  新酷音</a></h3>
+<pre><code class="language-sh">sudo apt-get install fcitx-table-boshiamy (嘸蝦米）
+sudo apt-get install fcitx-table-cangjie-big （倉頡大字集）
+sudo apt-get install fcitx-table-zhengma-large （鄭碼大字集）
+sudo apt-get install fcitx-table-wubi-large （五筆大字集）
+sudo apt-get install fcitx-chewing （新酷音）
+sudo apt-get install fcitx-sunpinyin （雙拼）
+sudo apt-get install fcitx-table-easy-big （輕鬆大詞庫）
+sudo apt-get install fcitx-m17n
+sudo apt-get remove ibus
+
+im-config
+
+選fcitx為預設
+重開機或登入
+在有可輸入中文的框中，按Ctrl+Space，然後用Ctrl+Shift選輸入法輸入，預設的簡繁轉換為Ctrl+Shift+F
+</code></pre>
+<h3 id="gitbook-安裝"><a class="header" href="#gitbook-安裝">Gitbook 安裝</a></h3>
+<pre><code class="language-sh">sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+
+sudo npm install gitbook -g
+</code></pre>
+<h3 id="node-安裝"><a class="header" href="#node-安裝">node 安裝</a></h3>
+<pre><code class="language-sh">https://nodejs.org/en/  
+
+export N_PREFIX=$HOME/.mybin/node-v17.8.0-linux-x64/
+export PATH=$N_PREFIX/bin:$PATH
+</code></pre>
+<h3 id="多個-ssh-key-對應多個-github-帳號"><a class="header" href="#多個-ssh-key-對應多個-github-帳號">多個 SSH Key 對應多個 Github 帳號</a></h3>
+<pre><code class="language-sh">$ cd ~/.ssh
+$ ssh-keygen -t rsa -C &quot;account1@email.com&quot; -f id_rsa_account1
+$ ssh-keygen -t rsa -C &quot;account2@email.com&quot; -f id_rsa_account2
+
+建立 config 檔
+$ cd ~/.ssh
+$ touch config
+$ gedit config
+
+#account1
+Host github.com-account1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_account1
+
+#account2
+Host github.com-account2
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_account2
+    
+修改相對應 repo 的 remote url。例如：
+ssh://git@github.com-account1/github account/repo1.git
+github account 是github帳號 ex : jasonblog , ccccjason , shihyu
+</code></pre>
+<h2 id="rust"><a class="header" href="#rust">Rust</a></h2>
+<pre><code class="language-sh">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
+更新 Rust 版本
+rustup update
+</code></pre>
+<h2 id="cmake-setup"><a class="header" href="#cmake-setup">cmake Setup</a></h2>
+<pre><code class="language-sh">wget https://cmake.org/files/v3.26/cmake-3.26.0.tar.gz
+./bootstrap --prefix=$HOME/.mybin/cmake
+make 
+make install
+export PATH=&quot;$HOME/.mybin/cmake/bin:$PATH&quot;
+</code></pre>
+<h2 id="新增虛擬記憶體swap"><a class="header" href="#新增虛擬記憶體swap">新增虛擬記憶體(swap)</a></h2>
+<ol>
+<li>
+<p>切割4GB空間做為swap使用。</p>
+<pre><code class="language-sh">sudo fallocate -l 4G /swapfile
+</code></pre>
+<p>4G：可視個人需求修改</p>
+<p>/swapfile：做為swap使用的檔案存放路徑，可修改</p>
+<p>這時你的硬碟空間就已被扣除4G保留為此檔案，做為虛擬記憶體使用。</p>
+<p>不過這時只是新增了一個容量4G大的檔案而已，系統並不知道要用他來做swap。</p>
+</li>
+<li>
+<p>告知系統使用此檔案，啟用swap功能。</p>
+<pre><code class="language-sh">sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+</code></pre>
+</li>
+<li>
+<p>將swap設定為開機自動掛載。</p>
+<pre><code class="language-sh">sudo vim /etc/fstab
+…
+
+開啟檔案，到最後加入此行
+
+/swapfile   none swap    sw 0 0
+</code></pre>
+<p>這樣以後每次重開機就會固定載入這個檔案做為虛擬記憶體使用了。</p>
+<p>附註：其實在虛擬網站伺服器都是使用SSD的現在，舉個例，如Linode的Linode 2GB規格，記憶體2G硬碟30G，設定個6G~10G來做虛擬記憶體，就等於你擁有8~12G的記憶體可能還太多了，如果主機有特殊需求使用大量記憶體，可以參考看看這個做法。</p>
+</li>
+</ol>
+<h2 id="改時區"><a class="header" href="#改時區">改時區</a></h2>
+<blockquote>
+<p>＃ <strong>tzselect</strong>
+Please identify a location so that time zone rules can be set correctly.
+Please select a continent, ocean, “coord&quot;, or “TZ&quot;.
+\1) Africa
+\2) Americas
+\3) Antarctica
+\4) Asia
+\5) Atlantic Ocean
+\6) Australia
+\7) Europe
+\8) Indian Ocean
+\9) Pacific Ocean
+\10) coord – I want to use geographical coordinates.
+\11) TZ – I want to specify the time zone using the Posix TZ format.
+＃? <strong>4</strong></p>
+<p>Please select a country whose clocks agree with yours.
+\1) Afghanistan 18) Israel 35) Palestine
+\2) Armenia 19) Japan 36) Philippines
+\3) Azerbaijan 20) Jordan 37) Qatar
+\4) Bahrain 21) Kazakhstan 38) Russia
+\5) Bangladesh 22) Korea (North) 39) Saudi Arabia
+\6) Bhutan 23) Korea (South) 40) Singapore
+\7) Brunei 24) Kuwait 41) Sri Lanka
+\8) Cambodia 25) Kyrgyzstan 42) Syria
+\9) China 26) Laos 43) Taiwan
+\10) Cyprus 27) Lebanon 44) Tajikistan
+\11) East Timor 28) Macau 45) Thailand
+\12) Georgia 29) Malaysia 46) Turkmenistan
+\13) Hong Kong 30) Mongolia 47) United Arab Emirates
+\14) India 31) Myanmar (Burma) 48) Uzbekistan
+\15) Indonesia 32) Nepal 49) Vietnam
+\16) Iran 33) Oman 50) Yemen
+\17) Iraq 34) Pakistan
+＃? <strong>43</strong></p>
+<p>The following information has been given:</p>
+<p>Taiwan</p>
+<p>Therefore TZ=’Asia/Taipei’ will be used.
+Local time is now: Tue Apr 3 12:07:13 CST 2018.
+Universal Time is now: Tue Apr 3 04:07:13 UTC 2018.
+Is the above information OK?
+\1) Yes
+\2) No
+＃? <strong>1</strong></p>
+<p>＃ <strong>cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime</strong></p>
+</blockquote>
+<h1 id="更新時間與測試"><a class="header" href="#更新時間與測試">更新時間與測試</a></h1>
+<blockquote>
+<p>＃ <strong>apt-get install ntpdate</strong></p>
+<p>＃ <strong>ntpdate <a href="http://time.stdtime.gov.tw/">time.stdtime.gov.tw</a></strong></p>
+<p>＃ <strong>hwclock -w</strong></p>
+<p>(將時間寫入 BIOS)</p>
+<p>＃ <strong>date</strong></p>
+</blockquote>
+<h1 id="加入排程"><a class="header" href="#加入排程">加入排程</a></h1>
+<blockquote>
+<p>＃ <strong>vim /etc/crontab</strong>…(略)</p>
+<p>SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</p>
+<p>＃ m h dom mon dow user command
+<strong>10 5 * * * root ntpdate <a href="http://time.stdtime.gov.tw/">time.stdtime.gov.tw</a></strong></p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>＃ <strong>crontab -e</strong>
+<strong>@daily /usr/sbin/ntpdate <a href="http://time.stdtime.gov.tw/">time.stdtime.gov.tw</a> &gt; /dev/null</strong>
+將對時寫進 crontab 每天做一次</p>
+</blockquote>
+
+                        <script src="https://utteranc.es/client.js"
+                            repo="imxood/imxood.github.io"
+                            issue-term="pathname"
+                            theme="boxy-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../ubuntu/command.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../ubuntu/command.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/custom/mermaid.min.js"></script>
+        <script type="text/javascript" src="../theme/custom/mermaid-init.js"></script>
+    </body>
+</html>
